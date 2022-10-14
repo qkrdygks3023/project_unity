@@ -7,6 +7,7 @@ public class pageController : MonoBehaviour
     public int stageNum;
     public Button[] TabControllers = new Button[4];
     public int index;
+
     void Awake()
     {
         stageNum = 0;
@@ -20,13 +21,14 @@ public class pageController : MonoBehaviour
         //     Debug.Log("Destroy");
         //     Destroy(gameObject);
         // }
+         btnContoller();
 
          Debug.Log("page - " + stageNum);
 
     }
     void Start()
     {
-      btnContoller();
+  
         Debug.Log("page - " + stageNum);
     }
 
@@ -76,6 +78,7 @@ public class pageController : MonoBehaviour
         });
       
     }
+
 
 
 }
