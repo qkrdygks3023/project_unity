@@ -3,11 +3,10 @@
     "testDataB": [],
     "Data0": [
         {
-            "type": 0,
-            "main": "연도별",
-            "submain": "1950년대",
+            "type": "기록영상",
+            "group_year": 1950,
             "title": "0전생의 침상을 겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
+            "place": "국방홍보원",
             "year": "2000년",
             "keyword": [
                 "a",
@@ -17,14 +16,13 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"
         },
         {
-            "type": 0,
-            "main": "연도별",
-            "submain": "1950년대",
+            "type": "기록영상",
+            "group_year": 1950,
             "title": "2950년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
+            "place": "국방홍보원",
             "year": "2000년",
             "keyword": [
                 "a",
@@ -34,14 +32,13 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/image/ex.jpeg"
         },
         {
-            "type": 0,
-            "main": "연도별",
-            "submain": "1950년대",
+            "type": "기록영상",
+            "group_year": 1950,
             "title": "1950년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
+            "place": "국방홍보원",
             "year": "2000년",
             "keyword": [
                 "a",
@@ -51,14 +48,109 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/Assets/image/ex.jpeg"
         },
         {
-            "type": 0,
-            "main": "연도별",
-            "submain": "1951년대",
+            "type": "기록영상",
+            "group_year": 1950,
+            "title": "1950년대 전생의 침상을 겸헝하다",
+            "place": "국방홍보원",
+            "year": "2000년",
+            "keyword": [
+                "a",
+                "b",
+                "c"
+            ],
+            "playtime": 2000,
+            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
+            "url": "www",
+            "thumbnail": "Assets/image/ex.jpeg"
+        },
+        {
+            "type": "기록영상",
+            "group_year": 1950,
+            "title": "1950년대 전생의 침상을 겸헝하다",
+            "place": "국방홍보원",
+            "year": "2000년",
+            "keyword": [
+                "a",
+                "b",
+                "c"
+            ],
+            "playtime": 2000,
+            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
+            "url": "www",
+            "thumbnail": "image/ex"
+        },
+        {
+            "type": "기록영상",
+            "group_year": 1950,
+            "title": "1950년대 전생의 침상을 겸헝하다",
+            "place": "국방홍보원",
+            "year": "2000년",
+            "keyword": [
+                "a",
+                "b",
+                "c"
+            ],
+            "playtime": 2000,
+            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
+            "url": "www",
+            "thumbnail": "Assets/image/ex"
+        },
+        {
+            "type": "기록영상",
+            "group_year": 1950,
+            "title": "1950년대 전생의 침상을 겸헝하다",
+            "place": "국방홍보원",
+            "year": "2000년",
+            "keyword": [
+                "a",
+                "b",
+                "c"
+            ],
+            "playtime": 2000,
+            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
+            "url": "www",
+            "thumbnail": "image/ex.jpeg"
+        },
+        {
+            "type": "기록영상",
+            "group_year": 1950,
+            "title": "1950년대 전생의 침상을 겸헝하다",
+            "place": "국방홍보원",
+            "year": "2000년",
+            "keyword": [
+                "a",
+                "b",
+                "c"
+            ],
+            "playtime": 2000,
+            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
+            "url": "www",
+            "thumbnail": "image/ex.jpeg"
+        },
+        {
+            "type": "기록영상",
+            "group_year": 1950,
+            "title": "1950년대 전생의 침상을 겸헝하다",
+            "place": "국방홍보원",
+            "year": "2000년",
+            "keyword": [
+                "a",
+                "b",
+                "c"
+            ],
+            "playtime": 2000,
+            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
+            "url": "www",
+            "thumbnail": "ex.jpeg"
+        },
+        {
+            "type": "기록영상",
+            "group_year": 1960,
             "title": "1951년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
+            "place": "미국",
             "year": "2000년",
             "keyword": [
                 "a",
@@ -68,14 +160,13 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "Assets/image/ex.jpeg"
         },
         {
-            "type": 0,
-            "main": "연도별",
-            "submain": "1951년대",
+            "type": "기록영상",
+            "group_year": 1960,
             "title": "전생의 침상을 겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
+            "place": "궁밥홍보원",
             "year": "2000년",
             "keyword": [
                 "a",
@@ -85,12 +176,11 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "image/ex.jpeg"
         },
         {
-            "type": 0,
-            "main": "연도별",
-            "submain": "1951년대",
+            "type": "기록영상",
+            "group_year": 1960,
             "title": "1951년대  겸헝하다",
             "place": "국방홍보원(당시 국방홍보관리소)",
             "year": "2000년",
@@ -102,12 +192,11 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "ex.jpeg"
         },
         {
-            "type": 0,
-            "main": "연도별",
-            "submain": "1951년대",
+            "type": "기록영상",
+            "group_year": 1960,
             "title": "전생의 침상을 겸헝하다",
             "place": "국방홍보원(당시 국방홍보관리소)",
             "year": "2000년",
@@ -119,12 +208,11 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"
         },
         {
-            "type": 0,
-            "main": "연도별",
-            "submain": "1960년대",
+            "type": "기록영상",
+            "group_year": 1970,
             "title": "1960년대 전생의 침상을 겸헝하다",
             "place": "국방홍보원(당시 국방홍보관리소)",
             "year": "2000년",
@@ -136,12 +224,11 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"
         },
         {
-            "type": 0,
-            "main": "소장처별",
-            "submain": "1953년대",
+            "type": "기록영상",
+            "group_year": 1970,
             "title": "전생의 침상을 겸헝하다",
             "place": "국방홍보원(당시 국방홍보관리소)",
             "year": "2000년",
@@ -153,12 +240,11 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"
         },
         {
-            "type": 0,
-            "main": "소장처별",
-            "submain": "1954년대",
+            "type": "기록영상",
+            "group_year": 1980,
             "title": "전생의 침상을 겸헝하다",
             "place": "국방홍보원(당시 국방홍보관리소)",
             "year": "2000년",
@@ -170,14 +256,13 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"
         }
     ],
     "Data1": [
         {
-            "type": 1,
-            "main": "전쟁연도별",
-            "submain": "1955년대",
+            "type": "전쟁영화",
+            "group_year": 1980,
             "title": "전생의 침상을 겸헝하다",
             "place": "국방홍보원(당시 국방홍보관리소)",
             "year": "2000년",
@@ -192,9 +277,8 @@
             "thumbnail": "www"
         },
         {
-            "type": 1,
-            "main": "전쟁연도별",
-            "submain": "1955년대",
+            "type": "전쟁영화",
+            "group_year": 1980,
             "title": "전생의 침상을 겸헝하다",
             "place": "국방홍보원(당시 국방홍보관리소)",
             "year": "2000년",
@@ -209,9 +293,8 @@
             "thumbnail": "www"
         },
         {
-            "type": 1,
-            "main": "전쟁연도별",
-            "submain": "1955년대",
+            "type": "전쟁영화",
+            "group_year": 1980,
             "title": "전생의 침상을 겸헝하다",
             "place": "국방홍보원(당시 국방홍보관리소)",
             "year": "2000년",
