@@ -34,40 +34,39 @@ public class dataController : MonoBehaviour
 
 
     public List<contentData> contentData = new List<contentData>();
+ 
+    public   Dictionary<string,int> dictYear;
 
-       public   List<string> year_group = new List<string>();
-       public   List<int> year_group_total = new List<int>();
+    public   List<string> year_group = new List<string>();
+    public   List<int> year_group_total = new List<int>();
 
-        public   List<string> place_group = new  List<string>();
-
+    public   List<string> place_group = new  List<string>();
+    
+    public contentData selectGridData;
 
     void Awake(){
         JsonSave();
         JsonLoad();
-        writeJson();
+        // writeJson();
     }
     void Start()
     {
-        //  writeJson();
-     
+        //  writeJson();     
         // selectData();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    private void writeJson()
-    {
-      
-            SpriteRenderer spriteR = gameObject.GetComponent<SpriteRenderer>();
-            Sprite[] sprites = Resources.LoadAll<Sprite>("/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image");
-      
-            // [게임오브젝트].GetComponent<Image>().sprite = Resources.Load("[이미지경로]", typeof(Sprite)) as Sprite;
           
     }
+
+    // private void writeJson()
+    // {      
+    //         SpriteRenderer spriteR = gameObject.GetComponent<SpriteRenderer>();
+    //         Sprite[] sprites = Resources.LoadAll<Sprite>("/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image");
+    //         // [게임오브젝트].GetComponent<Image>().sprite = Resources.Load("[이미지경로]", typeof(Sprite)) as Sprite;
+    // }
 
     public void JsonSave()
     {
@@ -94,28 +93,28 @@ public class dataController : MonoBehaviour
 
         //0 기록영상, 1 전쟁영화
         
-        saveData.Data0.Add(new Datajson("기록영상", 1950,  "0전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950,  "2950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex01.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950,  "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950,  "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex04.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950,  "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex05.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950,  "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex06.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950,  "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex07.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950,  "0전생의 침상을 겸헝하다", "국방홍보원", "2010년", new List<string> { "a", "b", "c" }, 6000, "전쟁의 참상을 표현한다 다큐멘터리", "www","/images/ex01.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950,  "2950년대 전생의 겸헝하다", "국방홍보원", "2020년", new List<string> { "a", "b", "c" }, 3600, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex01.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950,  "950년대  겸헝하다", "국방홍보원", "1990년", new List<string> { "a", "b", "c" }, 60000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950,  "150 겸헝하다", "국방홍보원", "1990년", new List<string> { "a", "b", "c" }, 60000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex04.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950,  "195년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 6000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex05.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950,  "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 8000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex06.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950,  "19", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 50000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex07.jpeg"));
         saveData.Data0.Add(new Datajson("기록영상", 1950,  "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex08.png"));
 
-        saveData.Data0.Add(new Datajson("기록영상", 1950,  "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "ex.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950,  "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex05.png"));
     
-        saveData.Data0.Add(new Datajson("기록영상", 1960,   "1951년대 전생의 침상을 겸헝하다", "미국", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "Assets/image/ex.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1960,  "전생의 침상을 겸헝하다", "궁밥홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "image/ex.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1960,   "1951년대  겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "ex.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1960,   "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1970,   "1960년대 전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1970, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1960,   "1951년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex05.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1960,  "전생의 침상을 겸헝하다", "궁밥홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex05.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1960,   "1951년대  겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www","/images/ex05.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1960,   "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex05.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1970,   "1960년대 전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex05.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1970, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex05.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex05.png"));
 
-        saveData.Data1.Add(new Datajson("전쟁영화", 1980,  "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "www"));
-        saveData.Data1.Add(new Datajson("전쟁영화", 1980,  "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "www"));
-        saveData.Data1.Add(new Datajson("전쟁영화", 1980,  "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "www"));
+        saveData.Data1.Add(new Datajson("전쟁영화", 1980,  "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data1.Add(new Datajson("전쟁영화", 1980,  "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data1.Add(new Datajson("전쟁영화", 1980,  "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
 
 
 
@@ -140,12 +139,22 @@ public class dataController : MonoBehaviour
         }else if(select_type == 1){
             SelectData = saveData.Data1;
         }
-
+        dictYear = new Dictionary<string,int>();
+          int yearcount;
+        //목록 생성
         for (int i = 0; i < SelectData.Count; i++)
         {     
           year_group.Add(SelectData[i].group_year+"년대");  
           year_group_total.Add(SelectData[i].group_year);
-          place_group.Add(SelectData[i].place);      
+          place_group.Add(SelectData[i].place);
+
+            if(dictYear.ContainsKey(SelectData[i].group_year+"년대")) {
+                yearcount = dictYear[SelectData[i].group_year+"년대"];
+                dictYear.Add(SelectData[i].group_year+"년대", yearcount + 1);  
+            }else{
+                dictYear.Add(SelectData[i].group_year+"년대", 1);  
+            }
+            
         }
 
         year_group =  year_group.Distinct().ToList();
@@ -167,10 +176,13 @@ public class dataController : MonoBehaviour
         Debug.Log( "select_main -- " + select_main == SelectData[0].group_year+"년대");
 
 
+        
+   
+      
 
+         
 
-
-
+        
 
         //초반 데이터 셋팅
         for (int i = 0; i < SelectData.Count; i++)
@@ -198,118 +210,15 @@ public class dataController : MonoBehaviour
              Debug.Log( "sorted -- " + i);
         }
 
-       
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-    //     List<string> subList = new List<string>();
-    //     for (int i = 0; i < Main.Count; i++)
-    //     {            
-    //         subMainList.Add(subList);
-    //     }
-
-
-    //     for (int i = 0; i < Main.Count; i++)
-    //     {       
-    //         for (int j = 0; j < SelectData.Count; j++)
-    //         {          
-             
-    //             if(Main[i] == SelectData[j].main && !subMainList[i].Contains(SelectData[j].submain)){
-    //                 Debug.Log("********** " + Main[i] +" ***** " +  SelectData[j].main);
-                 
-    //                  Debug.Log("********** " + j + " - " +  subMainList[i] +  "--- " + SelectData[j].submain);
-
-    //                  subMainList[i].Add(SelectData[j].submain);              
-    //             }                 
-    //         }          
-    //     }
-
-    //     foreach (var item in subMainList)
-    //     {
-    //          foreach (var i in item)
-    //      {
-    //           Debug.Log("foreach " +  i);
-
-    //      }
-    //     }
-       
-
-
-
-    //     for (int i = 0; i < Main.Count; i++)
-    //     {
-    //         for (int k = 0; k < subMainList[i].Count; k++)
-    //         {
-    //             Debug.Log(" ------------------=- " + "i - "  + i+ " k - " + k);
-    //         }
-    //     }
-
-
-
-    //   subMain =  new   List<List<string>>();
-    //     for (int i = 0; i < Main.Count; i++)
-    //     {
-    //     // subMain = subMainList[i].Distinct().ToList();
-    //     // subMainList[i] = subMainList[i].OrderBy(n => n).ToList();
-    //     //  Debug.Log("openList - " +subMainList[i][i]);
-    //      openList.Add(true);
-       
-    //     }
-
-
-    //     select_main = Main[0];  //연도별, 소장처별
-    //     select_sub = subMainList[0][0]; //1950년대, 1960년대
-
-    //     Debug.Log("select_main - " + select_main);
-    //     Debug.Log("select_sub - " + select_sub);
-        
-
-    //     // for (int i = 0; i < Main.Length; i++)
-    //     // {
-    //     //     Debug.Log("Main - " + Main[i]);
-    //     // }
-
-    //     // for (int i = 0; i < subMain.Length; i++)
-    //     // {
-    //     //     Debug.Log("subMain - " + subMain[i]);
-    //     // }
-
-
-
-
-
-
-
-
-
-
-
-        // selectData(0, select_main,  select_sub);
-
     }
+
+
+
+
+
+
+
+
 
     public void selectData(int type, string _main, string _sub)
     {
@@ -360,6 +269,43 @@ public class dataController : MonoBehaviour
           Debug.Log("contentData - " + i.title);
         }
           
+    }
+
+    public void selectGrid(int index){
+        selectGridData = new contentData(
+        contentData[index].type,
+        contentData[index].group_year,
+        contentData[index].title,
+        contentData[index].place,
+        contentData[index].year,
+        contentData[index].keyword,
+        contentData[index].playtime,
+        contentData[index].summary,
+        contentData[index].url,
+        contentData[index].thumbnail
+        );   
+       
+ 
+    }
+
+
+      public string CountTimeLine(int num){
+            int hours, minute, second;       
+            string strhour, strmin, strsec; 
+
+            hours = num / 3600;//시 공식          
+            strhour = hours > 10 ?  hours.ToString() : 0 + hours.ToString();
+
+            minute = num % 3600 / 60;//분을 구하기위해서 입력되고 남은값에서 또 60을 나눈다.
+             strmin = minute > 10 ?  minute.ToString() : 0 + minute.ToString();
+
+            second = num % 3600 % 60;//마지막 남은 시간에서 분을 뺀 나머지 시간을 초로 계산함
+            strsec = second > 10 ?  second.ToString() : 0 + second.ToString();
+
+
+            string timeline = strhour + ":" + strmin + ":" + strsec;
+
+        return timeline;
     }
 }
 
@@ -446,5 +392,4 @@ public class contentData
         thumbnail = _thumbnail;
     }
 }
-
-
+ 

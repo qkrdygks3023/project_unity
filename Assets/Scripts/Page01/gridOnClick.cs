@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 using UnityEngine.EventSystems;
 
 
@@ -16,9 +16,15 @@ public class gridOnClick : MonoBehaviour , IPointerDownHandler, IPointerUpHandle
 
     public int  ishover = 0;
 
- Vector3  originScale;
+    Vector3  originScale;
+    public int select_index;
+
+    dataController DataController;
+    selectController SelectController;
     void Start()
     {    
+     DataController = FindObjectOfType<dataController>();
+     SelectController = FindObjectOfType<selectController>();
     }
 
     // Update is called once per frame
@@ -27,18 +33,21 @@ public class gridOnClick : MonoBehaviour , IPointerDownHandler, IPointerUpHandle
      
        
     }
-
-  
-
-
     public void OnPointerDown (PointerEventData eventData)
     {
         Debug.Log("down");
+        DataController.selectGrid(select_index);
+        SelectController.select();
+
+        Debug.Log( SelectController.activity);
+       
+       
+    //    selectTitle =  this.transform.Find("gridtitle").gameObject.GetComponent<TextMeshProUGUI>().text;
     }
 
     public void OnPointerUp (PointerEventData eventData)
     {
-          Debug.Log("up");
+        //   Debug.Log("up");
     }
 
     public  void OnPointerEnter (PointerEventData eventData)

@@ -61,7 +61,10 @@ public class btnController : MonoBehaviour
             for (int k = 0; k < subMainList[i].Count; k++)
             {
                 newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
-                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];               
+                newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
+                newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];               
+
                 Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
             }
         }
@@ -89,7 +92,7 @@ public class btnController : MonoBehaviour
 
         for (int i = 0; i < findSubBtn.Length; i++)
         {
-           Destroy(findSubBtn[i]);
+            Destroy(findSubBtn[i]);
         }
          for (int i = 0; i < findMainBtn.Length; i++)
         {
@@ -107,6 +110,9 @@ public class btnController : MonoBehaviour
                 {
                     newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
                     newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+                    newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
+                    newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
+
                     Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
                 }
             }

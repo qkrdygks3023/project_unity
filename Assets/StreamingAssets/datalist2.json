@@ -7,29 +7,13 @@
             "group_year": 1950,
             "title": "0전생의 침상을 겸헝하다",
             "place": "국방홍보원",
-            "year": "2000년",
+            "year": "2010년",
             "keyword": [
                 "a",
                 "b",
                 "c"
             ],
-            "playtime": 2000,
-            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "www",
-            "thumbnail": "/images/ex.jpeg"
-        },
-        {
-            "type": "기록영상",
-            "group_year": 1950,
-            "title": "2950년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원",
-            "year": "2000년",
-            "keyword": [
-                "a",
-                "b",
-                "c"
-            ],
-            "playtime": 2000,
+            "playtime": 6000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
             "thumbnail": "/images/ex01.jpeg"
@@ -37,15 +21,31 @@
         {
             "type": "기록영상",
             "group_year": 1950,
-            "title": "1950년대 전생의 침상을 겸헝하다",
+            "title": "2950년대 전생의 겸헝하다",
             "place": "국방홍보원",
-            "year": "2000년",
+            "year": "2020년",
             "keyword": [
                 "a",
                 "b",
                 "c"
             ],
-            "playtime": 2000,
+            "playtime": 3600,
+            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
+            "url": "www",
+            "thumbnail": "/images/ex01.jpeg"
+        },
+        {
+            "type": "기록영상",
+            "group_year": 1950,
+            "title": "950년대  겸헝하다",
+            "place": "국방홍보원",
+            "year": "1990년",
+            "keyword": [
+                "a",
+                "b",
+                "c"
+            ],
+            "playtime": 60000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
             "thumbnail": "/images/ex02.png"
@@ -53,15 +53,15 @@
         {
             "type": "기록영상",
             "group_year": 1950,
-            "title": "1950년대 전생의 침상을 겸헝하다",
+            "title": "150 겸헝하다",
             "place": "국방홍보원",
-            "year": "2000년",
+            "year": "1990년",
             "keyword": [
                 "a",
                 "b",
                 "c"
             ],
-            "playtime": 2000,
+            "playtime": 60000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
             "thumbnail": "/images/ex04.jpeg"
@@ -69,7 +69,7 @@
         {
             "type": "기록영상",
             "group_year": 1950,
-            "title": "1950년대 전생의 침상을 겸헝하다",
+            "title": "195년대 전생의 침상을 겸헝하다",
             "place": "국방홍보원",
             "year": "2000년",
             "keyword": [
@@ -77,7 +77,7 @@
                 "b",
                 "c"
             ],
-            "playtime": 2000,
+            "playtime": 6000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
             "thumbnail": "/images/ex05.png"
@@ -93,7 +93,7 @@
                 "b",
                 "c"
             ],
-            "playtime": 2000,
+            "playtime": 8000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
             "thumbnail": "/images/ex06.jpeg"
@@ -101,7 +101,7 @@
         {
             "type": "기록영상",
             "group_year": 1950,
-            "title": "1950년대 전생의 침상을 겸헝하다",
+            "title": "19",
             "place": "국방홍보원",
             "year": "2000년",
             "keyword": [
@@ -109,7 +109,7 @@
                 "b",
                 "c"
             ],
-            "playtime": 2000,
+            "playtime": 50000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
             "thumbnail": "/images/ex07.jpeg"
@@ -144,13 +144,13 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "ex.jpeg"
+            "thumbnail": "/images/ex05.png"
         },
         {
             "type": "기록영상",
             "group_year": 1960,
             "title": "1951년대 전생의 침상을 겸헝하다",
-            "place": "미국",
+            "place": "국방홍보원",
             "year": "2000년",
             "keyword": [
                 "a",
@@ -160,7 +160,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "Assets/image/ex.jpeg"
+            "thumbnail": "/images/ex05.png"
         },
         {
             "type": "기록영상",
@@ -176,7 +176,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "image/ex.jpeg"
+            "thumbnail": "/images/ex05.png"
         },
         {
             "type": "기록영상",
@@ -192,7 +192,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "ex.jpeg"
+            "thumbnail": "/images/ex05.png"
         },
         {
             "type": "기록영상",
@@ -208,7 +208,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"
+            "thumbnail": "/images/ex05.png"
         },
         {
             "type": "기록영상",
@@ -224,7 +224,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"
+            "thumbnail": "/images/ex05.png"
         },
         {
             "type": "기록영상",
@@ -240,7 +240,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"
+            "thumbnail": "/images/ex05.png"
         },
         {
             "type": "기록영상",
@@ -256,7 +256,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "/Users/parkyohan/Documents/dev_unity/project_unity/Assets/image/ex.jpeg"
+            "thumbnail": "/images/ex05.png"
         }
     ],
     "Data1": [
@@ -274,7 +274,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/images/ex02.png"
         },
         {
             "type": "전쟁영화",
@@ -290,7 +290,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/images/ex02.png"
         },
         {
             "type": "전쟁영화",
@@ -306,7 +306,7 @@
             "playtime": 2000,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "www",
-            "thumbnail": "www"
+            "thumbnail": "/images/ex02.png"
         }
     ],
     "Data2": [],
