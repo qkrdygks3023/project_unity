@@ -50,11 +50,11 @@ public class GridController : MonoBehaviour
 
   
 
-    void sliverGrid()
+    public void sliverGrid()
     {
         GameObject newObj;
         Debug.Log("contentData.Count-- " + contentData.Count);
-
+    
 
 
         for (int i = 0; i < contentData.Count; i++)

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - main_btn
   - sub_btn
+  - grid_item
   layers:
   - Default
   - TransparentFX

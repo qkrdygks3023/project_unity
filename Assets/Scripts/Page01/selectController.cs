@@ -6,7 +6,7 @@ using TMPro;
 public class selectController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject SelectObj;
+    public GameObject newBody;
     public bool activity = false;
     public GameObject year_groupObj;
     public GameObject titleObj;
@@ -20,6 +20,13 @@ public class selectController : MonoBehaviour
     public GameObject urlObj;
     public GameObject thumbnailObj;
     dataController DataController;
+    public GameObject yeartitleObj;
+    public GameObject year_subtitleObj;
+    public GameObject select_year_subtitleObj;
+
+
+    public string group_subbtn_title;
+    public string select_year;
 
 
     void Start()
@@ -37,10 +44,10 @@ public class selectController : MonoBehaviour
         
     }
 
+    //grid select
     public void select(){
         
-        SelectObj.gameObject.SetActive(true);
-        
+        newBody.gameObject.SetActive(true);       
         year_groupObj.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.group_year+"년대";
         titleObj.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.title;
         titleObj01.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.title;
@@ -49,6 +56,7 @@ public class selectController : MonoBehaviour
         keywordObj.GetComponent<TextMeshProUGUI>().text =  keywordString(DataController.selectGridData.keyword);
         timeObj.GetComponent<TextMeshProUGUI>().text =  DataController.CountTimeLine(DataController.selectGridData.playtime).ToString();
         summaryObj.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.summary;
+        
 
         Debug.Log("select");
         

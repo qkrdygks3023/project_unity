@@ -29,11 +29,14 @@ public class btnController : MonoBehaviour
 
     GameObject newMainBtn;
     GameObject newSubBtn;
+    selectController selectController;
 
     void Start()
     {
         DataController = FindObjectOfType<dataController>();
         PageController = FindObjectOfType<pageController>();
+        selectController = FindObjectOfType<selectController>();
+
         mainbtnList.Add("연도별");
         mainbtnList.Add("소장처별");
 
@@ -61,9 +64,17 @@ public class btnController : MonoBehaviour
             for (int k = 0; k < subMainList[i].Count; k++)
             {
                 newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
-                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];               
+                if (mainbtnList[i] == "연도별")
+                {
+                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                }
+                else
+                {
+                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+                }
+
                 newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
-                newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];               
+                newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
 
                 Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
             }
@@ -86,20 +97,21 @@ public class btnController : MonoBehaviour
         GameObject[] findSubBtn;
         GameObject[] findMainBtn;
 
-        findSubBtn = GameObject.FindGameObjectsWithTag("sub_btn");       
-
+        findSubBtn = GameObject.FindGameObjectsWithTag("sub_btn");
         findMainBtn = GameObject.FindGameObjectsWithTag("main_btn");
+        selectController.newBody.gameObject.SetActive(false);
+
 
         for (int i = 0; i < findSubBtn.Length; i++)
         {
             Destroy(findSubBtn[i]);
         }
-         for (int i = 0; i < findMainBtn.Length; i++)
+        for (int i = 0; i < findMainBtn.Length; i++)
         {
-             Destroy(findMainBtn[i]);
+            Destroy(findMainBtn[i]);
         }
 
-        
+
         for (int i = 0; i < mainbtnList.Count; i++)
         {
             newMainBtn = (GameObject)Instantiate(mainBtn_prefab, transform);
@@ -108,10 +120,28 @@ public class btnController : MonoBehaviour
             {
                 for (int k = 0; k < subMainList[i].Count; k++)
                 {
+
                     newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
-                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+                    // newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+                    if (mainbtnList[i] == "연도별")
+                    {
+                        newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                    }
+                    else
+                    {
+                        newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+                    }
+
+
+
                     newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
                     newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
+
+
+                    if (selectController.group_subbtn_title == subMainList[i][k])
+                    {
+                        newSubBtn.gameObject.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+                    }
 
                     Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
                 }
