@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Video;
 
 public class selectController : MonoBehaviour
 {
@@ -29,48 +30,52 @@ public class selectController : MonoBehaviour
     public string select_year;
 
 
+
+
     void Start()
     {
-    
-        DataController = FindObjectOfType<dataController>();           
+
+        DataController = FindObjectOfType<dataController>();
         Debug.Log("activity");
 
-      
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //grid select
-    public void select(){
-        
-        newBody.gameObject.SetActive(true);       
-        year_groupObj.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.group_year+"년대";
-        titleObj.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.title;
-        titleObj01.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.title;
-        PlaceObj.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.place;
-        yearObj.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.year;
-        keywordObj.GetComponent<TextMeshProUGUI>().text =  keywordString(DataController.selectGridData.keyword);
-        timeObj.GetComponent<TextMeshProUGUI>().text =  DataController.CountTimeLine(DataController.selectGridData.playtime).ToString();
-        summaryObj.GetComponent<TextMeshProUGUI>().text =  DataController.selectGridData.summary;
-        
+    public void select()
+    {
+
+        newBody.gameObject.SetActive(true);
+        year_groupObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.group_year + "년대";
+        titleObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.title;
+        titleObj01.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.title;
+        PlaceObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.place;
+        yearObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.year;
+        keywordObj.GetComponent<TextMeshProUGUI>().text = keywordString(DataController.selectGridData.keyword);
+        timeObj.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(DataController.selectGridData.playtime).ToString();
+        summaryObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.summary;
+
 
         Debug.Log("select");
-        
+
         // Debug.Log( DataController.selectGridData.title);
     }
 
-     string  keywordString(List<string> keyword){
+    string keywordString(List<string> keyword)
+    {
         string keywordstr = "";
         for (int i = 0; i < keyword.Count; i++)
         {
-            keywordstr =  i < keyword.Count-1 ?  keywordstr + keyword[i] + "," : keywordstr + keyword[i];
+            keywordstr = i < keyword.Count - 1 ? keywordstr + keyword[i] + "," : keywordstr + keyword[i];
         }
 
-        return keywordstr;    
+        return keywordstr;
     }
 
 
