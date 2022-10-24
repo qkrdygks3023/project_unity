@@ -14,7 +14,7 @@ public class GridController : MonoBehaviour
     dataController DataController;
     List<contentData> contentData = new List<contentData>();
 
-    
+
 
     public Sprite temp;
 
@@ -32,47 +32,51 @@ public class GridController : MonoBehaviour
 
     }
 
-    private Sprite GetSpritefromImage(string imgPath)
+    public Sprite GetSpritefromImage(string imgPath)
     {
+        try
+        {
+            //Converts desired path into byte array
+            byte[] pngBytes = System.IO.File.ReadAllBytes(imgPath);
 
-        //Converts desired path into byte array
-        byte[] pngBytes = System.IO.File.ReadAllBytes(imgPath);
+            //Creates texture and loads byte array data to create image
+            Texture2D tex = new Texture2D(2, 2);
+            tex.LoadImage(pngBytes);
 
-        //Creates texture and loads byte array data to create image
-        Texture2D tex = new Texture2D(2, 2);
-        tex.LoadImage(pngBytes);
+            //Creates a new Sprite based on the Texture2D
+            Sprite fromTex = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
 
-        //Creates a new Sprite based on the Texture2D
-        Sprite fromTex = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
+            return fromTex;
+        }
+        catch (System.Exception)
+        {
 
-        return fromTex;
+            throw;
+        }
+
     }
 
-  
+
 
     public void sliverGrid()
     {
+
         GameObject newObj;
         Debug.Log("contentData.Count-- " + contentData.Count);
-    
+
 
 
         for (int i = 0; i < contentData.Count; i++)
         {
             newObj = (GameObject)Instantiate(prefab, transform);
             // newObj.GetComponentInChildren<Image>().color = Random.ColorHSV();
-     
-            newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);     
+
+            newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
             newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
 
-            newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine( contentData[i].playtime);
+            newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
 
             newObj.gameObject.GetComponent<gridOnClick>().select_index = i;
- 
-    
- 
-
-
 
 
 

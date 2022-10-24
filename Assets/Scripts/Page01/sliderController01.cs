@@ -5,17 +5,17 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class sliderController : MonoBehaviour
+public class sliderController01 : MonoBehaviour
 {
     // Start is called before the first frame update
 
     //videoController 연결
-    videoContorller videoContorller;
+    videoContorller1 videoContorller;
 
     void Start()
     {
         //videoController 연결
-        videoContorller = FindObjectOfType<videoContorller>();
+        videoContorller = FindObjectOfType<videoContorller1>();
 
     }
 
@@ -25,18 +25,14 @@ public class sliderController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+            videoContorller.isSlider01 = false;
         }
         else
         {
-            if (videoContorller != null)
+            if (videoContorller.isPlaying)
             {
-                if (videoContorller.isPlaying)
-                {
-                    videoContorller.isSlider = true;
-                }
+                videoContorller.isSlider01 = true;
             }
-
-
 
         }
 
@@ -51,11 +47,14 @@ public class sliderController : MonoBehaviour
     public void OnSliderValueChanged()
     {
         //slider의 value값을 videoController의 currentplay에 넣어준다.
+        videoContorller.isSlider01 = false;
+
         videoContorller.videoPlayer.time = this.GetComponent<Slider>().value * videoContorller.videoPlayer.length;
-        videoContorller.isSlider = false;
+
+        videoContorller.GetComponent<videoContorller1>().videoPlayer.Play();
+
 
     }
-
 
 
 

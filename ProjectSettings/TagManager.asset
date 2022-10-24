@@ -7,6 +7,8 @@ TagManager:
   - main_btn
   - sub_btn
   - grid_item
+  - row_item
+  - sizebox
   layers:
   - Default
   - TransparentFX

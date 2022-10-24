@@ -2,18 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 public class pageController : MonoBehaviour
 {
     public int stageNum;
     public Button[] TabControllers = new Button[4];
     public int index;
+    TabController tabController;
+    dataController dataController;
+    selectController selectController;
+
+
 
     void Awake()
     {
         stageNum = 0;
         var obj = FindObjectsOfType<MainController>();
+        tabController = FindObjectOfType<TabController>();
+        dataController = FindObjectOfType<dataController>();
+        selectController = FindObjectOfType<selectController>();
+
+
+
         if (obj.Length == 1)
-        {                
+        {
             stageNum = GameObject.Find("MainController").GetComponent<MainController>().stageNum;
         }
         // else
@@ -21,14 +34,17 @@ public class pageController : MonoBehaviour
         //     Debug.Log("Destroy");
         //     Destroy(gameObject);
         // }
-         btnContoller();
+        btnContoller();
 
-         Debug.Log("page - " + stageNum);
+        Debug.Log("page - " + stageNum);
+        dataController.select_type = stageNum;
+
+        // tabController.titleFunction(stageNum);
 
     }
     void Start()
     {
-  
+
         Debug.Log("page - " + stageNum);
     }
 
@@ -43,7 +59,7 @@ public class pageController : MonoBehaviour
     void titleName(int stageNum)
     {
         GameObject.Find("subtitle").GetComponent<TitleName>().stageController(stageNum);
-           Debug.Log("page stageNum - " + stageNum);
+        Debug.Log("page stageNum - " + stageNum);
     }
 
     void btnContoller()
@@ -52,31 +68,31 @@ public class pageController : MonoBehaviour
         TabControllers[0].onClick.AddListener(delegate
         {
             index = TabControllers[0].GetComponent<GetName>().stageNum;
-               Debug.Log("page stageNum - " + index);
-                 titleName(index);
+            Debug.Log("page stageNum - " + index);
+            titleName(index);
         });
 
         TabControllers[1].onClick.AddListener(delegate
         {
             index = TabControllers[1].GetComponent<GetName>().stageNum;
-             Debug.Log("page stageNum - " + index);
-                 titleName(index);
+            Debug.Log("page stageNum - " + index);
+            titleName(index);
         });
 
         TabControllers[2].onClick.AddListener(delegate
         {
             index = TabControllers[2].GetComponent<GetName>().stageNum;
-             Debug.Log("page stageNum - " + index);
-                 titleName(index);
+            Debug.Log("page stageNum - " + index);
+            titleName(index);
         });
 
         TabControllers[3].onClick.AddListener(delegate
         {
             index = TabControllers[3].GetComponent<GetName>().stageNum;
-             Debug.Log("page stageNum - " + index);
-                 titleName(index);
+            Debug.Log("page stageNum - " + index);
+            titleName(index);
         });
-      
+
     }
 
 

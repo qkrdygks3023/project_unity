@@ -9,12 +9,12 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class videoContorller : MonoBehaviour, IPointerClickHandler
+public class videoContorller1 : MonoBehaviour, IPointerClickHandler
 {
     // Start is called before the first frame update
     public VideoPlayer videoPlayer;
     public bool isPlaying = true;
-    public bool isSlider = true;
+    public bool isSlider01 = true;
 
     public GameObject pauseBtn;
     public GameObject playBtn;
@@ -23,31 +23,17 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
     public int totaltime;
     public float currentplay;
 
-    GameObject fullScreen;
-
     void Start()
     {
-        pauseBtnFadeIn();
         // isPlaying = true;
-        fullScreen = GameObject.Find("fullScreen");
-
-        if (fullScreen == null)
-        {
-            videoPause();
-        }
-        else
-        {
-            videoPlay();
-
-        }
-
+        videoPlay();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (isSlider)
+        if (isSlider01)
         {
             videoSlider();
         }
@@ -66,7 +52,6 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
     public void videoPause()
     {
         videoPlayer.Pause();
-        // StartCoroutine("pauseBtnFadeIn");
         pauseBtn.SetActive(false);
         playBtn.SetActive(true);
         isPlaying = false;
@@ -76,7 +61,7 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
 
     IEnumerator pauseBtnFadeIn()
     {
-        int i = 100;
+        int i = 10;
         while (i > 0)
         {
             Debug.Log("i : " + i);
@@ -89,11 +74,9 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
             pauseBtn.GetComponent<Image>().color = color;
 
 
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
-
-
 
 
 
@@ -132,6 +115,13 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         currentplay = (float)playtime / (float)totaltime;
         //slider의 value값을 현재 재생시간으로 변경한다.
         silderPlayBar.GetComponent<Slider>().value = currentplay;
+    }
+
+    public void movePlaytime(int timer)
+    {
+        videoPlayer.time = timer;
+        Debug.Log(" timer - " + timer);
+
     }
 
 

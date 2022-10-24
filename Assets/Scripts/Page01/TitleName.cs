@@ -13,18 +13,19 @@ public class TitleName : MonoBehaviour
     public List<string> stagetitle;
     public string subtitle;
 
-    void Awake() {
-         stagetitle = new List<string> { "기록영상", "전쟁영화", "다큐멘터리", "구술영상" };
+    void Awake()
+    {
+        stagetitle = new List<string> { "기록영상", "전쟁영화", "다큐멘터리", "구술영상" };
     }
 
     void Start()
     {
-       
+
 
 
         // stageNum =  GameObject.Find("pageController").GetComponent<pageController>().stageNum;
         stageNum = pageController.GetComponent<pageController>().stageNum;
- 
+
 
         stageController(stageNum);
     }
@@ -41,7 +42,12 @@ public class TitleName : MonoBehaviour
         Debug.Log(subtitle);
 
         textMeshPro.text = subtitle;
+
+
+
+
+
     }
 
-    
+
 }

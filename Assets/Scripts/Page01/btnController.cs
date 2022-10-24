@@ -25,17 +25,26 @@ public class btnController : MonoBehaviour
 
     public GameObject mainBtn_prefab;
     public GameObject subBtn_prefab;
+    public GameObject sizeBox_prefab;
+
     public List<string> mainbtnList = new List<string>();
 
     GameObject newMainBtn;
     GameObject newSubBtn;
+
+
+
     selectController selectController;
+    public GameObject[] sub_btnList;
 
     void Start()
     {
         DataController = FindObjectOfType<dataController>();
         PageController = FindObjectOfType<pageController>();
         selectController = FindObjectOfType<selectController>();
+
+        mainbtnList.Clear();
+        subMainList.Clear();
 
         mainbtnList.Add("연도별");
         mainbtnList.Add("소장처별");
@@ -48,6 +57,23 @@ public class btnController : MonoBehaviour
         Main = DataController.Main;
         subMainList = DataController.subMainList;
         openList = DataController.openList;
+
+        create_Btn();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void create_Btn()
+    {
+        Debug.Log(" create_Btn() ");
+
+        Debug.Log(subMainList.Count);
+        Debug.Log(subMainList[0].Count);
+        Debug.Log(subMainList[0][0]);
 
 
 
@@ -66,7 +92,16 @@ public class btnController : MonoBehaviour
                 newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
                 if (mainbtnList[i] == "연도별")
                 {
-                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                    if (k == 0)
+                    {
+                        newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                        newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+
+                    }
+                    else
+                    {
+                        newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                    }
                 }
                 else
                 {
@@ -78,27 +113,24 @@ public class btnController : MonoBehaviour
 
                 Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
             }
+            Instantiate(sizeBox_prefab, transform);
+
         }
-
         Debug.Log(" - btnContrler - ");
         Debug.Log(" - btnContrler - ");
-
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void select_mainBtn()
     {
         GameObject[] findSubBtn;
         GameObject[] findMainBtn;
+        GameObject[] sizeBoxs;
+
 
         findSubBtn = GameObject.FindGameObjectsWithTag("sub_btn");
         findMainBtn = GameObject.FindGameObjectsWithTag("main_btn");
+        sizeBoxs = GameObject.FindGameObjectsWithTag("sizebox");
+
         selectController.newBody.gameObject.SetActive(false);
 
 
@@ -109,6 +141,10 @@ public class btnController : MonoBehaviour
         for (int i = 0; i < findMainBtn.Length; i++)
         {
             Destroy(findMainBtn[i]);
+        }
+        for (int i = 0; i < sizeBoxs.Length; i++)
+        {
+            Destroy(sizeBoxs[i]);
         }
 
 
@@ -146,7 +182,9 @@ public class btnController : MonoBehaviour
                     Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
                 }
             }
-
+            Instantiate(sizeBox_prefab, transform);
         }
     }
+
+
 }

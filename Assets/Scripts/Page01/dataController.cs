@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using System.Linq;
 using System;
+using TMPro;
 
 public class dataController : MonoBehaviour
 {
@@ -44,8 +45,13 @@ public class dataController : MonoBehaviour
 
     public contentData selectGridData;
 
+
+    selectController selectController;
+
     void Awake()
     {
+        selectController = FindObjectOfType<selectController>();
+
         JsonSave();
         JsonLoad();
         // writeJson();
@@ -115,8 +121,21 @@ public class dataController : MonoBehaviour
 
         saveData.Data1.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex02.png"));
         saveData.Data1.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
-        saveData.Data1.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data1.Add(new Datajson("전쟁영화", 3000, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
 
+        saveData.Data2.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data2.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data2.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data2.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data2.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data2.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+
+
+        saveData.Data3.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data3.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data3.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data3.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
+        saveData.Data3.Add(new Datajson("전쟁영화", 1980, "전생의 침상을 겸헝하다", "국방홍보원(당시 국방홍보관리소)", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "www", "/images/ex02.png"));
 
 
         string json = JsonUtility.ToJson(saveData, true);
@@ -130,6 +149,10 @@ public class dataController : MonoBehaviour
         string JsonLoadData = SavePath + "/datalist2.json";
         string data = File.ReadAllText(JsonLoadData);
         saveData = JsonUtility.FromJson<SaveData>(data);
+        subMainList.Clear();
+        year_group.Clear();
+        year_group_total.Clear();
+        place_group.Clear();
 
 
         var SelectData = saveData.Data0;
@@ -141,7 +164,19 @@ public class dataController : MonoBehaviour
         else if (select_type == 1)
         {
             SelectData = saveData.Data1;
+            Debug.Log("데이터1");
         }
+        else if (select_type == 2)
+        {
+            SelectData = saveData.Data2;
+            Debug.Log("데이터2");
+        }
+        else if (select_type == 3)
+        {
+            SelectData = saveData.Data3;
+            Debug.Log("데이터3");
+        }
+
         dictYear = new Dictionary<string, int>();
         int yearcount;
         //목록 생성
@@ -172,17 +207,17 @@ public class dataController : MonoBehaviour
         year_group = year_group.OrderBy(n => n).ToList();
         place_group = place_group.OrderBy(n => n).ToList();
 
+        //버튼 
         subMainList.Add(year_group);
         subMainList.Add(place_group);
 
 
-        select_main = year_group[0];
+        select_main = SelectData[0].group_year + "년대";
 
         Debug.Log("select_main -- " + select_main);
         Debug.Log("select_main -- " + SelectData[0].group_year);
         Debug.Log("select_main -- " + SelectData[0].group_year + "년대");
         Debug.Log("select_main -- " + select_main == SelectData[0].group_year + "년대");
-
 
 
         //초반 데이터 셋팅
@@ -203,28 +238,30 @@ public class dataController : MonoBehaviour
                  SelectData[i].thumbnail));
             }
         }
-        var sorted = contentData.OrderBy(ob => ob.title).ToList();
+
+        List<contentData> sorted = contentData.OrderBy(ob => ob.title).ToList();
+
+        selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = select_main;
+
         contentData.Clear();
         foreach (var i in sorted)
         {
             contentData.Add(i);
-            Debug.Log("sorted -- " + i);
-        }
 
+        }
     }
 
 
 
 
 
-
-
-
-
+    //grid Data
     public void selectData(int type, int grouptype, string year_group)
     {
         Debug.Log("selectData");
-
+        //grouptype 0 : year, 1 : place
+        //year_group : 선택된 년도
+        //type : 0 : 전쟁영화, 1 : 전쟁다큐멘터리
 
         contentData.Clear();
         var SelectData = saveData.Data0;
@@ -240,9 +277,18 @@ public class dataController : MonoBehaviour
         {
             SelectData = saveData.Data2;
         }
+        if (type == 3)
+        {
+            SelectData = saveData.Data3;
+        }
 
         Debug.Log(year_group);
         Debug.Log(select_main);
+        Debug.Log(SelectData[0].group_year);
+        Debug.Log(SelectData[0].group_year + "년대" == year_group);
+
+        Debug.Log("SelectData.Count - " + SelectData.Count);
+
 
         //초반 데이터 셋팅
         for (int i = 0; i < SelectData.Count; i++)
@@ -285,14 +331,18 @@ public class dataController : MonoBehaviour
             }
 
         }
+
+        Debug.Log("contentData.Count - " + contentData.Count);
+
         var sorted = contentData.OrderBy(ob => ob.title).ToList();
         contentData.Clear();
         foreach (var i in sorted)
         {
             contentData.Add(i);
-            Debug.Log("sorted -- " + i);
         }
     }
+
+
 
     public void selectGrid(int index)
     {
@@ -341,6 +391,8 @@ public class SaveData
     public List<Datajson> Data0 = new List<Datajson>();
     public List<Datajson> Data1 = new List<Datajson>();
     public List<Datajson> Data2 = new List<Datajson>();
+    public List<Datajson> Data3 = new List<Datajson>();
+
 
     public int gold;
     public int power;

@@ -26,7 +26,7 @@ public class btn_sub : MonoBehaviour
         gridController = FindObjectOfType<GridController>();
 
         pageSelect = pageController.stageNum;
-   }
+    }
 
     // Update is called once per frame
     void Update()
@@ -43,18 +43,20 @@ public class btn_sub : MonoBehaviour
         Debug.Log(yeartitle); //연도별
         Debug.Log(pageSelect); //0 1 2 3 4
         int grouptype;
-        if(yeartitle == "연도별"){
+        if (yeartitle == "연도별")
+        {
             grouptype = 0;
         }
-        else{
-            grouptype =1;
+        else
+        {
+            grouptype = 1;
         }
-        dataController.selectData(pageSelect, grouptype ,group_year);
+        dataController.selectData(pageSelect, grouptype, group_year);
         selectController.newBody.gameObject.SetActive(false);
         selectController.group_subbtn_title = group_year;
 
-        selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year;
-        selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = yeartitle;
+        selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = yeartitle;
+        selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year;
 
 
         if (selectController.select_year_subtitleObj != null)
@@ -83,7 +85,7 @@ public class btn_sub : MonoBehaviour
 
         foreach (var item in gridItem)
         {
-           Destroy(item);
+            Destroy(item);
         }
 
         gridController.sliverGrid();
