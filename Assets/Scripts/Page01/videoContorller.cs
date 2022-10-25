@@ -25,6 +25,9 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
 
     GameObject fullScreen;
 
+    public int i = 0;
+    int count = 0;
+
     void Start()
     {
         pauseBtnFadeIn();
@@ -51,6 +54,8 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         {
             videoSlider();
         }
+     
+      
 
     }
 
@@ -79,7 +84,7 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         int i = 100;
         while (i > 0)
         {
-            Debug.Log("i : " + i);
+            
             i -= 1;
             float f = i / 10.0f;
 
@@ -124,14 +129,20 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
 
     public void videoSlider()
     {
-        //videoplayer의 현재 재생시간을 가져온다.
-        playtime = (int)videoPlayer.time;
-        //videoplayer의 전체 재생시간을 가져온다.   
-        totaltime = (int)videoPlayer.length;
-        //videoplayer의 현재 재생시간을 전체 재생시간으로 나누어서 0~1사이의 값으로 만든다.     
-        currentplay = (float)playtime / (float)totaltime;
-        //slider의 value값을 현재 재생시간으로 변경한다.
-        silderPlayBar.GetComponent<Slider>().value = currentplay;
+        
+        
+            //videoplayer의 현재 재생시간을 가져온다.
+            playtime = (int)videoPlayer.time;
+            //videoplayer의 전체 재생시간을 가져온다.   
+            totaltime = (int)videoPlayer.length;
+            //videoplayer의 현재 재생시간을 전체 재생시간으로 나누어서 0~1사이의 값으로 만든다.     
+            currentplay = (float)playtime / (float)totaltime;
+            //slider의 value값을 현재 재생시간으로 변경한다.
+            silderPlayBar.GetComponent<Slider>().value = currentplay;
+      
+       
+        
+       
     }
 
 

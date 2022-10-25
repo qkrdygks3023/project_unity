@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class sliderController01 : MonoBehaviour
+public class sliderController01 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     // Start is called before the first frame update
 
@@ -25,20 +25,37 @@ public class sliderController01 : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            videoContorller.isSlider01 = false;
+            // videoContorller.isSlider01 = false;
         }
         else
         {
-            if (videoContorller.isPlaying)
+
+             if (videoContorller != null)
             {
-                videoContorller.isSlider01 = true;
+                if (videoContorller.isPlaying)
+                {
+                    videoContorller.isSlider01 = true;
+                }
             }
+            // if (videoContorller.isPlaying)
+            // {
+            //     videoContorller.isSlider01 = true;
+            // }
 
         }
+    }
 
 
+     public void OnPointerDown(PointerEventData eventData)
+    {
+        videoContorller.videoPause();
+        Debug.Log("OnPointerDown");
+    }
 
-
+     public void OnPointerUp(PointerEventData eventData)
+    {
+        videoContorller.videoPlay();
+        Debug.Log("OnPointerUp");
     }
 
 
@@ -47,13 +64,12 @@ public class sliderController01 : MonoBehaviour
     public void OnSliderValueChanged()
     {
         //slider의 value값을 videoController의 currentplay에 넣어준다.
-        videoContorller.isSlider01 = false;
+           if (videoContorller.isPlaying == false)
+        {
+             videoContorller.videoPlayer.time = this.GetComponent<Slider>().value * videoContorller.videoPlayer.length;
+            videoContorller.isSlider01 = false;
 
-        videoContorller.videoPlayer.time = this.GetComponent<Slider>().value * videoContorller.videoPlayer.length;
-
-        videoContorller.GetComponent<videoContorller1>().videoPlayer.Play();
-
-
+        }
     }
 
 

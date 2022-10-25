@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class sliderController : MonoBehaviour
+public class sliderController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     // Start is called before the first frame update
 
@@ -25,6 +25,7 @@ public class sliderController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+
         }
         else
         {
@@ -41,20 +42,36 @@ public class sliderController : MonoBehaviour
         }
 
 
-
-
     }
 
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        videoContorller.videoPause();
+        Debug.Log("OnPointerDown");
+    }
+
+     public void OnPointerUp(PointerEventData eventData)
+    {
+        videoContorller.videoPlay();
+        Debug.Log("OnPointerUp");
+    }
 
 
     //slider의 value값이 변경되었을때 호출되는 함수
     public void OnSliderValueChanged()
     {
         //slider의 value값을 videoController의 currentplay에 넣어준다.
-        videoContorller.videoPlayer.time = this.GetComponent<Slider>().value * videoContorller.videoPlayer.length;
-        videoContorller.isSlider = false;
+
+        if (videoContorller.isPlaying == false)
+        {
+            videoContorller.videoPlayer.time = this.GetComponent<Slider>().value * videoContorller.videoPlayer.length;
+            videoContorller.isSlider = false;
+        }
+
 
     }
+
 
 
 

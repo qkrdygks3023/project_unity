@@ -64,7 +64,7 @@ public class videoContorller1 : MonoBehaviour, IPointerClickHandler
         int i = 10;
         while (i > 0)
         {
-            Debug.Log("i : " + i);
+            // Debug.Log("i : " + i);
             i -= 1;
             float f = i / 10.0f;
 
