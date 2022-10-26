@@ -19,6 +19,8 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     Vector3 originScale;
     public int select_index;
 
+    public GameObject impactPanel;
+
     dataController DataController;
     selectController SelectController;
     rowItemContorller rowItemContorller;
@@ -40,13 +42,11 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("down");
+
         DataController.selectGrid(select_index);
-        SelectController.select();
-
-
+        StartCoroutine(sizedUp());
+       
         Debug.Log(SelectController.activity);
-
-
         //    selectTitle =  this.transform.Find("gridtitle").gameObject.GetComponent<TextMeshProUGUI>().text;
     }
 
@@ -74,6 +74,21 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
 
     }
 
+
+    //서서히 확대
+    IEnumerator sizedUp()
+    {
+        GameObject prefab = Instantiate(impactPanel, transform.position, Quaternion.identity);
+ 
+        for (int i = 0; i < 10; i++)
+        {
+            prefab.transform.localScale = new Vector3(1.0f + i * 0.1f, 1.0f + i * 0.1f, 1.0f + i * 0.1f);
+            yield return new WaitForSeconds(0.1f);
+        }
+        Destroy(prefab);
+         SelectController.select();
+        
+    }
 
 
 
