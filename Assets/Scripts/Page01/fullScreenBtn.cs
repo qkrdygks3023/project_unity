@@ -13,7 +13,7 @@ public class fullScreenBtn : MonoBehaviour
 
 
     videoContorller videoContorller;
-    videoContorller1 videoContorller01;
+    
 
 
 
@@ -25,11 +25,6 @@ public class fullScreenBtn : MonoBehaviour
     void Start()
     {
         videoContorller = FindObjectOfType<videoContorller>();
-        videoContorller01 = FindObjectOfType<videoContorller1>();
-
-
-
-
     }
 
     // Update is called once per frame
@@ -44,11 +39,8 @@ public class fullScreenBtn : MonoBehaviour
 
         if (fullScreen.activeSelf)
         {
-            videoContorller01 = FindObjectOfType<videoContorller1>();
             videoContorller = FindObjectOfType<videoContorller>();
 
-            videoContorller01.GetComponent<videoContorller1>().videoPlayer.Pause();
-            videoContorller.GetComponent<videoContorller>().videoPlayer.time = (float)videoContorller01.GetComponent<videoContorller1>().playtime;
             videoContorller.GetComponent<videoContorller>().videoPlay();
             videoContorller.GetComponent<videoContorller>().videoSlider();
 
@@ -60,18 +52,8 @@ public class fullScreenBtn : MonoBehaviour
             //fullScreen 활성화
 
             fullScreen.SetActive(true);
-            videoContorller.GetComponent<videoContorller>().videoPause();
-
-            // videoContorller01.GetComponent<videoContorller1>().videoPlayer.time = (float)videoContorller.GetComponent<videoContorller>().playtime;
-
-            //fullScreen 비디오 재생
-            // videoContorller01.GetComponent<videoContorller1>().videoPlay();
-
             Debug.Log("play -- " + videoContorller.GetComponent<videoContorller>().playtime); // (int)videoContorller.GetComponent<videoContorller>().playtime;
 
-
-            //videoContorller01 400초 후 
-            videoContorller01 = FindObjectOfType<videoContorller1>();
             videoContorller = FindObjectOfType<videoContorller>();
 
 
@@ -83,11 +65,7 @@ public class fullScreenBtn : MonoBehaviour
 
 
 
-            videoContorller01.GetComponent<videoContorller1>().videoPlay();
-            videoContorller01.GetComponent<videoContorller1>().videoSlider();
-
-
-            videoContorller01.GetComponent<videoContorller1>().videoPlayer.time = (float)videoContorller.GetComponent<videoContorller>().playtime;
+           
 
 
 

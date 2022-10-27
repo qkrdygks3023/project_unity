@@ -44,7 +44,8 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
         Debug.Log("down");
 
         DataController.selectGrid(select_index);
-        StartCoroutine(sizedUp());
+          SelectController.select();
+        // StartCoroutine(sizedUp());
        
         Debug.Log(SelectController.activity);
         //    selectTitle =  this.transform.Find("gridtitle").gameObject.GetComponent<TextMeshProUGUI>().text;
