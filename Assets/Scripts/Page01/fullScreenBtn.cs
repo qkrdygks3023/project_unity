@@ -13,13 +13,15 @@ public class fullScreenBtn : MonoBehaviour
 
 
     videoContorller videoContorller;
-    
+
 
 
 
     int playtime;
     int totaltime;
     float currentplay;
+
+    public GameObject pauseFullBtn;
 
 
     void Start()
@@ -56,6 +58,11 @@ public class fullScreenBtn : MonoBehaviour
 
             videoContorller = FindObjectOfType<videoContorller>();
 
+            if (pauseFullBtn.activeSelf)
+            {
+                videoContorller.videoPlay();
+            }
+
 
             //await 1초 대기 
 
@@ -65,7 +72,7 @@ public class fullScreenBtn : MonoBehaviour
 
 
 
-           
+
 
 
 

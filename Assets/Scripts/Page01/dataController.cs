@@ -100,13 +100,13 @@ public class dataController : MonoBehaviour
 
         //0 기록영상, 1 전쟁영화
 
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "0전생의 침상을 겸헝하다", "국방홍보원", "2010년", new List<string> { "a", "b", "c" }, 6000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex01.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "2950년대 전생의 겸헝하다", "국방홍보원", "2020년", new List<string> { "a", "b", "c" }, 3600, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex01.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "950년대  겸헝하다", "국방홍보원", "1990년", new List<string> { "a", "b", "c" }, 60000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex02.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "150 겸헝하다", "국방홍보원", "1990년", new List<string> { "a", "b", "c" }, 60000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex04.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "195년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 6000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex05.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 8000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex06.jpeg"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "19", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 50000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex07.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "0전생의 침상을 겸헝하다", "국방홍보원", "2010년", new List<string> { "a", "b", "c" }, 6000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/video.mp4", "/images/ex01.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "2950년대 전생의 겸헝하다", "국방홍보원", "2020년", new List<string> { "a", "b", "c" }, 3600, "전쟁의 참상을 표현한다 다큐멘터리", "/movise/video.mp4", "/images/ex01.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "950년대  겸헝하다", "국방홍보원", "1990년", new List<string> { "a", "b", "c" }, 60000, "전쟁의 참상을 표현한다 다큐멘터리", "/movise/video.mp4", "/images/ex02.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "150 겸헝하다", "국방홍보원", "1990년", new List<string> { "a", "b", "c" }, 60000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/video.mp4", "/images/ex04.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "195년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 6000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/video.mp4", "/images/ex05.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 8000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/video.mp4", "/images/ex06.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "19", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 50000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/video.mp4", "/images/ex07.jpeg"));
         saveData.Data0.Add(new Datajson("기록영상", 1950, "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex08.png"));
 
         saveData.Data0.Add(new Datajson("기록영상", 1950, "1950년대 전생의 침상을 겸헝하다", "국방홍보원", "2000년", new List<string> { "a", "b", "c" }, 2000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/videoex.mp4", "/images/ex05.png"));

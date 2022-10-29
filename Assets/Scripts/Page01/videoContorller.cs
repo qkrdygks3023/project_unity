@@ -18,10 +18,19 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
 
     public GameObject pauseBtn;
     public GameObject playBtn;
+
+
+    // public GameObject pauseFullBtn;
+    // public GameObject playFullBtn;
+    // public GameObject Fullobj;
+
+
     public GameObject silderPlayBar;
+    // public GameObject silderFullPlayBar;
+
     public int playtime;
     public int totaltime;
-    public float currentplay;
+    public float currentplay = 0.001f;
 
     GameObject fullScreen;
 
@@ -54,8 +63,6 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         {
             videoSlider();
         }
-     
-      
 
     }
 
@@ -65,6 +72,15 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         pauseBtn.SetActive(true);
         StartCoroutine("pauseBtnFadeIn");
         playBtn.SetActive(false);
+
+        // if (Fullobj.activeSelf)
+        // {
+        //     playFullBtn.SetActive(false);
+        //     StartCoroutine("pauseFullBtnFadeIn");
+        //     pauseFullBtn.SetActive(true);
+        // }
+
+
         isPlaying = true;
     }
 
@@ -74,6 +90,14 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         // StartCoroutine("pauseBtnFadeIn");
         pauseBtn.SetActive(false);
         playBtn.SetActive(true);
+
+        // if (Fullobj.activeSelf)
+        // {
+        //     playFullBtn.SetActive(true);
+        //     pauseFullBtn.SetActive(false);
+        // }
+
+
         isPlaying = false;
 
     }
@@ -84,7 +108,7 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         int i = 100;
         while (i > 0)
         {
-            
+
             i -= 1;
             float f = i / 10.0f;
 
@@ -93,10 +117,42 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
             color.a = f;
             pauseBtn.GetComponent<Image>().color = color;
 
+            // if (pauseFullBtn.activeSelf)
+            // {
+            //     //pauseFullBtn color 변경
+            //     Color color2 = pauseFullBtn.GetComponent<Image>().color;
+            //     color2.a = f;
+            //     pauseFullBtn.GetComponent<Image>().color = color2;
+            // }
+
 
             yield return new WaitForSeconds(0.01f);
         }
     }
+
+
+    IEnumerator pauseFullBtnFadeIn()
+    {
+        int i = 100;
+        while (i > 0)
+        {
+
+            i -= 1;
+            float f = i / 10.0f;
+
+            // if (pauseFullBtn.activeSelf)
+            // {
+            //     //pauseFullBtn color 변경
+            //     Color color2 = pauseFullBtn.GetComponent<Image>().color;
+            //     color2.a = f;
+            //     pauseFullBtn.GetComponent<Image>().color = color2;
+            // }
+
+
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
 
 
 
@@ -129,20 +185,56 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
 
     public void videoSlider()
     {
-        
-        
-            //videoplayer의 현재 재생시간을 가져온다.
-            playtime = (int)videoPlayer.time;
-            //videoplayer의 전체 재생시간을 가져온다.   
-            totaltime = (int)videoPlayer.length;
-            //videoplayer의 현재 재생시간을 전체 재생시간으로 나누어서 0~1사이의 값으로 만든다.     
-            currentplay = (float)playtime / (float)totaltime;
-            //slider의 value값을 현재 재생시간으로 변경한다.
-            silderPlayBar.GetComponent<Slider>().value = currentplay;
-      
-       
-        
-       
+        if (videoPlayer != null)
+        {
+            if (videoPlayer.length == 0)
+            {
+                return;
+            }
+            else if (videoPlayer.time == 0)
+            {
+                return;
+            }
+            else
+            {
+                //slider의 value값을 videoController의 currentplay에 넣어준다.
+                currentplay = (float)videoPlayer.time / (float)videoPlayer.length;
+                silderPlayBar.GetComponent<Slider>().value = currentplay;
+            }
+
+            //silderFullPlayBar 비활성화 체크 
+            // if (silderFullPlayBar.activeSelf && silderFullPlayBar.GetComponent<Slider>() != null)
+            // {
+            //     silderFullPlayBar.GetComponent<Slider>().value = currentplay;
+            // }
+
+
+        }
+
+        //videoplayer의 현재 재생시간을 가져온다.            
+        playtime = (int)videoPlayer.time;
+
+        //videoplayer의 전체 재생시간을 가져온다.   
+        totaltime = (int)videoPlayer.length;
+
+        //videoplayer의 현재 재생시간을 전체 재생시간으로 나누어서 0~1사이의 값으로 만든다.     
+        currentplay = (float)playtime / (float)totaltime;
+
+        //소수점 3자리까지 표시
+        currentplay = (float)System.Math.Round(currentplay, 2);
+
+
+        // //slider의 value값을 currentplay값으로 변경
+        // silderPlayBar.GetComponent<Slider>().value = currentplay;
+
+
+
+
+
+
+
+
+
     }
 
 

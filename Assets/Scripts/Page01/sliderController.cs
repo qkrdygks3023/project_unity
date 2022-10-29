@@ -23,23 +23,14 @@ public class sliderController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
     void Update()
     {
 
-        if (Input.GetMouseButton(0))
+        if (videoContorller != null)
         {
-
-        }
-        else
-        {
-            if (videoContorller != null)
+            if (videoContorller.isPlaying)
             {
-                if (videoContorller.isPlaying)
-                {
-                    videoContorller.isSlider = true;
-                }
+                videoContorller.isSlider = true;
             }
-
-
-
         }
+
 
 
     }
@@ -51,7 +42,7 @@ public class sliderController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         Debug.Log("OnPointerDown");
     }
 
-     public void OnPointerUp(PointerEventData eventData)
+    public void OnPointerUp(PointerEventData eventData)
     {
         videoContorller.videoPlay();
         Debug.Log("OnPointerUp");
@@ -65,6 +56,8 @@ public class sliderController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
         if (videoContorller.isPlaying == false)
         {
+
+
             videoContorller.videoPlayer.time = this.GetComponent<Slider>().value * videoContorller.videoPlayer.length;
             videoContorller.isSlider = false;
         }

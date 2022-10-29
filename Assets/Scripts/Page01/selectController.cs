@@ -25,6 +25,9 @@ public class selectController : MonoBehaviour
     public GameObject select_year_subtitleObj;
     public GameObject Row_Items;
 
+    public GameObject video_Obj;
+
+
 
 
     public string group_subbtn_title;
@@ -63,7 +66,7 @@ public class selectController : MonoBehaviour
         timeObj.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(DataController.selectGridData.playtime).ToString();
         summaryObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.summary;
         Row_Items.GetComponent<rowItemContorller>().rowItem();
-
+        video_Obj.GetComponent<UnityEngine.Video.VideoPlayer>().url = "file://" + Application.streamingAssetsPath + DataController.selectGridData.url;
 
 
         Debug.Log("select");
