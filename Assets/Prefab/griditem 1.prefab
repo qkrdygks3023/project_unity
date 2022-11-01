@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ishover: 0
   select_index: 0
-  impactPanel: {fileID: 1529791358151178126, guid: f1ae915bf2a31499d864c1c1ebb524bb, type: 3}
+  impactPanel: {fileID: 690552570235966892, guid: f1ae915bf2a31499d864c1c1ebb524bb, type: 3}
 --- !u!1 &7167884301147407383
 GameObject:
   m_ObjectHideFlags: 0

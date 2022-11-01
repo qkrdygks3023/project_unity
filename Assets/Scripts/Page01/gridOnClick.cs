@@ -43,10 +43,9 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     {
         Debug.Log("down");
 
-        DataController.selectGrid(select_index);
-          SelectController.select();
-        // StartCoroutine(sizedUp());
-       
+        DataController.selectGrid(select_index);   
+        StartCoroutine(sizedUp());
+
         Debug.Log(SelectController.activity);
         //    selectTitle =  this.transform.Find("gridtitle").gameObject.GetComponent<TextMeshProUGUI>().text;
     }
@@ -79,16 +78,39 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     //서서히 확대
     IEnumerator sizedUp()
     {
-        GameObject prefab = Instantiate(impactPanel, transform.position, Quaternion.identity);
- 
+        //canvas안에 prefab 생성    
+        GameObject newObj = (GameObject)Instantiate(impactPanel, transform);
+        newObj.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        Debug.Log("sizeup");
+        width = newObj.GetComponent<RectTransform>();
+        height = newObj.GetComponent<RectTransform>();
+
+        //서서히 커짐        
+        for (int i = 0; i < 50; i++)
+        { 
+            //newObj width 2890 까지 증가
+            if (width.rect.width <= 2890)
+            {
+                width.sizeDelta = new Vector2(width.rect.width + 100, height.rect.height);
+                height.sizeDelta = new Vector2(width.rect.width, height.rect.height + 100);
+            }
+            yield return new WaitForSeconds(0.01f);
+        }
+
+          SelectController.select();
+
         for (int i = 0; i < 10; i++)
         {
-            prefab.transform.localScale = new Vector3(1.0f + i * 0.1f, 1.0f + i * 0.1f, 1.0f + i * 0.1f);
-            yield return new WaitForSeconds(0.1f);
+             newObj.GetComponent<Image>().color = new Color(1, 1, 1, newObj.GetComponent<Image>().color.a - 0.1f);
+            yield return new WaitForSeconds(0.01f);           
         }
-        Destroy(prefab);
-         SelectController.select();
-        
+
+      
+        Destroy(newObj);
+
+
+ 
+
     }
 
 

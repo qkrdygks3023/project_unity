@@ -19,6 +19,8 @@ public class GridController : MonoBehaviour
     public Sprite temp;
 
     private Image img;
+
+    public bool isload = false;
     void Start()
     {
         DataController = FindObjectOfType<dataController>();
@@ -63,25 +65,100 @@ public class GridController : MonoBehaviour
 
         GameObject newObj;
         Debug.Log("contentData.Count-- " + contentData.Count);
-
-
-
-        for (int i = 0; i < contentData.Count; i++)
+        if (isload == false)
         {
-            newObj = (GameObject)Instantiate(prefab, transform);
-            // newObj.GetComponentInChildren<Image>().color = Random.ColorHSV();
+            try
+            {
+                isload = true;
+                for (int i = 0; i < contentData.Count; i++)
+                {
+                    if (prefab == null)
+                    {
+                        break;
+                    }
+                    if (prefab != null)
+                    {
+                        newObj = (GameObject)Instantiate(prefab, transform);
+                        // newObj.GetComponentInChildren<Image>().color = Random.ColorHSV();
+                        //newObj 투명도 0
+                        newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
 
-            newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
-            newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
+                        newObj.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
+                        newObj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
+                        newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
 
-            newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
+                        if (newObj != null)
+                        {
+                            StartCoroutine(fadeIn(newObj));
+                        }
 
-            newObj.gameObject.GetComponent<gridOnClick>().select_index = i;
 
 
 
-            Debug.Log(" contentData -- " + contentData[i].thumbnail);
+
+                        newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
+                        newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
+                        newObj.gameObject.GetComponent<gridOnClick>().select_index = i;
+
+
+
+                        //1초 대기           
+                        Debug.Log(" contentData -- " + contentData[i].thumbnail);
+                    }
+
+
+                }
+                isload = false;
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
 
         }
+
+
+
     }
+
+    IEnumerator fadeIn(GameObject obj)
+    {
+        if (obj == null)
+        {
+            yield return null;
+        }
+
+        
+        if (obj != null)
+        {
+            //서서히 커짐        
+            for (int i = 0; i < 100; i++)
+            {
+                // obj null 체크 
+                if (obj == null)
+                {
+                    yield return null;
+                }
+
+                if (obj != null)
+                {
+                    //obj 투명도 0.02씩 
+                    obj.GetComponentInChildren<Image>().color = new Color(1, 1, 1, obj.GetComponentInChildren<Image>().color.a + 0.02f);
+                    obj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(1, 1, 1, obj.GetComponentInChildren<TextMeshProUGUI>().color.a + 0.02f);
+                    obj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, obj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color.a + 0.02f);
+                    yield return new WaitForSeconds(0.01f);
+
+                }             
+            
+
+                //obj pos y -20
+                // obj.GetComponent<RectTransform>().anchoredPosition = new Vector2(obj.GetComponent<RectTransform>().anchoredPosition.x, obj.GetComponent<RectTransform>().anchoredPosition.y - 0.20f);
+
+            }
+        }
+
+
+    }
+
 }

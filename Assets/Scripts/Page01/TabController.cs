@@ -32,6 +32,8 @@ public class TabController : MonoBehaviour
     public GameObject[] main_btnList;
 
     public GameObject[] sizeboxs;
+    public GameObject[] impactPanel;
+
 
 
 
@@ -128,6 +130,10 @@ public class TabController : MonoBehaviour
         sub_btnList = GameObject.FindGameObjectsWithTag("sub_btn");
         main_btnList = GameObject.FindGameObjectsWithTag("main_btn");
         sizeboxs = GameObject.FindGameObjectsWithTag("sizebox");
+        impactPanel = GameObject.FindGameObjectsWithTag("impactPanel");
+
+
+        
 
         foreach (var item in sizeboxs)
         {
@@ -140,6 +146,11 @@ public class TabController : MonoBehaviour
         }
 
         foreach (var item in main_btnList)
+        {
+            Destroy(item);
+        }
+
+         foreach (var item in impactPanel)
         {
             Destroy(item);
         }
