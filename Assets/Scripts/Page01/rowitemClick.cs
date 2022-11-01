@@ -8,6 +8,7 @@ public class rowitemClick : MonoBehaviour
     public int index;
     dataController dataController;
     selectController selectController;
+    public bool isLoad = false;
 
 
     void Start()
@@ -24,9 +25,8 @@ public class rowitemClick : MonoBehaviour
 
     public void itemClick()
     {
-        Debug.Log("itemClick");
-        Debug.Log("itemClick - " + index);
-        dataController.selectGrid(index);
-        selectController.select();
+        
+            dataController.selectGrid(index);
+            selectController.select(); 
     }
 }

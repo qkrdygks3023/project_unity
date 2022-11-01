@@ -100,7 +100,7 @@ public class dataController : MonoBehaviour
 
         //0 기록영상, 1 전쟁영화
 
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "0전생의 침상을 겸헝하다", "국방홍보원", "2010년", new List<string> { "a", "b", "c" }, 6000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/video.mp4", "/images/ex01.jpeg"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "0전생의 침상을 겸헝하다", "국방홍보원", "2010년", new List<string> { "a", "b", "c" }, 6000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/video01.mov", "/images/ex01.jpeg"));
         saveData.Data0.Add(new Datajson("기록영상", 1950, "2950년대 전생의 겸헝하다", "국방홍보원", "2020년", new List<string> { "a", "b", "c" }, 3600, "전쟁의 참상을 표현한다 다큐멘터리", "/movise/video.mp4", "/images/ex01.jpeg"));
         saveData.Data0.Add(new Datajson("기록영상", 1950, "950년대  겸헝하다", "국방홍보원", "1990년", new List<string> { "a", "b", "c" }, 60000, "전쟁의 참상을 표현한다 다큐멘터리", "/movise/video.mp4", "/images/ex02.png"));
         saveData.Data0.Add(new Datajson("기록영상", 1950, "150 겸헝하다", "국방홍보원", "1990년", new List<string> { "a", "b", "c" }, 60000, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/video.mp4", "/images/ex04.jpeg"));

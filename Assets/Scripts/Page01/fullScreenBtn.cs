@@ -22,6 +22,8 @@ public class fullScreenBtn : MonoBehaviour
     float currentplay;
 
     public GameObject pauseFullBtn;
+    public GameObject playBtn;
+
 
 
     void Start()
@@ -61,6 +63,8 @@ public class fullScreenBtn : MonoBehaviour
             if (pauseFullBtn.activeSelf)
             {
                 videoContorller.videoPlay();
+            }else{
+                 videoContorller.videoPlay();
             }
 
 
