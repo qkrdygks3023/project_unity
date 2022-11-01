@@ -7,7 +7,7 @@ public class TitleName : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public TextMeshProUGUI textMeshPro;
+    public Text textMeshPro;
     public GameObject pageController;
     public int stageNum;
     public List<string> stagetitle;
