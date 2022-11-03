@@ -35,21 +35,38 @@ public class selectController : MonoBehaviour
 
     rowItemContorller rowItemContorller;
 
-   public bool isLoad;
-   private bool isClicked = false;
+    public bool isLoad;
+    private bool isClicked = false;
 
-  
+    private float year_groupObj_y;
+    private float titleObj_y;
+    private float titleObj01_y;
+    private float PlaceObj_y;
+    private float yearObj_y;
+    private float keywordObj_y;
+    private float timeObj_y;
+    private float summaryObj_y;
+
 
     void Start()
     {
+        year_groupObj_y = year_groupObj.GetComponent<RectTransform>().anchoredPosition.y;
+        titleObj_y = titleObj.GetComponent<RectTransform>().anchoredPosition.y;
+        titleObj01_y = titleObj01.GetComponent<RectTransform>().anchoredPosition.y;
+        PlaceObj_y = PlaceObj.GetComponent<RectTransform>().anchoredPosition.y;
+        yearObj_y = yearObj.GetComponent<RectTransform>().anchoredPosition.y;
+        keywordObj_y = keywordObj.GetComponent<RectTransform>().anchoredPosition.y;
+        timeObj_y = timeObj.GetComponent<RectTransform>().anchoredPosition.y;
+        summaryObj_y = summaryObj.GetComponent<RectTransform>().anchoredPosition.y;
+
 
         DataController = FindObjectOfType<dataController>();
         rowItemContorller = FindObjectOfType<rowItemContorller>();
-       
+
 
 
         Debug.Log("activity");
-     
+
 
     }
 
@@ -78,16 +95,16 @@ public class selectController : MonoBehaviour
 
         //year_groupObj 투명하게 
         year_groupObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
-        titleObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f,  0);
-        titleObj01.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f,0);
+        titleObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
+        titleObj01.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
         PlaceObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
         yearObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
         keywordObj.GetComponent<TextMeshProUGUI>().color = new Color(33 / 255f, 56 / 255f, 90 / 255f, 0);
-        timeObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f,0);
+        timeObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
         summaryObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
 
         //검정색
-        
+
 
         if (isClicked == false)
         {
@@ -95,30 +112,30 @@ public class selectController : MonoBehaviour
 
             int posy = 20;
             //year_groupObj pos y 10증가
-            year_groupObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(year_groupObj.GetComponent<RectTransform>().anchoredPosition.x, year_groupObj.GetComponent<RectTransform>().anchoredPosition.y + posy);
-            titleObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(titleObj.GetComponent<RectTransform>().anchoredPosition.x, titleObj.GetComponent<RectTransform>().anchoredPosition.y + posy);
-            titleObj01.GetComponent<RectTransform>().anchoredPosition = new Vector2(titleObj01.GetComponent<RectTransform>().anchoredPosition.x, titleObj01.GetComponent<RectTransform>().anchoredPosition.y + posy);
-            PlaceObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(PlaceObj.GetComponent<RectTransform>().anchoredPosition.x, PlaceObj.GetComponent<RectTransform>().anchoredPosition.y + posy);
-            yearObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(yearObj.GetComponent<RectTransform>().anchoredPosition.x, yearObj.GetComponent<RectTransform>().anchoredPosition.y + posy);
-            keywordObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(keywordObj.GetComponent<RectTransform>().anchoredPosition.x, keywordObj.GetComponent<RectTransform>().anchoredPosition.y + posy);
-            timeObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(timeObj.GetComponent<RectTransform>().anchoredPosition.x, timeObj.GetComponent<RectTransform>().anchoredPosition.y + posy);
-            summaryObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(summaryObj.GetComponent<RectTransform>().anchoredPosition.x, summaryObj.GetComponent<RectTransform>().anchoredPosition.y + posy);
+            year_groupObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(year_groupObj.GetComponent<RectTransform>().anchoredPosition.x, year_groupObj_y + posy);
+            titleObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(titleObj.GetComponent<RectTransform>().anchoredPosition.x, titleObj_y + posy);
+            titleObj01.GetComponent<RectTransform>().anchoredPosition = new Vector2(titleObj01.GetComponent<RectTransform>().anchoredPosition.x, titleObj01_y + posy);
+            PlaceObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(PlaceObj.GetComponent<RectTransform>().anchoredPosition.x, PlaceObj_y + posy);
+            yearObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(yearObj.GetComponent<RectTransform>().anchoredPosition.x, yearObj_y + posy);
+            keywordObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(keywordObj.GetComponent<RectTransform>().anchoredPosition.x, keywordObj_y + posy);
+            timeObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(timeObj.GetComponent<RectTransform>().anchoredPosition.x, timeObj_y + posy);
+            summaryObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(summaryObj.GetComponent<RectTransform>().anchoredPosition.x, summaryObj_y + posy);
 
 
             //year_groupObj 서서히 
-            StartCoroutine(fadeIn(year_groupObj));
-            StartCoroutine(fadeIn(titleObj));
-            StartCoroutine(fadeIn(titleObj01));
-            StartCoroutine(fadeIn(PlaceObj));
-            StartCoroutine(fadeIn(yearObj));
-            StartCoroutine(fadeIn(keywordObj));
-            StartCoroutine(fadeIn(timeObj));
-            StartCoroutine(fadeIn(summaryObj));
+            StartCoroutine(fadeIn(year_groupObj, year_groupObj_y));
+            StartCoroutine(fadeIn(titleObj, titleObj_y));
+            StartCoroutine(fadeIn(titleObj01, titleObj01_y));
+            StartCoroutine(fadeIn(PlaceObj, PlaceObj_y));
+            StartCoroutine(fadeIn(yearObj, yearObj_y));
+            StartCoroutine(fadeIn(keywordObj, keywordObj_y));
+            StartCoroutine(fadeIn(timeObj, timeObj_y));
+            StartCoroutine(fadeIn(summaryObj, summaryObj_y));
 
             isClicked = false;
         }
 
-    
+
 
 
         Debug.Log("select");
@@ -126,7 +143,7 @@ public class selectController : MonoBehaviour
         // Debug.Log( DataController.selectGridData.title);
     }
 
-    IEnumerator fadeIn(GameObject obj)
+    IEnumerator fadeIn(GameObject obj, float y)
     {
 
         //서서히 커짐        
@@ -135,7 +152,7 @@ public class selectController : MonoBehaviour
             //obj 투명도 0.02씩 
             obj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, obj.GetComponent<TextMeshProUGUI>().color.a + 0.02f);
             //obj pos y -20
-            obj.GetComponent<RectTransform>().anchoredPosition = new Vector2(obj.GetComponent<RectTransform>().anchoredPosition.x, obj.GetComponent<RectTransform>().anchoredPosition.y - 0.20f);
+            obj.GetComponent<RectTransform>().anchoredPosition = new Vector2(obj.GetComponent<RectTransform>().anchoredPosition.x, y);
 
             yield return new WaitForSeconds(0.01f);
         }
