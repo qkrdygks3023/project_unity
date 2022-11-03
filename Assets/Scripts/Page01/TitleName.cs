@@ -7,7 +7,7 @@ public class TitleName : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public Text textMeshPro;
+    public GameObject textMeshPro;
     public GameObject pageController;
     public int stageNum;
     public List<string> stagetitle;
@@ -41,7 +41,8 @@ public class TitleName : MonoBehaviour
         subtitle = stagetitle[stageNum];
         Debug.Log(subtitle);
 
-        textMeshPro.text = subtitle;
+        textMeshPro.GetComponent<TextMeshProUGUI>().text = subtitle;
+     
 
 
 

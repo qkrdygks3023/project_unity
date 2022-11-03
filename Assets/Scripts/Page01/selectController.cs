@@ -38,11 +38,15 @@ public class selectController : MonoBehaviour
    public bool isLoad;
    private bool isClicked = false;
 
+  
+
     void Start()
     {
 
         DataController = FindObjectOfType<dataController>();
         rowItemContorller = FindObjectOfType<rowItemContorller>();
+       
+
 
         Debug.Log("activity");
      
@@ -73,14 +77,17 @@ public class selectController : MonoBehaviour
 
 
         //year_groupObj 투명하게 
-        year_groupObj.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
-        titleObj.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
-        titleObj01.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
-        PlaceObj.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
-        yearObj.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
-        keywordObj.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
-        timeObj.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
-        summaryObj.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, 0);
+        year_groupObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
+        titleObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f,  0);
+        titleObj01.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f,0);
+        PlaceObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
+        yearObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
+        keywordObj.GetComponent<TextMeshProUGUI>().color = new Color(33 / 255f, 56 / 255f, 90 / 255f, 0);
+        timeObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f,0);
+        summaryObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
+
+        //검정색
+        
 
         if (isClicked == false)
         {
@@ -111,6 +118,8 @@ public class selectController : MonoBehaviour
             isClicked = false;
         }
 
+    
+
 
         Debug.Log("select");
 
@@ -124,7 +133,7 @@ public class selectController : MonoBehaviour
         for (int i = 0; i < 100; i++)
         {
             //obj 투명도 0.02씩 
-            obj.GetComponent<TextMeshProUGUI>().color = new Color(1, 1, 1, obj.GetComponent<TextMeshProUGUI>().color.a + 0.02f);
+            obj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, obj.GetComponent<TextMeshProUGUI>().color.a + 0.02f);
             //obj pos y -20
             obj.GetComponent<RectTransform>().anchoredPosition = new Vector2(obj.GetComponent<RectTransform>().anchoredPosition.x, obj.GetComponent<RectTransform>().anchoredPosition.y - 0.20f);
 

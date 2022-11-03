@@ -101,7 +101,7 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
 
         for (int i = 0; i < 10; i++)
         {
-             newObj.GetComponent<Image>().color = new Color(1, 1, 1, newObj.GetComponent<Image>().color.a - 0.1f);
+             newObj.GetComponent<Image>().color = new Color(3, 56, 90, newObj.GetComponent<Image>().color.a - 0.1f);
             yield return new WaitForSeconds(0.01f);           
         }
 

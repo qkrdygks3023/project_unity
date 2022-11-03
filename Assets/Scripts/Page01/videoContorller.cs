@@ -19,6 +19,8 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
     public GameObject pauseBtn;
     public GameObject playBtn;
 
+    public int videoPlayerlength;
+
 
     // public GameObject pauseFullBtn;
     // public GameObject playFullBtn;
@@ -39,6 +41,7 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
 
     void Start()
     {
+        videoPlay();
         pauseBtnFadeIn();
         // isPlaying = true;
         fullScreen = GameObject.Find("fullScreen");
@@ -221,7 +224,7 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         currentplay = (float)playtime / (float)totaltime;
 
         //소수점 3자리까지 표시
-        currentplay = (float)System.Math.Round(currentplay, 2);
+        // currentplay = (float)System.Math.Round(currentplay, 5);
 
 
         // //slider의 value값을 currentplay값으로 변경

@@ -56,15 +56,31 @@ public class fullScreenBtn : MonoBehaviour
             //fullScreen 활성화
 
             fullScreen.SetActive(true);
+            playBtn.SetActive(false);
             Debug.Log("play -- " + videoContorller.GetComponent<videoContorller>().playtime); // (int)videoContorller.GetComponent<videoContorller>().playtime;
 
             videoContorller = FindObjectOfType<videoContorller>();
 
+
+
             if (pauseFullBtn.activeSelf)
             {
                 videoContorller.videoPlay();
+
+                if(smallScreen.activeSelf)
+                {
+                       smallScreen.GetComponent<videoContorller>().videoPlay();
+                }
+
+                 
             }else{
                  videoContorller.videoPlay();
+
+                  if(smallScreen.activeSelf)
+                {
+                    smallScreen.GetComponent<videoContorller>().videoPlay();
+                }
+              
             }
 
 

@@ -11,11 +11,14 @@ public class sliderController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
 
     //videoController 연결
     videoContorller videoContorller;
+        dataController DataController;
 
     void Start()
     {
         //videoController 연결
         videoContorller = FindObjectOfType<videoContorller>();
+        DataController = FindObjectOfType<dataController>();
+
 
     }
 
@@ -58,7 +61,22 @@ public class sliderController : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         {
 
 
-            videoContorller.videoPlayer.time = this.GetComponent<Slider>().value * videoContorller.videoPlayer.length;
+          
+
+
+            if(videoContorller.totaltime == 0){
+               videoContorller.videoPlayer.time = this.GetComponent<Slider>().value *  DataController.selectGridData.playtime;
+            }else{
+                  videoContorller.videoPlayer.time = this.GetComponent<Slider>().value * videoContorller.totaltime;
+            }
+          
+
+            Debug.Log("videoPlayer - " + videoContorller.videoPlayer.length.ToString());  //645
+            Debug.Log("value - " + this.GetComponent<Slider>().value.ToString());   //0.18
+            Debug.Log("time - " +  videoContorller.videoPlayer.time.ToString());    //
+
+
+
             videoContorller.isSlider = false;
         }
 
