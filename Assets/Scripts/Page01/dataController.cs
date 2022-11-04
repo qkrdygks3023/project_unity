@@ -52,7 +52,7 @@ public class dataController : MonoBehaviour
     {
         selectController = FindObjectOfType<selectController>();
 
-        JsonSave();
+        // JsonSave();
         JsonLoad();
         // writeJson();
     }
