@@ -5,258 +5,182 @@
         {
             "type": "기록영상",
             "group_year": 1950,
-            "title": "0전생의 침상을 겸헝하다",
-            "place": "국방홍보원",
-            "year": "2010년",
+            "title": "흥남 철수, 한국 EVACUATION OF HUNGNAM, KOREA",
+            "place": "미국 NARA",
+            "year": "12/24/1950",
             "keyword": [
-                "a",
-                "b",
-                "c"
+                "미해군 매시 (구축함). 11/24/1944-9/18/1947",
+                "국방부. 미해군. 리포스 (병원선). 9/18/1947-5/1/1970",
+                "민간인 대피",
+                "폭발",
+                "전쟁 피해",
+                "수륙 양용 장갑차"
             ],
-            "playtime": 6000,
+            "playtime": 652,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/video01.mov",
-            "thumbnail": "/images/ex01.jpeg"
+            "url": "/movies/00/1_흥남 철수, 한국.mp4",
+            "thumbnail": "/images/00/ing.png"
+        },
+        {
+            "type": "기록영상",
+            "group_year": 0,
+            "title": "한국에 무스탕 MUSTANGA IN KOREA",
+            "place": "미국 NARA",
+            "year": "/",
+            "keyword": [
+                "항공 조종사",
+                "공장",
+                "비행기 격납고",
+                "군용기",
+                "대포",
+                "로켓 (대포)",
+                "무스탕 (전투기)",
+                "정비공 (인물)"
+            ],
+            "playtime": 517,
+            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
+            "url": "/movies/00/2_한국에 무스탕.mp4",
+            "thumbnail": "/images/00/ing.png"
         },
         {
             "type": "기록영상",
             "group_year": 1950,
-            "title": "2950년대 전생의 겸헝하다",
-            "place": "국방홍보원",
-            "year": "2020년",
+            "title": "심리전: 한국에서의 전투 무기 Psychological Warfare: A Combat Weapon in Korea",
+            "place": "미국 NARA",
+            "year": "ca. 1950",
             "keyword": [
-                "a",
-                "b",
-                "c"
+                "공중포격",
+                "대포",
+                "군용차",
+                "화재",
+                "선전 투하",
+                "일본",
+                "송신탑",
+                "인쇄 공장"
             ],
-            "playtime": 3600,
+            "playtime": 502,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movise/video.mp4",
-            "thumbnail": "/images/ex01.jpeg"
+            "url": "/movies/00/3_심리전- 한국에서의 전투 무기.mp4",
+            "thumbnail": "/images/00/ing.png"
         },
         {
             "type": "기록영상",
             "group_year": 1950,
-            "title": "950년대  겸헝하다",
-            "place": "국방홍보원",
-            "year": "1990년",
+            "title": "지뢰 제거선이 원산에서 운행, 항구, 북한MINESWEEPER IN ACTION IN WONSAN, HARBOR, NORTH KOREA",
+            "place": "미국 NARA",
+            "year": "10/10/1950",
             "keyword": [
-                "a",
-                "b",
-                "c"
+                "한국",
+                "국방부. 미해군. 목킹버드 (모터 지뢰 제거선). 9/18/1947-1/6/1956",
+                "항구",
+                "지뢰 (군용화약)",
+                "선박",
+                "해안선",
+                "선박 조송술"
             ],
-            "playtime": 60000,
+            "playtime": 337,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movise/video.mp4",
-            "thumbnail": "/images/ex02.png"
+            "url": "/movies/00/4_제뢰제거함 활동 원산, 한국, 북한 .mp4",
+            "thumbnail": "/images/00/ing.png"
         },
         {
             "type": "기록영상",
-            "group_year": 1950,
-            "title": "150 겸헝하다",
-            "place": "국방홍보원",
-            "year": "1990년",
+            "group_year": 1951,
+            "title": "평화 강화 회담 무산리, 한국 CEASE FIRE TALKS Munsan-ni, Korea",
+            "place": "미국 NARA",
+            "year": "8/1/1951",
             "keyword": [
-                "a",
-                "b",
-                "c"
+                "유엔",
+                "미해군. 미국 해군 밴드. 1925-9/1947",
+                "C. 터너 조이 (찰스 터너) 1895-1956",
+                "의회와 협약",
+                "헬리콥터",
+                "사찰",
+                "경비병"
             ],
-            "playtime": 60000,
+            "playtime": 174,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/video.mp4",
-            "thumbnail": "/images/ex04.jpeg"
+            "url": "/movies/00/5_평화 회담 무산리, 한국.mp4",
+            "thumbnail": "/images/00/ing.png"
         },
         {
             "type": "기록영상",
-            "group_year": 1950,
-            "title": "195년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원",
-            "year": "2000년",
+            "group_year": 1951,
+            "title": "평화 회담 개성, 한국 PEACE TALKS Kaesong, Korea",
+            "place": "미국 NARA",
+            "year": "7/10/1951",
             "keyword": [
-                "a",
-                "b",
-                "c"
+                "유엔",
+                "C. 터너 조이 (찰스 터너), 1895-1956",
+                "매슈 B. 리즈웨이 (매슈 벙커), 1895-1993",
+                "항공 조종사",
+                "인터뷰",
+                "해군 장교",
+                "육군 장교",
+                "군 헬리콥터"
             ],
-            "playtime": 6000,
+            "playtime": 215,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/video.mp4",
-            "thumbnail": "/images/ex05.png"
+            "url": "/movies/00/6_평화 회담 개성, 한국.mp4",
+            "thumbnail": "/images/00/ing.png"
         },
         {
             "type": "기록영상",
-            "group_year": 1950,
-            "title": "1950년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원",
-            "year": "2000년",
+            "group_year": 1951,
+            "title": "대한민국 해군사관학교 REPUBLIC OF KOREA NAVAL ACADEMY",
+            "place": "미국 NARA",
+            "year": "3/15/1951",
             "keyword": [
-                "a",
-                "b",
-                "c"
+                "한국",
+                "깃발",
+                "군사 교육"
             ],
-            "playtime": 8000,
+            "playtime": 663,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/video.mp4",
-            "thumbnail": "/images/ex06.jpeg"
+            "url": "/movies/00/7_대한민국 해군사관학교.mp4",
+            "thumbnail": "/images/00/ing.png"
         },
         {
             "type": "기록영상",
-            "group_year": 1950,
-            "title": "19",
-            "place": "국방홍보원",
-            "year": "2000년",
+            "group_year": 0,
+            "title": "부산에서의 활동, 한국 ACTIVITIES AT PUSAN, KOREA",
+            "place": "미국 NARA",
+            "year": "/",
             "keyword": [
-                "a",
-                "b",
-                "c"
+                "민간인 대피",
+                "한국인",
+                "포로",
+                "신병 모집과 협조",
+                "선박",
+                "사찰",
+                "지프차",
+                "경비병"
             ],
-            "playtime": 50000,
+            "playtime": 595,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/video.mp4",
-            "thumbnail": "/images/ex07.jpeg"
+            "url": "/movies/00/8_부산에서의 활동, 한국.mp4",
+            "thumbnail": "/images/00/ing.png"
         },
         {
             "type": "기록영상",
-            "group_year": 1950,
-            "title": "1950년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원",
-            "year": "2000년",
+            "group_year": 0,
+            "title": "유엔 서울 안으로 후퇴, 서울 UN RETREAT INTO SEOUL, KOREA",
+            "place": "미국 NARA",
+            "year": "/",
             "keyword": [
-                "a",
-                "b",
-                "c"
+                "군용트럭",
+                "나룻배",
+                "수여식",
+                "사진사",
+                "피난민",
+                "배식",
+                "취사",
+                "LP"
             ],
-            "playtime": 2000,
+            "playtime": 595,
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/videoex.mp4",
-            "thumbnail": "/images/ex08.png"
-        },
-        {
-            "type": "기록영상",
-            "group_year": 1950,
-            "title": "1950년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원",
-            "year": "2000년",
-            "keyword": [
-                "a",
-                "b",
-                "c"
-            ],
-            "playtime": 2000,
-            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/videoex.mp4",
-            "thumbnail": "/images/ex05.png"
-        },
-        {
-            "type": "기록영상",
-            "group_year": 1960,
-            "title": "1951년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원",
-            "year": "2000년",
-            "keyword": [
-                "a",
-                "b",
-                "c"
-            ],
-            "playtime": 2000,
-            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/videoex.mp4",
-            "thumbnail": "/images/ex05.png"
-        },
-        {
-            "type": "기록영상",
-            "group_year": 1960,
-            "title": "전생의 침상을 겸헝하다",
-            "place": "궁밥홍보원",
-            "year": "2000년",
-            "keyword": [
-                "a",
-                "b",
-                "c"
-            ],
-            "playtime": 2000,
-            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/videoex.mp4",
-            "thumbnail": "/images/ex05.png"
-        },
-        {
-            "type": "기록영상",
-            "group_year": 1960,
-            "title": "1951년대  겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
-            "year": "2000년",
-            "keyword": [
-                "a",
-                "b",
-                "c"
-            ],
-            "playtime": 2000,
-            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/videoex.mp4",
-            "thumbnail": "/images/ex05.png"
-        },
-        {
-            "type": "기록영상",
-            "group_year": 1960,
-            "title": "전생의 침상을 겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
-            "year": "2000년",
-            "keyword": [
-                "a",
-                "b",
-                "c"
-            ],
-            "playtime": 2000,
-            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/videoex.mp4",
-            "thumbnail": "/images/ex05.png"
-        },
-        {
-            "type": "기록영상",
-            "group_year": 1970,
-            "title": "1960년대 전생의 침상을 겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
-            "year": "2000년",
-            "keyword": [
-                "a",
-                "b",
-                "c"
-            ],
-            "playtime": 2000,
-            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/videoex.mp4",
-            "thumbnail": "/images/ex05.png"
-        },
-        {
-            "type": "기록영상",
-            "group_year": 1970,
-            "title": "전생의 침상을 겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
-            "year": "2000년",
-            "keyword": [
-                "a",
-                "b",
-                "c"
-            ],
-            "playtime": 2000,
-            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/videoex.mp4",
-            "thumbnail": "/images/ex05.png"
-        },
-        {
-            "type": "기록영상",
-            "group_year": 1980,
-            "title": "전생의 침상을 겸헝하다",
-            "place": "국방홍보원(당시 국방홍보관리소)",
-            "year": "2000년",
-            "keyword": [
-                "a",
-                "b",
-                "c"
-            ],
-            "playtime": 2000,
-            "summary": "전쟁의 참상을 표현한다 다큐멘터리",
-            "url": "/movies/videoex.mp4",
-            "thumbnail": "/images/ex05.png"
+            "url": "/movies/00/9_유엔 서울로 후퇴, 서울.mp4",
+            "thumbnail": "/images/00/ing.png"
         }
     ],
     "Data1": [
