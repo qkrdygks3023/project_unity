@@ -67,20 +67,25 @@ public class fullScreenBtn : MonoBehaviour
             {
                 videoContorller.videoPlay();
 
-                if(smallScreen.activeSelf)
+                if (smallScreen.activeSelf && smallScreen != null)
                 {
-                       smallScreen.GetComponent<videoContorller>().videoPlay();
+
+                    smallScreen.GetComponent<videoContorller>().videoPlay();
+
+
                 }
 
-                 
-            }else{
-                 videoContorller.videoPlay();
 
-                  if(smallScreen.activeSelf)
+            }
+            else
+            {
+                videoContorller.videoPlay();
+
+                if (smallScreen.activeSelf)
                 {
                     smallScreen.GetComponent<videoContorller>().videoPlay();
                 }
-              
+
             }
 
 

@@ -55,6 +55,14 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
             videoPlay();
 
         }
+        //videoPlayer 재생 중 확인
+
+
+
+        if (videoPlayer.isPlaying)
+        {
+            playBtn.SetActive(false);
+        }
 
     }
 
@@ -66,15 +74,39 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         {
             videoSlider();
         }
+        if (videoPlayer.isPlaying)
+        {
+            playBtn.SetActive(false);
+
+
+            if (isSlider && fullScreen == null)
+            {
+                videoSlider();
+            }
+
+
+
+
+
+
+        }
 
     }
 
     public void videoPlay()
     {
         videoPlayer.Play();
-        pauseBtn.SetActive(true);
+        if (pauseBtn != null && pauseBtn.activeSelf == false)
+        {
+            pauseBtn.SetActive(true);
+        }
+
         StartCoroutine("pauseBtnFadeIn");
-        playBtn.SetActive(false);
+        if (playBtn != null && playBtn.activeSelf == true)
+        {
+            playBtn.SetActive(false);
+        }
+
 
         // if (Fullobj.activeSelf)
         // {
@@ -211,17 +243,17 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
             //     silderFullPlayBar.GetComponent<Slider>().value = currentplay;
             // }
 
+            //videoplayer의 현재 재생시간을 가져온다.            
+            playtime = (int)videoPlayer.time;
+
+            //videoplayer의 전체 재생시간을 가져온다.   
+            totaltime = (int)videoPlayer.length;
+
+            //videoplayer의 현재 재생시간을 전체 재생시간으로 나누어서 0~1사이의 값으로 만든다.     
+            currentplay = (float)playtime / (float)totaltime;
+
 
         }
-
-        //videoplayer의 현재 재생시간을 가져온다.            
-        playtime = (int)videoPlayer.time;
-
-        //videoplayer의 전체 재생시간을 가져온다.   
-        totaltime = (int)videoPlayer.length;
-
-        //videoplayer의 현재 재생시간을 전체 재생시간으로 나누어서 0~1사이의 값으로 만든다.     
-        currentplay = (float)playtime / (float)totaltime;
 
         //소수점 3자리까지 표시
         // currentplay = (float)System.Math.Round(currentplay, 5);
