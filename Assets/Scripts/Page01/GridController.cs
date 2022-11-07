@@ -83,14 +83,14 @@ public class GridController : MonoBehaviour
                         //newObj 투명도 0
                         newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
 
-                        newObj.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
-                        newObj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
-                        newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
+                        // newObj.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
+                        // newObj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
+                        // newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
 
-                        if (newObj != null)
-                        {
-                            StartCoroutine(fadeIn(newObj));
-                        }
+                        // if (newObj != null)
+                        // {
+                        //     StartCoroutine(fadeIn(newObj));
+                        // }
 
 
 
@@ -133,7 +133,7 @@ public class GridController : MonoBehaviour
         if (obj != null)
         {
             //서서히 커짐        
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 10; i++)
             {
                 // obj null 체크 
                 if (obj == null)
@@ -144,10 +144,10 @@ public class GridController : MonoBehaviour
                 if (obj != null)
                 {
                     //obj 투명도 0.02씩 
-                    obj.GetComponentInChildren<Image>().color = new Color(1, 1, 1, obj.GetComponentInChildren<Image>().color.a + 0.02f);
-                    obj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0, 0, 0, obj.GetComponentInChildren<TextMeshProUGUI>().color.a + 0.02f);
-                    obj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, obj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color.a + 0.02f);
-                    yield return new WaitForSeconds(0.01f);
+                    obj.GetComponentInChildren<Image>().color = new Color(1, 1, 1, obj.GetComponentInChildren<Image>().color.a + 0.2f);
+                    obj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0, 0, 0, obj.GetComponentInChildren<TextMeshProUGUI>().color.a + 0.2f);
+                    obj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, obj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color.a + 0.2f);
+                    yield return new WaitForSeconds(0.1f);
 
                 }             
             

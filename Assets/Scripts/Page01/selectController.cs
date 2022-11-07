@@ -94,14 +94,14 @@ public class selectController : MonoBehaviour
 
 
         //year_groupObj 투명하게 
-        year_groupObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
-        titleObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
-        titleObj01.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
-        PlaceObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
-        yearObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
-        keywordObj.GetComponent<TextMeshProUGUI>().color = new Color(33 / 255f, 56 / 255f, 90 / 255f, 0);
-        timeObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
-        summaryObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 0);
+        year_groupObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 255f);
+        titleObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 255f);
+        titleObj01.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 255f);
+        PlaceObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 255f);
+        yearObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 255f);
+        keywordObj.GetComponent<TextMeshProUGUI>().color = new Color(33 / 255f, 56 / 255f, 90 / 255f, 255f);
+        timeObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 255f);
+        summaryObj.GetComponent<TextMeshProUGUI>().color = new Color(3 / 255f, 56 / 255f, 90 / 255f, 255f);
 
         //검정색
 
@@ -123,14 +123,14 @@ public class selectController : MonoBehaviour
 
 
             //year_groupObj 서서히 
-            StartCoroutine(fadeIn(year_groupObj, year_groupObj_y));
-            StartCoroutine(fadeIn(titleObj, titleObj_y));
-            StartCoroutine(fadeIn(titleObj01, titleObj01_y));
-            StartCoroutine(fadeIn(PlaceObj, PlaceObj_y));
-            StartCoroutine(fadeIn(yearObj, yearObj_y));
-            StartCoroutine(fadeIn(keywordObj, keywordObj_y));
-            StartCoroutine(fadeIn(timeObj, timeObj_y));
-            StartCoroutine(fadeIn(summaryObj, summaryObj_y));
+            // StartCoroutine(fadeIn(year_groupObj, year_groupObj_y));
+            //  StartCoroutine(fadeIn(titleObj, titleObj_y));
+            // StartCoroutine(fadeIn(titleObj01, titleObj01_y));
+            // StartCoroutine(fadeIn(PlaceObj, PlaceObj_y));
+            // StartCoroutine(fadeIn(yearObj, yearObj_y));
+            // StartCoroutine(fadeIn(keywordObj, keywordObj_y));
+            // StartCoroutine(fadeIn(timeObj, timeObj_y));
+            // StartCoroutine(fadeIn(summaryObj, summaryObj_y));
 
             isClicked = false;
         }
