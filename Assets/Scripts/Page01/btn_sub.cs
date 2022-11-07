@@ -46,69 +46,66 @@ public class btn_sub : MonoBehaviour
         Debug.Log(group_year); //1950년대
         Debug.Log(yeartitle); //연도별
         Debug.Log(pageSelect); //0 1 2 3 4
-        if (isLoad == false)
+
+        int grouptype;
+        if (yeartitle == "연도별")
         {
-            isLoad = true;
-            int grouptype;
-            if (yeartitle == "연도별")
-            {
-                grouptype = 0;
-            }
-            else
-            {
-                grouptype = 1;
-            }
-            dataController.selectData(pageSelect, grouptype, group_year);
-            selectController.newBody.gameObject.SetActive(false);
-            selectController.group_subbtn_title = group_year;
-
-            selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = yeartitle;
-            selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year;
-
-
-            if (selectController.select_year_subtitleObj != null)
-            {
-                selectController.select_year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(130 / 255f, 130 / 255f, 130 / 255f);
-
-            }
-            else
-            {
-                selectController.select_year_subtitleObj = this.gameObject;
-
-                sub_btnList = GameObject.FindGameObjectsWithTag("sub_btn");
-                foreach (GameObject sub_btnObject in sub_btnList)
-                {
-                    sub_btnObject.GetComponentInChildren<TextMeshProUGUI>().color = new Color(130 / 255f, 130 / 255f, 130 / 255f);
-                }
-            }
-
-            selectController.select_year_subtitleObj = this.gameObject;
-            selectController.select_year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
-
-
-            selectController.select_year = yeartitle;
-
-            gridItem = GameObject.FindGameObjectsWithTag("grid_item");
-            impactPanel = GameObject.FindGameObjectsWithTag("impactPanel");
-
-
-            foreach (var item in gridItem)
-            {
-
-                item.gameObject.SetActive(false);
-
-                Destroy(item);
-            }
-
-            foreach (var item in impactPanel)
-            {
-                Destroy(item);
-            }
-
-
-            gridController.sliverGrid();
-            isLoad = false;
+            grouptype = 0;
         }
+        else
+        {
+            grouptype = 1;
+        }
+        dataController.selectData(pageSelect, grouptype, group_year);
+        selectController.newBody.gameObject.SetActive(false);
+        selectController.group_subbtn_title = group_year;
+
+        selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = yeartitle;
+        selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year;
+
+
+        if (selectController.select_year_subtitleObj != null)
+        {
+            selectController.select_year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(130 / 255f, 130 / 255f, 130 / 255f);
+
+        }
+        else
+        {
+            selectController.select_year_subtitleObj = this.gameObject;
+
+            sub_btnList = GameObject.FindGameObjectsWithTag("sub_btn");
+            foreach (GameObject sub_btnObject in sub_btnList)
+            {
+                sub_btnObject.GetComponentInChildren<TextMeshProUGUI>().color = new Color(130 / 255f, 130 / 255f, 130 / 255f);
+            }
+        }
+
+        selectController.select_year_subtitleObj = this.gameObject;
+        selectController.select_year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+
+
+        selectController.select_year = yeartitle;
+
+        gridItem = GameObject.FindGameObjectsWithTag("grid_item");
+        impactPanel = GameObject.FindGameObjectsWithTag("impactPanel");
+
+
+        foreach (var item in gridItem)
+        {
+
+            item.gameObject.SetActive(false);
+
+            Destroy(item);
+        }
+
+        foreach (var item in impactPanel)
+        {
+            Destroy(item);
+        }
+
+
+        gridController.sliverGrid();
+
 
     }
 

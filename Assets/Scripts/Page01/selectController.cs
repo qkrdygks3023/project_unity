@@ -27,6 +27,9 @@ public class selectController : MonoBehaviour
 
     public GameObject video_Obj;
 
+    public GameObject gridObj;
+
+
 
 
 
@@ -106,34 +109,34 @@ public class selectController : MonoBehaviour
         //검정색
 
 
-        if (isClicked == false)
-        {
-            isClicked = true;
+        // if (isClicked == false)
+        // {
+        //     isClicked = true;
 
-            int posy = 20;
-            //year_groupObj pos y 10증가
-            year_groupObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(year_groupObj.GetComponent<RectTransform>().anchoredPosition.x, year_groupObj_y + posy);
-            titleObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(titleObj.GetComponent<RectTransform>().anchoredPosition.x, titleObj_y + posy);
-            titleObj01.GetComponent<RectTransform>().anchoredPosition = new Vector2(titleObj01.GetComponent<RectTransform>().anchoredPosition.x, titleObj01_y + posy);
-            PlaceObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(PlaceObj.GetComponent<RectTransform>().anchoredPosition.x, PlaceObj_y + posy);
-            yearObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(yearObj.GetComponent<RectTransform>().anchoredPosition.x, yearObj_y + posy);
-            keywordObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(keywordObj.GetComponent<RectTransform>().anchoredPosition.x, keywordObj_y + posy);
-            timeObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(timeObj.GetComponent<RectTransform>().anchoredPosition.x, timeObj_y + posy);
-            summaryObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(summaryObj.GetComponent<RectTransform>().anchoredPosition.x, summaryObj_y + posy);
+        //     int posy = 20;
+        //     //year_groupObj pos y 10증가
+        //     year_groupObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(year_groupObj.GetComponent<RectTransform>().anchoredPosition.x, year_groupObj_y + posy);
+        //     titleObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(titleObj.GetComponent<RectTransform>().anchoredPosition.x, titleObj_y + posy);
+        //     titleObj01.GetComponent<RectTransform>().anchoredPosition = new Vector2(titleObj01.GetComponent<RectTransform>().anchoredPosition.x, titleObj01_y + posy);
+        //     PlaceObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(PlaceObj.GetComponent<RectTransform>().anchoredPosition.x, PlaceObj_y + posy);
+        //     yearObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(yearObj.GetComponent<RectTransform>().anchoredPosition.x, yearObj_y + posy);
+        //     keywordObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(keywordObj.GetComponent<RectTransform>().anchoredPosition.x, keywordObj_y + posy);
+        //     timeObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(timeObj.GetComponent<RectTransform>().anchoredPosition.x, timeObj_y + posy);
+        //     summaryObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(summaryObj.GetComponent<RectTransform>().anchoredPosition.x, summaryObj_y + posy);
 
 
-            //year_groupObj 서서히 
-            // StartCoroutine(fadeIn(year_groupObj, year_groupObj_y));
-            //  StartCoroutine(fadeIn(titleObj, titleObj_y));
-            // StartCoroutine(fadeIn(titleObj01, titleObj01_y));
-            // StartCoroutine(fadeIn(PlaceObj, PlaceObj_y));
-            // StartCoroutine(fadeIn(yearObj, yearObj_y));
-            // StartCoroutine(fadeIn(keywordObj, keywordObj_y));
-            // StartCoroutine(fadeIn(timeObj, timeObj_y));
-            // StartCoroutine(fadeIn(summaryObj, summaryObj_y));
+        //     //year_groupObj 서서히 
+        //     // StartCoroutine(fadeIn(year_groupObj, year_groupObj_y));
+        //     //  StartCoroutine(fadeIn(titleObj, titleObj_y));
+        //     // StartCoroutine(fadeIn(titleObj01, titleObj01_y));
+        //     // StartCoroutine(fadeIn(PlaceObj, PlaceObj_y));
+        //     // StartCoroutine(fadeIn(yearObj, yearObj_y));
+        //     // StartCoroutine(fadeIn(keywordObj, keywordObj_y));
+        //     // StartCoroutine(fadeIn(timeObj, timeObj_y));
+        //     // StartCoroutine(fadeIn(summaryObj, summaryObj_y));
 
-            isClicked = false;
-        }
+        //     isClicked = false;
+        // }
 
 
 

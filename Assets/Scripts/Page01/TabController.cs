@@ -78,7 +78,7 @@ public class TabController : MonoBehaviour
         {
             title = TabControllers[3].GetComponent<GetName>().title;
             titleFunction(3);
-            call(title);
+
         });
 
 
@@ -99,20 +99,53 @@ public class TabController : MonoBehaviour
         Debug.Log(title);
     }
 
-    public void titleFunction(int index)
+    public void titleFunction(int index) //0
     {
+        //데이터 구조 
         pageController.stageNum = index;
         dataController.select_type = index;
         dataController.JsonLoad();
         griditemDestroy();
-        dataController.selectData(dataController.select_type, 0, dataController.select_main);
-        gridController.sliverGrid();
+        if (index == 3)
+        {
+            dataController.selectData(dataController.select_type, 1, dataController.select_main);
+        }
+        else
+        {
+            dataController.selectData(dataController.select_type, 0, dataController.select_main);
+        }
+        gridController.sliverGrid();  //그리드 생성
         BtnDestroy();
-        btnController.create_Btn();
+        btnController.create_Btn(index); //부버튼 
 
         selectController.newBody.gameObject.SetActive(false);
-        selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "연도별";
+
+
         selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = dataController.select_main;
+
+        if (index == 3)
+        {
+            selectController.year_subtitleObj.SetActive(false);
+
+            //selectController.gridObj pos x - 100
+
+            Vector2 gridpos = selectController.gridObj.GetComponent<RectTransform>().anchoredPosition;
+
+            selectController.gridObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(gridpos.x, 520);
+
+
+
+
+
+        }
+        else
+        {
+            selectController.year_subtitleObj.SetActive(true);
+
+            Vector2 gridpos = selectController.gridObj.GetComponent<RectTransform>().anchoredPosition;
+            selectController.gridObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(gridpos.x, 400);
+
+        }
     }
 
     void griditemDestroy()
@@ -133,7 +166,7 @@ public class TabController : MonoBehaviour
         impactPanel = GameObject.FindGameObjectsWithTag("impactPanel");
 
 
-        
+
 
         foreach (var item in sizeboxs)
         {
@@ -150,7 +183,7 @@ public class TabController : MonoBehaviour
             Destroy(item);
         }
 
-         foreach (var item in impactPanel)
+        foreach (var item in impactPanel)
         {
             Destroy(item);
         }

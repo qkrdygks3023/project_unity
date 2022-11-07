@@ -100,15 +100,15 @@ public class dataController : MonoBehaviour
 
         //0 기록영상, 1 전쟁영화
 
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "흥남 철수, 한국 EVACUATION OF HUNGNAM, KOREA", "미국 NARA", "12/24/1950", new List<string> { "미해군 매시 (구축함). 11/24/1944-9/18/1947", "국방부. 미해군. 리포스 (병원선). 9/18/1947-5/1/1970", "민간인 대피", "폭발", "전쟁 피해", "수륙 양용 장갑차" }, 652, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/00/1_흥남 철수, 한국.mp4", "/images/00/ing.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 0, "한국에 무스탕 MUSTANGA IN KOREA", "미국 NARA", "/", new List<string> { "항공 조종사", "공장", "비행기 격납고", "군용기", "대포", "로켓 (대포)", "무스탕 (전투기)", "정비공 (인물)" }, 517, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/00/2_한국에 무스탕.mp4", "/images/00/ing.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "심리전: 한국에서의 전투 무기 Psychological Warfare: A Combat Weapon in Korea", "미국 NARA", "ca. 1950", new List<string> { "공중포격", "대포", "군용차", "화재", "선전 투하", "일본", "송신탑", "인쇄 공장" }, 502, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/00/3_심리전- 한국에서의 전투 무기.mp4", "/images/00/ing.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 1950, "지뢰 제거선이 원산에서 운행, 항구, 북한MINESWEEPER IN ACTION IN WONSAN, HARBOR, NORTH KOREA", "미국 NARA", "10/10/1950", new List<string> { "한국", "국방부. 미해군. 목킹버드 (모터 지뢰 제거선). 9/18/1947-1/6/1956", "항구", "지뢰 (군용화약)", "선박", "해안선", "선박 조송술" }, 337, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/00/4_제뢰제거함 활동 원산, 한국, 북한 .mp4", "/images/00/ing.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 1951, "평화 강화 회담 무산리, 한국 CEASE FIRE TALKS Munsan-ni, Korea", "미국 NARA", "8/1/1951", new List<string> { "유엔", "미해군. 미국 해군 밴드. 1925-9/1947", "C. 터너 조이 (찰스 터너) 1895-1956", "의회와 협약", "헬리콥터", "사찰", "경비병" }, 174, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/00/5_평화 회담 무산리, 한국.mp4", "/images/00/ing.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 1951, "평화 회담 개성, 한국 PEACE TALKS Kaesong, Korea", "미국 NARA", "7/10/1951", new List<string> { "유엔", "C. 터너 조이 (찰스 터너), 1895-1956", "매슈 B. 리즈웨이 (매슈 벙커), 1895-1993", "항공 조종사", "인터뷰", "해군 장교", "육군 장교", "군 헬리콥터" }, 215, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/00/6_평화 회담 개성, 한국.mp4", "/images/00/ing.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 1951, "대한민국 해군사관학교 REPUBLIC OF KOREA NAVAL ACADEMY", "미국 NARA", "3/15/1951", new List<string> { "한국", "깃발", "군사 교육" }, 663, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/00/7_대한민국 해군사관학교.mp4", "/images/00/ing.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 0, "부산에서의 활동, 한국 ACTIVITIES AT PUSAN, KOREA", "미국 NARA", "/", new List<string> { "민간인 대피", "한국인", "포로", "신병 모집과 협조", "선박", "사찰", "지프차", "경비병" }, 595, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/00/8_부산에서의 활동, 한국.mp4", "/images/00/ing.png"));
-        saveData.Data0.Add(new Datajson("기록영상", 0, "유엔 서울 안으로 후퇴, 서울 UN RETREAT INTO SEOUL, KOREA", "미국 NARA", "/", new List<string> { "군용트럭", "나룻배", "수여식", "사진사", "피난민", "배식", "취사", "LP" }, 595, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/00/9_유엔 서울로 후퇴, 서울.mp4", "/images/00/ing.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "흥남 철수, 한국 EVACUATION OF HUNGNAM, KOREA", "미국 NARA", "12/24/1950", new List<string> { "미해군 매시 (구축함). 11/24/1944-9/18/1947", "국방부. 미해군. 리포스 (병원선). 9/18/1947-5/1/1970", "민간인 대피", "폭발", "전쟁 피해", "수륙 양용 장갑차" }, 652, "", "/movies/00/1_흥남 철수, 한국.mp4", "/images/00/ing.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 0, "한국에 무스탕 MUSTANGA IN KOREA", "미국 NARA", "/", new List<string> { "항공 조종사", "공장", "비행기 격납고", "군용기", "대포", "로켓 (대포)", "무스탕 (전투기)", "정비공 (인물)" }, 517, "", "/movies/00/2_한국에 무스탕.mp4", "/images/00/ing.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "심리전: 한국에서의 전투 무기 Psychological Warfare: A Combat Weapon in Korea", "미국 NARA", "ca. 1950", new List<string> { "공중포격", "대포", "군용차", "화재", "선전 투하", "일본", "송신탑", "인쇄 공장" }, 502, "", "/movies/00/3_심리전- 한국에서의 전투 무기.mp4", "/images/00/ing.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1950, "지뢰 제거선이 원산에서 운행, 항구, 북한MINESWEEPER IN ACTION IN WONSAN, HARBOR, NORTH KOREA", "미국 NARA", "10/10/1950", new List<string> { "한국", "국방부. 미해군. 목킹버드 (모터 지뢰 제거선). 9/18/1947-1/6/1956", "항구", "지뢰 (군용화약)", "선박", "해안선", "선박 조송술" }, 337, "", "/movies/00/4_제뢰제거함 활동 원산, 한국, 북한 .mp4", "/images/00/ing.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1951, "평화 강화 회담 무산리, 한국 CEASE FIRE TALKS Munsan-ni, Korea", "미국 NARA", "8/1/1951", new List<string> { "유엔", "미해군. 미국 해군 밴드. 1925-9/1947", "C. 터너 조이 (찰스 터너) 1895-1956", "의회와 협약", "헬리콥터", "사찰", "경비병" }, 174, "", "/movies/00/5_평화 회담 무산리, 한국.mp4", "/images/00/ing.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1951, "평화 회담 개성, 한국 PEACE TALKS Kaesong, Korea", "미국 NARA", "7/10/1951", new List<string> { "유엔", "C. 터너 조이 (찰스 터너), 1895-1956", "매슈 B. 리즈웨이 (매슈 벙커), 1895-1993", "항공 조종사", "인터뷰", "해군 장교", "육군 장교", "군 헬리콥터" }, 215, "", "/movies/00/6_평화 회담 개성, 한국.mp4", "/images/00/ing.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 1951, "대한민국 해군사관학교 REPUBLIC OF KOREA NAVAL ACADEMY", "미국 NARA", "3/15/1951", new List<string> { "한국", "깃발", "군사 교육" }, 663, "", "/movies/00/7_대한민국 해군사관학교.mp4", "/images/00/ing.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 0, "부산에서의 활동, 한국 ACTIVITIES AT PUSAN, KOREA", "미국 NARA", "/", new List<string> { "민간인 대피", "한국인", "포로", "신병 모집과 협조", "선박", "사찰", "지프차", "경비병" }, 595, "", "/movies/00/8_부산에서의 활동, 한국.mp4", "/images/00/ing.png"));
+        saveData.Data0.Add(new Datajson("기록영상", 0, "유엔 서울 안으로 후퇴, 서울 UN RETREAT INTO SEOUL, KOREA", "미국 NARA", "/", new List<string> { "군용트럭", "나룻배", "수여식", "사진사", "피난민", "배식", "취사", "LP" }, 595, "", "/movies/00/9_유엔 서울로 후퇴, 서울.mp4", "/images/00/ing.png"));
 
 
 
@@ -125,9 +125,9 @@ public class dataController : MonoBehaviour
 
 
         saveData.Data2.Add(new Datajson("다큐멘터리", 2002, "휴전선을 말한다 - 제1부 155마일의 진실", "국방홍보원", "2002년", new List<string> { "한국전쟁", "휴전선", "국군", "DMZ", "6.25전쟁", "국방홍보원" }, 3235, "2002년 국방홍보원에서 제작한 다큐멘터리 영상으로 남북 휴전선의 탄생과 변천과정, 휴전선을 바라보는 세계인의 평가에 관한 내용을 담고 있다.", "/movies/02/1.휴전선을 말한다 제1부 155마일의 진실-006.mp4", "/images/02/1. 휴전선을 말한다 - 제1부 155마일의 진실.jpg"));
-        saveData.Data2.Add(new Datajson("다큐멘터리", 2002, "휴전선을 말한다 - 제2부 휴전선의 두얼굴", "국방홍보원", "2002년", new List<string> { "한국전쟁", "휴전선", "국군", "DMZ", "6.25전쟁", "국방홍보원" }, 3288, "2002년 국방홍보원에서 제작한 다큐멘터리 영상으로 2000년 6월 남북화해를 기대했으나, 서해의 NLL선에서 남과 북의 젊은이들이 교전을 벌여 수십명의 사상자가 발생하였고 이를 통해 우리 비무장지대가 안고있는 딜레마를 보여주는 내용을 담고 있다.", "/movies/02/.mp4", "/images/02/2. 휴전선을 말한다 - 제2부 휴전선의 두얼굴.jpg"));
-        saveData.Data2.Add(new Datajson("다큐멘터리", 2002, "휴전선을 말한다 - 제3부 돌아가야할 땅", "국방홍보원", "2002년", new List<string> { "한국전쟁", "휴전선", "국군", "DMZ", "6.25전쟁", "국방홍보원", "경의선", "남북교류" }, 3262, "2002년 국방홍보원에서 제작한 다큐멘터리 영상으로 비무장지대 내 유적지와 이산가족, 경의선 공사현장에 관한 내용을 담고 있다.", "/movies/02/.mp4", "/images/02/3. 휴전선을 말한다 - 제3부 돌아가야할 땅.jpg"));
-        saveData.Data2.Add(new Datajson("다큐멘터리", 0000, "6·25동란", "한국정책방송원", "미상", new List<string> { "한국전쟁", "6.25전쟁", "국립영화제작소" }, 6780, "", "/movies/02/4.6.25동란-002.mp4", "/images/02/4. 6.25동란.jpg"));
+        saveData.Data2.Add(new Datajson("다큐멘터리", 2002, "휴전선을 말한다 - 제2부 휴전선의 두얼굴", "국방홍보원", "2002년", new List<string> { "한국전쟁", "휴전선", "국군", "DMZ", "6.25전쟁", "국방홍보원" }, 3288, "2002년 국방홍보원에서 제작한 다큐멘터리 영상으로 2000년 6월 남북화해를 기대했으나, 서해의 NLL선에서 남과 북의 젊은이들이 교전을 벌여 수십명의 사상자가 발생하였고 이를 통해 우리 비무장지대가 안고있는 딜레마를 보여주는 내용을 담고 있다.", "/movies/02/2.휴전선을 말한다 제2부 휴전선의 두얼굴.mp4", "/images/02/2. 휴전선을 말한다 - 제2부 휴전선의 두얼굴.jpg"));
+        saveData.Data2.Add(new Datajson("다큐멘터리", 2002, "휴전선을 말한다 - 제3부 돌아가야할 땅", "국방홍보원", "2002년", new List<string> { "한국전쟁", "휴전선", "국군", "DMZ", "6.25전쟁", "국방홍보원", "경의선", "남북교류" }, 3262, "2002년 국방홍보원에서 제작한 다큐멘터리 영상으로 비무장지대 내 유적지와 이산가족, 경의선 공사현장에 관한 내용을 담고 있다.", "/movies/02/3.휴전선을 말한다 제3부 돌아가야할 땅.mp4", "/images/02/3. 휴전선을 말한다 - 제3부 돌아가야할 땅.jpg"));
+        saveData.Data2.Add(new Datajson("다큐멘터리", 0000, "6·25동란", "한국정책방송원", "미상", new List<string> { "한국전쟁", "6.25전쟁", "국립영화제작소" }, 6780, "", "/movies/02/4.6.25동란.mp4", "/images/02/4. 6.25동란.jpg"));
         saveData.Data2.Add(new Datajson("다큐멘터리", 1987, "민족의 증언", "한국정책방송원", "1987년", new List<string> { "한국전쟁", "6.25전쟁", "국립영화제작소" }, 1357, "", "/movies/02/4.민족의증언.mp4", "/images/02/ing.png"));
         saveData.Data2.Add(new Datajson("다큐멘터리", 1972, "아! 6.25 (농촌판)", "한국정책방송원", "1972년", new List<string> { "한국전쟁", "6.25전쟁", "국립영화제작소" }, 1035, "", "/movies/02/1. 아! 6.25 (농촌판).mp4", "/images/02/ing.png"));
         saveData.Data2.Add(new Datajson("다큐멘터리", 1976, "잊지말자 6.25", "한국정책방송원", "1976년", new List<string> { "한국전쟁", "6.25전쟁", "국립영화제작소" }, 881, "", "/movies/02/6.잊지말자  6.25.mp4", "/images/02/ing.png"));
@@ -137,15 +137,15 @@ public class dataController : MonoBehaviour
 
 
 
-        saveData.Data3.Add(new Datajson("구술영상", 2020, "박경석 육군 준장 구술", "국방홍보원", "2020년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군사관학교", "육사", "시비" }, 654, "2020년 구술영상 아카이브 구축 사업 관련 본 촬영 최종본 영상이다. 박경석 예비역 육군 준장은 1950년 육군사관학교 생도 2기로 입학하였다. 입학 25일만에 6·25전쟁에 투입되어 포천전투에 참전하였고 부산까지 후퇴하여 17세에 최연소 육군 소위로 임관하였다. 현재 전쟁기념관에 있는 시비 <조국>과 <서시>의 작가이기도 하다. 6·25전쟁 투입 첫 날의 기억, 북방 1077고지 전투에서 인민군 포로가 됐던 경험과 전쟁기념관 설립과 관련된 일화 등을 구술하였다.", "/movies/03/1.박경석(2020).mov", "/images/03/ing.png"));
-        saveData.Data3.Add(new Datajson("구술영상", 2020, "최영섭 해군 대령 구술", "국방홍보원", "2020", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "백두산함", "대한해협해전", "장사상륙작전" }, 652, "2020년 구술영상 아카이브 구축 사업 관련 본 촬영 최종본 영상이다. 최영섭 예비역 해군 대령은 1947년 9월 해군사관학교 3기생으로 입교하였다. 임관 4개월 만인 1950년 6월 25일 우리나라 최초의 전투함 백두산함의 갑판사관으로 대한해협해전에 참전하였다. 전역 후에는 <6·25 바다의 전우들>을 집필하기도 하고 추모비 건립 운동 등 여러 활동을 하고 있다. 해군사관학교 입교, 대한해협해전의 시작과 과정, 그리고 전쟁의 아픔과 희생을 기억하는 것의 중요성 등을 구술하였다.", "/movies/03/2.최영섭(2020).mov", "/images/03/ing.png"));
-        saveData.Data3.Add(new Datajson("구술영상", 2020, "이배선 공군 대령 구술", "국방홍보원", "2020년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "공군사관학교", "공사", "조종사", "출격일지", "강릉기지" }, 760, "2020년 구술영상 아카이브 구축 사업 관련 본 촬영 최종본 영상이다. 이배선 예비역 공군 대령은 1949년 공군사관학교 1기생으로 입교하여 대한민국 공군사관학교가 배출한 최초의 조종사이다. 6·25전쟁 중 총 92회 출격을 하였고 6·25전쟁 항공작전의 출격기록들을 <출격일지>로 남겨두었다. 공군사관학교 입교, 6·25전쟁 중 강릉기지에서의 첫 출격, 그리고 임택순 전우 등 희생된 동료에 대한 기억 등을 구술하였다.", "/movies/03/3.이배선(2020).mov", "/images/03/ing.png"));
-        saveData.Data3.Add(new Datajson("구술영상", 2021, "류영봉 카투사 1기 구술", "국방홍보원", "2021년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "장진호", "전투", "흥남철수", "미8군", "인천상륙작전" }, 531, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/4.류영봉(2021).mov", "/images/03/ing.png"));
-        saveData.Data3.Add(new Datajson("구술영상", 2021, "박옥선 간호장교 2기 구술", "국방홍보원", "2021년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군", "군의학교" }, 503, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/5.박옥순(2021).mov", "/images/03/ing.png"));
-        saveData.Data3.Add(new Datajson("구술영상", 2021, "정기숙 여자학도병 구술", "국방홍보원", "2021년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "학도병" }, 534, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/6.정기숙(2021).mov", "/images/03/ing.png"));
-        saveData.Data3.Add(new Datajson("구술영상", 2021, "최선분 여자의용군 구술", "국방홍보원", "2021년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군", "부관학교", "주월한국군사령부", "베트남전쟁" }, 653, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/7.최선분(2021).mov", "/images/03/ing.png"));
-        saveData.Data3.Add(new Datajson("구술영상", 2022, "김화순 노무자 구술", "국방홍보원", "2022년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군", "화살머리고지전투", "미 7사단", "노무자", "한국노무단", "KP", "KSC", "CTC" }, 657, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/8.김화순(2022)-006.mov", "/images/03/ing.png"));
-        saveData.Data3.Add(new Datajson("구술영상", 2022, "안태진 육군 포병", "국방홍보원", "2022년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군", "수도기계화보병사단", "수도사단", "금성전투", "713전투", "351고지전투", "육근수" }, 521, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/9.안태진(2022)-002.mov", "/images/03/ing.png"));
+        saveData.Data3.Add(new Datajson("구술영상", 2020, "박경석 육군 준장 구술", "국군/경찰", "2020년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군사관학교", "육사", "시비" }, 654, "2020년 구술영상 아카이브 구축 사업 관련 본 촬영 최종본 영상이다. 박경석 예비역 육군 준장은 1950년 육군사관학교 생도 2기로 입학하였다. 입학 25일만에 6·25전쟁에 투입되어 포천전투에 참전하였고 부산까지 후퇴하여 17세에 최연소 육군 소위로 임관하였다. 현재 전쟁기념관에 있는 시비 <조국>과 <서시>의 작가이기도 하다. 6·25전쟁 투입 첫 날의 기억, 북방 1077고지 전투에서 인민군 포로가 됐던 경험과 전쟁기념관 설립과 관련된 일화 등을 구술하였다.", "/movies/03/1.박경석(2020).mp4", "/images/03/ing.png"));
+        saveData.Data3.Add(new Datajson("구술영상", 2020, "최영섭 해군 대령 구술", "국군/경찰", "2020", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "백두산함", "대한해협해전", "장사상륙작전" }, 652, "2020년 구술영상 아카이브 구축 사업 관련 본 촬영 최종본 영상이다. 최영섭 예비역 해군 대령은 1947년 9월 해군사관학교 3기생으로 입교하였다. 임관 4개월 만인 1950년 6월 25일 우리나라 최초의 전투함 백두산함의 갑판사관으로 대한해협해전에 참전하였다. 전역 후에는 <6·25 바다의 전우들>을 집필하기도 하고 추모비 건립 운동 등 여러 활동을 하고 있다. 해군사관학교 입교, 대한해협해전의 시작과 과정, 그리고 전쟁의 아픔과 희생을 기억하는 것의 중요성 등을 구술하였다.", "/movies/03/2.최영섭(2020).mp4", "/images/03/ing.png"));
+        saveData.Data3.Add(new Datajson("구술영상", 2020, "이배선 공군 대령 구술", "국군/경찰", "2020년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "공군사관학교", "공사", "조종사", "출격일지", "강릉기지" }, 760, "2020년 구술영상 아카이브 구축 사업 관련 본 촬영 최종본 영상이다. 이배선 예비역 공군 대령은 1949년 공군사관학교 1기생으로 입교하여 대한민국 공군사관학교가 배출한 최초의 조종사이다. 6·25전쟁 중 총 92회 출격을 하였고 6·25전쟁 항공작전의 출격기록들을 <출격일지>로 남겨두었다. 공군사관학교 입교, 6·25전쟁 중 강릉기지에서의 첫 출격, 그리고 임택순 전우 등 희생된 동료에 대한 기억 등을 구술하였다.", "/movies/03/3.이배선(2020).mp4", "/images/03/ing.png"));
+        saveData.Data3.Add(new Datajson("구술영상", 2021, "류영봉 카투사 1기 구술", "기타", "2021년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "장진호", "전투", "흥남철수", "미8군", "인천상륙작전" }, 531, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/4.류영봉(2021).mp4", "/images/03/ing.png"));
+        saveData.Data3.Add(new Datajson("구술영상", 2021, "박옥선 간호장교 2기 구술", "기타", "2021년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군", "군의학교" }, 503, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/5.박옥순(2021).mp4", "/images/03/ing.png"));
+        saveData.Data3.Add(new Datajson("구술영상", 2021, "정기숙 여자학도병 구술", "기타", "2021년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "학도병" }, 534, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/6.정기숙(2021).mp4", "/images/03/ing.png"));
+        saveData.Data3.Add(new Datajson("구술영상", 2021, "최선분 여자의용군 구술", "기타", "2021년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군", "부관학교", "주월한국군사령부", "베트남전쟁" }, 653, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/7.최선분(2021).mp4", "/images/03/ing.png"));
+        saveData.Data3.Add(new Datajson("구술영상", 2022, "김화순 노무자 구술", "기타", "2022년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군", "화살머리고지전투", "미 7사단", "노무자", "한국노무단", "KP", "KSC", "CTC" }, 657, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/8.김화순(2022).mp4", "/images/03/ing.png"));
+        saveData.Data3.Add(new Datajson("구술영상", 2022, "안태진 육군 포병", "국군/경찰", "2022년", new List<string> { "구술영상", "인터뷰", "구술채록", "구술사", "참전자", "참전용사", "6·25전쟁", "한국전쟁", "육군", "수도기계화보병사단", "수도사단", "금성전투", "713전투", "351고지전투", "육근수" }, 521, "전쟁의 참상을 표현한다 다큐멘터리", "/movies/03/9.안태진(2022).mp4", "/images/03/ing.png"));
 
 
 
@@ -223,36 +223,77 @@ public class dataController : MonoBehaviour
         subMainList.Add(place_group);
 
 
-        select_main = SelectData[0].group_year + "년대";
 
-        Debug.Log("select_main -- " + select_main);
-        Debug.Log("select_main -- " + SelectData[0].group_year);
-        Debug.Log("select_main -- " + SelectData[0].group_year + "년대");
-        Debug.Log("select_main -- " + select_main == SelectData[0].group_year + "년대");
+        // select_main = SelectData[0].group_year + "년대";
+
+        select_main = year_group[0];
+
+
 
 
         //초반 데이터 셋팅
-        for (int i = 0; i < SelectData.Count; i++)
+        if (select_type != 3)
         {
-            if (select_main == SelectData[i].group_year + "년대")
+            select_main = year_group[0];
+            for (int i = 0; i < SelectData.Count; i++)
             {
-                contentData.Add(new contentData(
-                SelectData[i].title,
-                SelectData[i].group_year,
-                 SelectData[i].title,
-                 SelectData[i].place,
-                 SelectData[i].year,
-                 SelectData[i].keyword,
-                 SelectData[i].playtime,
-                 SelectData[i].summary,
-                 SelectData[i].url,
-                 SelectData[i].thumbnail));
+                if (select_main == SelectData[i].group_year + "년대")
+                {
+                    contentData.Add(new contentData(
+                    SelectData[i].title,
+                    SelectData[i].group_year,
+                    SelectData[i].title,
+                    SelectData[i].place,
+                    SelectData[i].year,
+                    SelectData[i].keyword,
+                    SelectData[i].playtime,
+                    SelectData[i].summary,
+                    SelectData[i].url,
+                    SelectData[i].thumbnail));
+                }
+            }
+        }
+        else
+        {
+            select_main = place_group[0];
+            for (int i = 0; i < SelectData.Count; i++)
+            {
+                if (select_main == SelectData[i].place)
+                {
+                    contentData.Add(new contentData(
+                    SelectData[i].title,
+                    SelectData[i].group_year,
+                    SelectData[i].title,
+                    SelectData[i].place,
+                    SelectData[i].year,
+                    SelectData[i].keyword,
+                    SelectData[i].playtime,
+                    SelectData[i].summary,
+                    SelectData[i].url,
+                    SelectData[i].thumbnail));
+                }
             }
         }
 
+
         List<contentData> sorted = contentData.OrderBy(ob => ob.title).ToList();
 
-        selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = select_main;
+        //초반 년도 타이틀 
+
+        if (select_type == 3)
+        {
+            //군국
+            selectController.yeartitleObj.GetComponentInChildren<TextMeshProUGUI>().text = select_main;
+        }
+        else
+        {
+
+            //연도별 타이틀
+            selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = select_main;
+            //1950년대
+            selectController.yeartitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "연도별";
+
+        }
 
         contentData.Clear();
         foreach (var i in sorted)
@@ -270,9 +311,10 @@ public class dataController : MonoBehaviour
     public void selectData(int type, int grouptype, string year_group)
     {
         Debug.Log("selectData");
+        //type : 0 : 전쟁영화, 1 : 전쟁다큐멘터리, 2 : 전쟁드라마, 3 : 전쟁애니메이션
         //grouptype 0 : year, 1 : place
         //year_group : 선택된 년도
-        //type : 0 : 전쟁영화, 1 : 전쟁다큐멘터리
+
 
         contentData.Clear();
         var SelectData = saveData.Data0;

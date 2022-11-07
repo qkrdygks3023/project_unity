@@ -94,8 +94,6 @@ public class GridController : MonoBehaviour
 
 
 
-
-
                         newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
                         newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
                         newObj.gameObject.GetComponent<gridOnClick>().select_index = i;
@@ -129,7 +127,7 @@ public class GridController : MonoBehaviour
             yield return null;
         }
 
-        
+
         if (obj != null)
         {
             //서서히 커짐        
@@ -149,8 +147,8 @@ public class GridController : MonoBehaviour
                     obj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, obj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color.a + 0.2f);
                     yield return new WaitForSeconds(0.1f);
 
-                }             
-            
+                }
+
 
                 //obj pos y -20
                 // obj.GetComponent<RectTransform>().anchoredPosition = new Vector2(obj.GetComponent<RectTransform>().anchoredPosition.x, obj.GetComponent<RectTransform>().anchoredPosition.y - 0.20f);
