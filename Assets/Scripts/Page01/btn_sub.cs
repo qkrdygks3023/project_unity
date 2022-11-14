@@ -10,6 +10,8 @@ public class btn_sub : MonoBehaviour
     public string yeartitle;
     public string group_year;
 
+    public string str_group_year;
+
     selectController selectController;
     dataController dataController;
     pageController pageController;
@@ -60,8 +62,41 @@ public class btn_sub : MonoBehaviour
         selectController.newBody.gameObject.SetActive(false);
         selectController.group_subbtn_title = group_year;
 
+        // selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year;
+
+        //selectController 오브젝트 
+        //연대별 소장쳐벌
         selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = yeartitle;
-        selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year;
+        // 1950년 1950년대
+        if (pageSelect == 0)
+        {
+            if (grouptype == 0)
+            {
+                selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year + "년";
+
+            }
+            else
+            {
+                selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year;
+            }
+
+        }
+        else
+        {
+            if (grouptype == 0)
+            {
+                selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year + "년대";
+
+            }
+            else
+            {
+                selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year;
+            }
+        }
+
+
+
+
 
 
         if (selectController.select_year_subtitleObj != null)
@@ -86,6 +121,9 @@ public class btn_sub : MonoBehaviour
 
         selectController.select_year = yeartitle;
 
+
+
+        //grid 생성
         gridItem = GameObject.FindGameObjectsWithTag("grid_item");
         impactPanel = GameObject.FindGameObjectsWithTag("impactPanel");
 

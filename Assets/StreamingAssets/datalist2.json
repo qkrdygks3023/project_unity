@@ -23,7 +23,7 @@
         },
         {
             "type": "기록영상",
-            "group_year": 0,
+            "group_year": 1949,
             "title": "한국에 무스탕 MUSTANGA IN KOREA",
             "place": "미국 NARA",
             "year": "/",
@@ -142,7 +142,7 @@
         },
         {
             "type": "기록영상",
-            "group_year": 0,
+            "group_year": 1949,
             "title": "부산에서의 활동, 한국 ACTIVITIES AT PUSAN, KOREA",
             "place": "미국 NARA",
             "year": "/",
@@ -163,7 +163,7 @@
         },
         {
             "type": "기록영상",
-            "group_year": 0,
+            "group_year": 1949,
             "title": "유엔 서울 안으로 후퇴, 서울 UN RETREAT INTO SEOUL, KOREA",
             "place": "미국 NARA",
             "year": "/",
@@ -186,7 +186,7 @@
     "Data1": [
         {
             "type": "전쟁영화",
-            "group_year": 2004,
+            "group_year": 2000,
             "title": "육탄 11용사",
             "place": "국방홍보원",
             "year": "2004년",
@@ -202,7 +202,7 @@
         },
         {
             "type": "전쟁영화",
-            "group_year": 1951,
+            "group_year": 1950,
             "title": "정의의 진격 1부",
             "place": "한국영상자료원",
             "year": "1951년",
@@ -216,7 +216,7 @@
         },
         {
             "type": "전쟁영화",
-            "group_year": 1952,
+            "group_year": 1950,
             "title": "태양의 거리(무성영화)",
             "place": "한국영상자료원",
             "year": "1952년",
@@ -235,7 +235,7 @@
         },
         {
             "type": "전쟁영화",
-            "group_year": 1954,
+            "group_year": 1950,
             "title": "운명의 손",
             "place": "한국영상자료원",
             "year": "1954년",
@@ -249,7 +249,7 @@
         },
         {
             "type": "전쟁영화",
-            "group_year": 1955,
+            "group_year": 1950,
             "title": "미망인",
             "place": "한국영상자료원",
             "year": "1955년",
@@ -267,7 +267,7 @@
         },
         {
             "type": "전쟁영화",
-            "group_year": 1956,
+            "group_year": 1950,
             "title": "피아골",
             "place": "한국영상자료원",
             "year": "1956년",
@@ -281,7 +281,7 @@
         },
         {
             "type": "전쟁영화",
-            "group_year": 1956,
+            "group_year": 1950,
             "title": "격퇴(우리는 이렇게 싸웠다)",
             "place": "한국영상자료원",
             "year": "1956년",
@@ -298,7 +298,7 @@
         },
         {
             "type": "전쟁영화",
-            "group_year": 1958,
+            "group_year": 1950,
             "title": "지옥화",
             "place": "한국영상자료원",
             "year": "1958년",
@@ -313,7 +313,7 @@
         },
         {
             "type": "전쟁영화",
-            "group_year": 1958,
+            "group_year": 1950,
             "title": "동심초",
             "place": "한국영상자료원",
             "year": "1958년",
@@ -330,7 +330,7 @@
     "Data2": [
         {
             "type": "다큐멘터리",
-            "group_year": 2002,
+            "group_year": 2000,
             "title": "휴전선을 말한다 - 제1부 155마일의 진실",
             "place": "국방홍보원",
             "year": "2002년",
@@ -349,7 +349,7 @@
         },
         {
             "type": "다큐멘터리",
-            "group_year": 2002,
+            "group_year": 2000,
             "title": "휴전선을 말한다 - 제2부 휴전선의 두얼굴",
             "place": "국방홍보원",
             "year": "2002년",
@@ -368,7 +368,7 @@
         },
         {
             "type": "다큐멘터리",
-            "group_year": 2002,
+            "group_year": 2000,
             "title": "휴전선을 말한다 - 제3부 돌아가야할 땅",
             "place": "국방홍보원",
             "year": "2002년",
@@ -389,7 +389,7 @@
         },
         {
             "type": "다큐멘터리",
-            "group_year": 0,
+            "group_year": 1950,
             "title": "6·25동란",
             "place": "한국정책방송원",
             "year": "미상",
@@ -405,7 +405,7 @@
         },
         {
             "type": "다큐멘터리",
-            "group_year": 1987,
+            "group_year": 1980,
             "title": "민족의 증언",
             "place": "한국정책방송원",
             "year": "1987년",
@@ -421,7 +421,7 @@
         },
         {
             "type": "다큐멘터리",
-            "group_year": 1972,
+            "group_year": 1970,
             "title": "아! 6.25 (농촌판)",
             "place": "한국정책방송원",
             "year": "1972년",
@@ -437,7 +437,7 @@
         },
         {
             "type": "다큐멘터리",
-            "group_year": 1976,
+            "group_year": 1970,
             "title": "잊지말자 6.25",
             "place": "한국정책방송원",
             "year": "1976년",
@@ -453,7 +453,7 @@
         },
         {
             "type": "다큐멘터리",
-            "group_year": 1957,
+            "group_year": 1950,
             "title": "상기하자 6.25",
             "place": "한국정책방송원",
             "year": "1957년",
@@ -469,7 +469,7 @@
         },
         {
             "type": "다큐멘터리",
-            "group_year": 1995,
+            "group_year": 1990,
             "title": "시련과 영광",
             "place": "한국정책방송원",
             "year": "1995년",
@@ -490,7 +490,7 @@
             "type": "구술영상",
             "group_year": 2020,
             "title": "박경석 육군 준장 구술",
-            "place": "국군/경찰",
+            "place": "1. 국군/경찰",
             "year": "2020년",
             "keyword": [
                 "구술영상",
@@ -514,7 +514,7 @@
             "type": "구술영상",
             "group_year": 2020,
             "title": "최영섭 해군 대령 구술",
-            "place": "국군/경찰",
+            "place": "1. 국군/경찰",
             "year": "2020",
             "keyword": [
                 "구술영상",
@@ -538,7 +538,7 @@
             "type": "구술영상",
             "group_year": 2020,
             "title": "이배선 공군 대령 구술",
-            "place": "국군/경찰",
+            "place": "1. 국군/경찰",
             "year": "2020년",
             "keyword": [
                 "구술영상",
@@ -564,7 +564,7 @@
             "type": "구술영상",
             "group_year": 2021,
             "title": "류영봉 카투사 1기 구술",
-            "place": "기타",
+            "place": "4. 기타",
             "year": "2021년",
             "keyword": [
                 "구술영상",
@@ -590,7 +590,7 @@
             "type": "구술영상",
             "group_year": 2021,
             "title": "박옥선 간호장교 2기 구술",
-            "place": "기타",
+            "place": "4. 기타",
             "year": "2021년",
             "keyword": [
                 "구술영상",
@@ -613,7 +613,7 @@
             "type": "구술영상",
             "group_year": 2021,
             "title": "정기숙 여자학도병 구술",
-            "place": "기타",
+            "place": "4. 기타",
             "year": "2021년",
             "keyword": [
                 "구술영상",
@@ -635,7 +635,7 @@
             "type": "구술영상",
             "group_year": 2021,
             "title": "최선분 여자의용군 구술",
-            "place": "기타",
+            "place": "4. 기타",
             "year": "2021년",
             "keyword": [
                 "구술영상",
@@ -660,7 +660,7 @@
             "type": "구술영상",
             "group_year": 2022,
             "title": "김화순 노무자 구술",
-            "place": "기타",
+            "place": "4. 기타",
             "year": "2022년",
             "keyword": [
                 "구술영상",
@@ -689,7 +689,7 @@
             "type": "구술영상",
             "group_year": 2022,
             "title": "안태진 육군 포병",
-            "place": "국군/경찰",
+            "place": "1. 국군/경찰",
             "year": "2022년",
             "keyword": [
                 "구술영상",
@@ -712,9 +712,48 @@
             "summary": "전쟁의 참상을 표현한다 다큐멘터리",
             "url": "/movies/03/9.안태진(2022).mp4",
             "thumbnail": "/images/03/ing.png"
+        },
+        {
+            "type": "구술영상",
+            "group_year": 0,
+            "title": "준비중",
+            "place": "2. 유 엔 군",
+            "year": "0년",
+            "keyword": [],
+            "playtime": 0,
+            "summary": "준비중",
+            "url": "",
+            "thumbnail": "/images/03/ing.png"
+        },
+        {
+            "type": "구술영상",
+            "group_year": 0,
+            "title": "준비중",
+            "place": "3. 관 련 국",
+            "year": "0년",
+            "keyword": [],
+            "playtime": 0,
+            "summary": "준비중",
+            "url": "",
+            "thumbnail": "/images/03/ing.png"
+        }
+    ],
+    "urljson": [
+        {
+            "title": "국방홍보원",
+            "url": "www.naver.com"
+        },
+        {
+            "title": "라이브러리2",
+            "url": "www.google.com"
+        },
+        {
+            "title": "라이브러리3",
+            "url": "www.daum.net"
         }
     ],
     "gold": 5,
     "power": 10,
-    "title": ""
+    "title": "",
+    "url": ""
 }
