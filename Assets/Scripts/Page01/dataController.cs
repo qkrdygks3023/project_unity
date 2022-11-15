@@ -326,9 +326,19 @@ public class dataController : MonoBehaviour
         }
         else
         {
-
             //연도별 타이틀
-            selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = select_main;
+            if (select_type == 0)
+            {
+
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = select_main + "년";
+            }
+            else
+            {
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = select_main + "년대";
+
+            }
+
+
             //1950년대
             selectController.yeartitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "연도별";
 

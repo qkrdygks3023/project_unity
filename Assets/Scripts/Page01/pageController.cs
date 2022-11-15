@@ -39,6 +39,20 @@ public class pageController : MonoBehaviour
         Debug.Log("page - " + stageNum);
         dataController.select_type = stageNum;
 
+
+
+        if (stageNum == 3)
+        {
+            selectController.year_subtitleObj.SetActive(false);
+            Vector2 gridpos = selectController.gridObj.GetComponent<RectTransform>().anchoredPosition;
+            selectController.gridObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(gridpos.x, 520);
+        }
+        else
+        {
+            selectController.year_subtitleObj.SetActive(true);
+            Vector2 gridpos = selectController.gridObj.GetComponent<RectTransform>().anchoredPosition;
+            selectController.gridObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(gridpos.x, 400);
+        }
         // tabController.titleFunction(stageNum);
 
     }

@@ -121,7 +121,14 @@ public class TabController : MonoBehaviour
         selectController.newBody.gameObject.SetActive(false);
 
 
-        selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = dataController.select_main;
+        if (index == 0)
+        {
+            selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = dataController.select_main + "년";
+        }
+        else
+        {
+            selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = dataController.select_main + "년대";
+        }
 
         if (index == 3)
         {
@@ -132,11 +139,6 @@ public class TabController : MonoBehaviour
             Vector2 gridpos = selectController.gridObj.GetComponent<RectTransform>().anchoredPosition;
 
             selectController.gridObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(gridpos.x, 520);
-
-
-
-
-
         }
         else
         {
@@ -144,7 +146,6 @@ public class TabController : MonoBehaviour
 
             Vector2 gridpos = selectController.gridObj.GetComponent<RectTransform>().anchoredPosition;
             selectController.gridObj.GetComponent<RectTransform>().anchoredPosition = new Vector2(gridpos.x, 400);
-
         }
     }
 

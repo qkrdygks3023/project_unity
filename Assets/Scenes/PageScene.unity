@@ -2371,7 +2371,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "1950\uB144\uB300"
+  m_text: "1950\uB144"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b78cba24ee5024c26a93e41e2b34559a, type: 2}
   m_sharedMaterial: {fileID: 5649940165493292427, guid: b78cba24ee5024c26a93e41e2b34559a, type: 2}

@@ -41,8 +41,11 @@ public class TitleName : MonoBehaviour
         subtitle = stagetitle[stageNum];
         Debug.Log(subtitle);
 
+
+
+
         textMeshPro.GetComponent<TextMeshProUGUI>().text = subtitle;
-     
+
 
 
 
