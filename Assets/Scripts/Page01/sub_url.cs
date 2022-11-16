@@ -44,6 +44,28 @@ public class sub_url : MonoBehaviour
         index = url_titleList.FindIndex(a => a.Contains(title));
         url = urls[index];
 
-        Application.OpenURL(url);
+        string[] thisArray =  url.Split(':');
+        string thisUrl = thisArray[0];
+        Debug.Log(thisUrl);
+
+       
+
+        try{
+             if (thisUrl == "http" || thisUrl == "https")
+            {
+                Application.OpenURL(url);
+            }
+            else
+            {
+                Application.OpenURL("http://" + url);
+            }
+            // Application.OpenURL(url);
+        }
+         catch (System.Exception)
+            {
+                Debug.Log("url error");
+                throw;
+            }
+     
     }
 }

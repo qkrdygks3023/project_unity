@@ -34,6 +34,10 @@ public class selectController : MonoBehaviour
 
 
     public string group_subbtn_title;
+
+    public int subtbtn_white_i;
+    public int subtbtn_white_k;
+
     public string select_year;
 
     rowItemContorller rowItemContorller;

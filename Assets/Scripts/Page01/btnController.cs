@@ -44,6 +44,7 @@ public class btnController : MonoBehaviour
 
     selectController selectController;
     public GameObject[] sub_btnList;
+    int select_type;
 
     void Start()
     {
@@ -65,6 +66,7 @@ public class btnController : MonoBehaviour
         Main = DataController.Main;
         subMainList = DataController.subMainList;
         openList = DataController.openList;
+        select_type = DataController.select_type;
 
         create_Btn(stageNum);
     }
@@ -302,6 +304,8 @@ public class btnController : MonoBehaviour
 
         selectController.newBody.gameObject.SetActive(false);
 
+         select_type = DataController.select_type;
+
 
         for (int i = 0; i < findSubBtn.Length; i++)
         {
@@ -319,8 +323,24 @@ public class btnController : MonoBehaviour
 
         for (int i = 0; i < mainbtnList.Count; i++)
         {
-            newMainBtn = (GameObject)Instantiate(mainBtn_prefab, transform);
-            newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = mainbtnList[i];
+            if( select_type == 1){
+                  if(i == 0){
+                  newMainBtn = (GameObject)Instantiate(mainBtn_prefab, transform);
+
+                   newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = mainbtnList[i];
+
+                  }else{
+                    newMainBtn = (GameObject)Instantiate(mainBtn_prefab01, transform);
+                  }
+
+            }else{
+             newMainBtn = (GameObject)Instantiate(mainBtn_prefab, transform);
+              newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = mainbtnList[i];
+
+            }
+
+          
+
             if (openList[i])
             {
                 for (int k = 0; k < subMainList[i].Count; k++)
@@ -328,9 +348,37 @@ public class btnController : MonoBehaviour
 
                     newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
                     // newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+
                     if (mainbtnList[i] == "연도별")
                     {
-                        newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                        if (select_type == 0)
+                        {
+                            if (k == 0)
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "~" + subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            }
+                            else if (k == subMainList[i].Count - 1)
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년 ~" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            }
+                            else
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            }
+                        }
+                        else if (select_type == 1 || select_type == 2)
+                        {
+                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                        }
+                        else
+                        {
+                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                        }
                     }
                     else
                     {
