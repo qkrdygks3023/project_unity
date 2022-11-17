@@ -2235,7 +2235,6 @@ GameObject:
   m_Component:
   - component: {fileID: 249033895}
   - component: {fileID: 249033896}
-  - component: {fileID: 249033897}
   m_Layer: 0
   m_Name: pageController
   m_TagString: Untagged
@@ -2277,42 +2276,6 @@ MonoBehaviour:
   - {fileID: 2083916268}
   - {fileID: 355876930}
   index: 0
---- !u!114 &249033897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249033894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed8675e05d924488f8f90e937763f626, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  datalist: []
-  saveData:
-    testDataA: []
-    testDataB: 
-    Data0: []
-    Data1: []
-    Data2: []
-    Data3: []
-    urljson: []
-    gold: 0
-    power: 0
-    title: 
-    url: 
-  Main: []
-  select_type: 0
-  select_main: 
-  select_sub: 
-  MainList: 
-  openList: 
-  year_group: []
-  year_group_total: 
-  place_group: []
-  url_list: []
-  urls: []
 --- !u!1 &318340173
 GameObject:
   m_ObjectHideFlags: 0
@@ -6005,6 +5968,8 @@ MonoBehaviour:
   video_Obj: {fileID: 9892808}
   gridObj: {fileID: 1102907957}
   group_subbtn_title: 
+  subtbtn_white_i: 0
+  subtbtn_white_k: 0
   select_year: 
   isLoad: 0
 --- !u!4 &819640190
