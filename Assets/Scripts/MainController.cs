@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class MainController : MonoBehaviour
 {
 
-
     public static MainController control;
     public int stageNum;
     public GameObject StageManager;
+    public List<GameObject> grid_items = new List<GameObject>();
+
+    public GameObject prefab;
 
     TabController tabController;
 
@@ -29,11 +31,20 @@ public class MainController : MonoBehaviour
             Debug.Log("Destroy");
             Destroy(gameObject);
         }
+
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        //  GameObject newObj;
+        // for (int i = 0; i < 400; i++)
+        // {
+        //     newObj = (GameObject)Instantiate(prefab, transform);
+        //     newObj.SetActive(false);
+        //     grid_items.Add(newObj);
+        // }
     }
 
     // Update is called once per frame
@@ -41,13 +52,11 @@ public class MainController : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            SceneManager.LoadScene("PageScene");
-            Debug.Log("Down");
-
-
-        }
+        // if (Input.GetKeyDown(KeyCode.DownArrow))
+        // {
+        //     SceneManager.LoadScene("PageScene");
+        //     Debug.Log("Down");
+        // }
 
     }
 

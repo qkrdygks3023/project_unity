@@ -34,7 +34,7 @@ public class TabController : MonoBehaviour
     public GameObject[] sizeboxs;
     public GameObject[] impactPanel;
 
-     
+
 
     void Start()
     {
@@ -154,7 +154,9 @@ public class TabController : MonoBehaviour
 
         foreach (var item in gridItem)
         {
+
             Destroy(item);
+            // item.SetActive(false);
         }
     }
 

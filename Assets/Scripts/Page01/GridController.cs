@@ -12,7 +12,17 @@ public class GridController : MonoBehaviour
     // Start is called before the first frame update
     public int numberToCreate;
     dataController DataController;
+    MainController mainContoller;
     List<contentData> contentData = new List<contentData>();
+
+    List<GameObject> items = new List<GameObject>();
+
+    public GameObject contentObject;
+
+
+    // public GameObject mainContoller;
+
+
 
 
 
@@ -24,7 +34,14 @@ public class GridController : MonoBehaviour
     void Start()
     {
         DataController = FindObjectOfType<dataController>();
+        mainContoller = FindObjectOfType<MainController>();
+
+        items = GameObject.Find("MainController").GetComponent<MainController>().grid_items;
+
         contentData = DataController.contentData;
+
+
+
         sliverGrid();
     }
 
@@ -63,71 +80,91 @@ public class GridController : MonoBehaviour
     public void sliverGrid()
     {
 
+        StartCoroutine(GridGen());
+
+    }
+    IEnumerator GridGen()
+    {
+
         GameObject newObj;
         Debug.Log("contentData.Count-- " + contentData.Count);
         if (isload == false)
         {
-            try
+
+            // isload = true;
+            // foreach(var item in contentData)
+            // {
+            //     newObj = Instantiate(prefab, transform);
+            //     newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + item.thumbnail);
+            //     newObj.GetComponentInChildren<TextMeshProUGUI>().text = item.title;
+            //     newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(item.playtime);
+            //     newObj.gameObject.GetComponent<gridOnClick>().select_index = 0;
+            // }
+            for (int i = 0; i < contentData.Count; i++)
             {
-                // isload = true;
-                // foreach(var item in contentData)
-                // {
-                //     newObj = Instantiate(prefab, transform);
-                //     newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + item.thumbnail);
-                //     newObj.GetComponentInChildren<TextMeshProUGUI>().text = item.title;
-                //     newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(item.playtime);
-                //     newObj.gameObject.GetComponent<gridOnClick>().select_index = 0;
-                // }
-                for (int i = 0; i < contentData.Count; i++)
+                Debug.Log("contentData.Count-- " + contentData.Count);
+                Debug.Log("mainContoller.GetComponent<MainController>().grid_items-- " + mainContoller.grid_items.Count);
+
+
+                // items[i].transform.SetParent(this.transform);
+
+                // items[i].SetActive(true);
+                // items[i].GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
+                // items[i].GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
+                // items[i].transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
+                // items[i].gameObject.GetComponent<gridOnClick>().select_index = i;
+
+
+                if (prefab == null)
                 {
-                    if (prefab == null)
-                    {
-                        break;
-                    }
-                    if (prefab != null)
-                    {
-                        newObj = (GameObject)Instantiate(prefab, transform);
-                        // newObj.GetComponentInChildren<Image>().color = Random.ColorHSV();
-                        //newObj 투명도 0
-                        newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
+                    break;
+                }
+                if (prefab != null)
+                {
 
-                        // newObj.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
-                        // newObj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
-                        // newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
+                    // items[i].SetActive(true);
+                    // items[i].GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
+                    // items[i].GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
+                    // items[i].transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
+                    // items[i].gameObject.GetComponent<gridOnClick>().select_index = i;
 
-                        // if (newObj != null)
-                        // {
-                        //     StartCoroutine(fadeIn(newObj));
-                        // }
+                    // newObj.GetComponentInChildren<Image>().color = Random.ColorHSV();
+                    //newObj 투명도 0
+
+                    // newObj.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
+                    // newObj.GetComponentInChildren<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
+                    // newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 1);
+
+                    // if (newObj != null)
+                    // {
+                    //     StartCoroutine(fadeIn(newObj));
+                    // }
+
+                    newObj = (GameObject)Instantiate(prefab, transform);
+
+                    newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
+
+                    newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
+                    newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
+                    newObj.gameObject.GetComponent<gridOnClick>().select_index = i;
+                    yield return null;
 
 
-
-                        newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
-                        newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
-                        newObj.gameObject.GetComponent<gridOnClick>().select_index = i;
-
+                    //1초 대기           
+                    Debug.Log(" contentData -- " + contentData[i].thumbnail);
+                }
 
 
-                        //1초 대기           
-                        Debug.Log(" contentData -- " + contentData[i].thumbnail);
-                    }
-
-
-                 }
-                isload = false;
             }
-            catch (System.Exception)
-            {
+            isload = false;
 
-                throw;
-            }
+
 
         }
 
 
 
     }
-
     IEnumerator fadeIn(GameObject obj)
     {
         if (obj == null)

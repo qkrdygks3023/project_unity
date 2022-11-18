@@ -34,6 +34,11 @@ public class rowItemContorller : MonoBehaviour
 
     public void rowItem()
     {
+        StartCoroutine(rowGen());
+    }
+
+    IEnumerator rowGen()
+    {
         GameObject newObj;
 
         Debug.Log(" rowItem -- " + contentData.Count);
@@ -55,7 +60,7 @@ public class rowItemContorller : MonoBehaviour
             newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
             newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
             newObj.gameObject.GetComponent<rowitemClick>().index = i;
-
+            yield return null;
             Debug.Log("rowItem - " + contentData[i].thumbnail);
         }
     }

@@ -131,7 +131,7 @@ public class btn_sub : MonoBehaviour
         foreach (var item in gridItem)
         {
 
-            item.gameObject.SetActive(false);
+            // item.gameObject.SetActive(false);
 
             Destroy(item);
         }
