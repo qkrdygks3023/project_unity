@@ -56,8 +56,15 @@ public class rowItemContorller : MonoBehaviour
         for (int i = 0; i < contentData.Count; i++)
         {
             newObj = (GameObject)Instantiate(prefab, transform);
+            try
+            {
+                newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
 
-            newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
+            }
+            catch (System.Exception e)
+            {
+                newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + "/images/03/ing.png");
+            }
             newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
             newObj.gameObject.GetComponent<rowitemClick>().index = i;
             yield return null;

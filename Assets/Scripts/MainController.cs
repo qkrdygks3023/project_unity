@@ -10,9 +10,9 @@ public class MainController : MonoBehaviour
     public static MainController control;
     public int stageNum;
     public GameObject StageManager;
-    public List<GameObject> grid_items = new List<GameObject>();
+    // public List<GameObject> grid_items = new List<GameObject>();
 
-    public GameObject prefab;
+    // public GameObject prefab;
 
     TabController tabController;
 

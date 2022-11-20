@@ -12,7 +12,7 @@ public class GridController : MonoBehaviour
     // Start is called before the first frame update
     public int numberToCreate;
     dataController DataController;
-    MainController mainContoller;
+    // MainController mainContoller;
     List<contentData> contentData = new List<contentData>();
 
     List<GameObject> items = new List<GameObject>();
@@ -21,7 +21,7 @@ public class GridController : MonoBehaviour
 
 
     // public GameObject mainContoller;
-
+    selectController selectController;
 
 
 
@@ -34,9 +34,11 @@ public class GridController : MonoBehaviour
     void Start()
     {
         DataController = FindObjectOfType<dataController>();
-        mainContoller = FindObjectOfType<MainController>();
+        selectController = FindObjectOfType<selectController>();
 
-        items = GameObject.Find("MainController").GetComponent<MainController>().grid_items;
+        // mainContoller = FindObjectOfType<MainController>();
+
+        // items = GameObject.Find("MainController").GetComponent<MainController>().grid_items;
 
         contentData = DataController.contentData;
 
@@ -79,7 +81,11 @@ public class GridController : MonoBehaviour
 
     public void sliverGrid()
     {
+        if (contentData.Count > 40)
+        {
+            selectController.loadingObj.gameObject.SetActive(true);
 
+        }
         StartCoroutine(GridGen());
 
     }
@@ -88,6 +94,8 @@ public class GridController : MonoBehaviour
 
         GameObject newObj;
         Debug.Log("contentData.Count-- " + contentData.Count);
+        Debug.Log("contentData.Count-- " + (contentData.Count > 40).ToString());
+
         if (isload == false)
         {
 
@@ -100,10 +108,14 @@ public class GridController : MonoBehaviour
             //     newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(item.playtime);
             //     newObj.gameObject.GetComponent<gridOnClick>().select_index = 0;
             // }
+
+
+
+
             for (int i = 0; i < contentData.Count; i++)
             {
-                Debug.Log("contentData.Count-- " + contentData.Count);
-                Debug.Log("mainContoller.GetComponent<MainController>().grid_items-- " + mainContoller.grid_items.Count);
+                // Debug.Log("contentData.Count-- " + contentData.Count);
+                // Debug.Log("mainContoller.GetComponent<MainController>().grid_items-- " + mainContoller.grid_items.Count);
 
 
                 // items[i].transform.SetParent(this.transform);
@@ -121,6 +133,7 @@ public class GridController : MonoBehaviour
                 }
                 if (prefab != null)
                 {
+
 
                     // items[i].SetActive(true);
                     // items[i].GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
@@ -140,9 +153,28 @@ public class GridController : MonoBehaviour
                     //     StartCoroutine(fadeIn(newObj));
                     // }
 
-                    newObj = (GameObject)Instantiate(prefab, transform);
+                    if (i > contentData.Count - 20)
+                    {
+                        if (selectController.loadingObj.activeSelf == true)
+                        {
+                            selectController.loadingObj.SetActive(false);
+                        }
+                    }
 
-                    newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
+
+
+
+                    newObj = (GameObject)Instantiate(prefab, transform);
+                    try
+                    {
+                        newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + contentData[i].thumbnail);
+
+                    }
+                    catch (System.Exception e)
+                    {
+                        newObj.GetComponentInChildren<Image>().sprite = GetSpritefromImage(Application.streamingAssetsPath + "/images/03/ing.png");
+                        Debug.Log(e);
+                    }
 
                     newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
                     newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
@@ -151,7 +183,7 @@ public class GridController : MonoBehaviour
 
 
                     //1초 대기           
-                    Debug.Log(" contentData -- " + contentData[i].thumbnail);
+                    // Debug.Log(" contentData -- " + contentData[i].thumbnail);
                 }
 
 

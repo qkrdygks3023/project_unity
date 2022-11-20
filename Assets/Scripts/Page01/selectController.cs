@@ -29,6 +29,8 @@ public class selectController : MonoBehaviour
 
     public GameObject gridObj;
 
+    public GameObject loadingObj;
+
 
 
 
@@ -84,20 +86,68 @@ public class selectController : MonoBehaviour
     }
 
     //grid select
-    public void select()
+    public void select(bool isfirst)
     {
 
+        DataController = FindObjectOfType<dataController>();
         newBody.gameObject.SetActive(true);
-        year_groupObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.group_year + "년대";
+        if (DataController.select_type == 0)
+        {
+
+            if (DataController.selectGridData.group_year == 0)
+            {
+                year_groupObj.GetComponent<TextMeshProUGUI>().text = "년도미상";
+
+            }
+            else
+            {
+                year_groupObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.group_year + "년대";
+
+            }
+        }
+        else
+        {
+
+            if (DataController.selectGridData.group_year == 0)
+            {
+                year_groupObj.GetComponent<TextMeshProUGUI>().text = "년대미상";
+
+            }
+            else
+            {
+                year_groupObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.year;
+
+            }
+        }
+
         titleObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.title;
         titleObj01.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.title;
-        PlaceObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.place;
+
+        if (DataController.select_type == 3)
+        {
+            string[] placeList = DataController.selectGridData.place.Split('.');
+            PlaceObj.GetComponent<TextMeshProUGUI>().text = placeList[1].ToString();
+        }
+        else
+        {
+            PlaceObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.place;
+        };
+
         yearObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.year;
         keywordObj.GetComponent<TextMeshProUGUI>().text = keywordString(DataController.selectGridData.keyword);
         timeObj.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(DataController.selectGridData.playtime).ToString();
         summaryObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.summary;
-        Row_Items.GetComponent<rowItemContorller>().rowItem();
         video_Obj.GetComponent<UnityEngine.Video.VideoPlayer>().url = "file://" + Application.streamingAssetsPath + DataController.selectGridData.url;
+
+        if (isfirst)
+        {
+            Row_Items.GetComponent<rowItemContorller>().rowItem();
+        }
+        else
+        {
+
+        }
+
 
 
         //year_groupObj 투명하게 

@@ -46,6 +46,8 @@ public class btnController : MonoBehaviour
     public GameObject[] sub_btnList;
     int select_type;
 
+    public bool unknown_year = false;
+
     void Start()
     {
         DataController = FindObjectOfType<dataController>();
@@ -85,6 +87,22 @@ public class btnController : MonoBehaviour
         Debug.Log(subMainList[0].Count);
         Debug.Log(subMainList[1].Count);
 
+        unknown_year = false;
+
+        stageNum = PageController.stageNum;
+
+        for (int i = 0; i < mainbtnList.Count; i++)
+        {
+            for (int k = 0; k < subMainList[i].Count; k++)
+            {
+                if (subMainList[i][k].ToString() == "0")
+                {
+                    unknown_year = true;
+                }
+            }
+        }
+
+
 
 
         for (int i = 0; i < mainbtnList.Count; i++)
@@ -100,7 +118,15 @@ public class btnController : MonoBehaviour
                 if (i == 0) //연도별
                 {
                     newMainBtn = (GameObject)Instantiate(mainBtn_prefab, transform);
-                    newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = mainbtnList[i];
+                    if (stageNum == 0)
+                    {
+                        newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = "연도별";
+                    }
+                    else
+                    {
+                        newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = "연대별";
+                    }
+
                 }
                 else
                 { //소장처별, 지역 미디어 라이브러리 
@@ -128,117 +154,261 @@ public class btnController : MonoBehaviour
 
             //기록영상
             if (index == 0)
-            {
-                //연도아래 버튼, 소장처별 아래 버튼 생성
-                for (int k = 0; k < subMainList[i].Count; k++)
+            {   //미상년도 체크
+                if (unknown_year)
                 {
-                    newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
-                    //연도 아래 
-                    if (mainbtnList[i] == "연도별")
+                    //연도아래 버튼, 소장처별 아래 버튼 생성
+                    for (int k = 0; k < subMainList[i].Count; k++)
                     {
-
-                        if (k == 0)
+                        newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
+                        //연도 아래 
+                        if (mainbtnList[i] == "연도별")
                         {
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "~" + subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+                            Debug.Log(subMainList[i][k].ToString() == "0");
+                            Debug.Log("subMainList -- " + subMainList[i][k].ToString());
 
-                        }
-                        else if (k == subMainList[i].Count - 1)
-                        {
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년 ~" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
 
+                            if (subMainList[i][k].ToString() == "0")
+                            {
+
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "년도미상" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+
+
+                            }
+                            else if (k == 1)
+                            {
+
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "~" + subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            }
+                            else if (k == subMainList[i].Count - 1)
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년 ~" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            }
+                            else
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            }
                         }
+                        //소장처 아래 
                         else
                         {
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
                         }
-                    }
-                    //소장처 아래 
-                    else
-                    {
-                        newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
-                    }
 
-                    newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
-                    newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
+                        newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
+                        newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
 
-                    Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
+                        Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
+                    }
+                    Instantiate(sizeBox_prefab, transform);
                 }
-                Instantiate(sizeBox_prefab, transform);
+                else
+                {
+                    //연도아래 버튼, 소장처별 아래 버튼 생성
+                    for (int k = 0; k < subMainList[i].Count; k++)
+                    {
+                        newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
+                        //연도 아래 
+                        if (mainbtnList[i] == "연도별")
+                        {
+
+                            if (k == 0)
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "~" + subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+
+                            }
+                            else if (k == subMainList[i].Count - 1)
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년 ~" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            }
+                            else
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            }
+                        }
+                        //소장처 아래 
+                        else
+                        {
+                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+                        }
+
+                        newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
+                        newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
+
+                        Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
+                    }
+                    Instantiate(sizeBox_prefab, transform);
+                }
             }
             //전쟁영화,
             else if (index == 1)
             {
-
-                for (int k = 0; k < subMainList[i].Count; k++)
+                if (unknown_year)
                 {
-
-                    //연도아래 
-                    if (mainbtnList[i] == "연도별")
+                    for (int k = 0; k < subMainList[i].Count; k++)
                     {
-                        newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
 
-                        if (k == 0)
+                        //연도아래 
+                        if (mainbtnList[i] == "연도별")
                         {
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+                            newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
 
+                            if (subMainList[i][k].ToString() == "0")
+                            {
+
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "년대미상" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+
+
+                            }
+                            else if (k == 1)
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            }
+                            else
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            }
                         }
-
+                        //지역 미디어 라이브러리
                         else
                         {
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            newSubBtn = (GameObject)Instantiate(subBtn_url_prefab, transform);
+                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
                         }
-                    }
-                    //지역 미디어 라이브러리
-                    else
-                    {
-                        newSubBtn = (GameObject)Instantiate(subBtn_url_prefab, transform);
-                        newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
-                    }
 
-                    newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
-                    newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
+                        newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
+                        newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
 
-                    Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
+                        Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
+                    }
+                    Instantiate(sizeBox_prefab, transform);
                 }
-                Instantiate(sizeBox_prefab, transform);
+                else
+                {
+                    for (int k = 0; k < subMainList[i].Count; k++)
+                    {
+
+                        //연도아래 
+                        if (mainbtnList[i] == "연도별")
+                        {
+                            newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
+
+                            if (k == 0)
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+
+                            }
+
+                            else
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            }
+                        }
+                        //지역 미디어 라이브러리
+                        else
+                        {
+                            newSubBtn = (GameObject)Instantiate(subBtn_url_prefab, transform);
+                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+                        }
+
+                        newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
+                        newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
+
+                        Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
+                    }
+                    Instantiate(sizeBox_prefab, transform);
+                }
+
+
             }
             // 다큐멘터리
             else if (index != 3)
             {
-
-                for (int k = 0; k < subMainList[i].Count; k++)
+                if (unknown_year)
                 {
-                    newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
-                    //연도아래 
-                    if (mainbtnList[i] == "연도별")
+                    for (int k = 0; k < subMainList[i].Count; k++)
                     {
-
-                        if (k == 0)
+                        newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
+                        //연도아래 
+                        if (mainbtnList[i] == "연도별")
                         {
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
 
+                            if (subMainList[i][k].ToString() == "0")
+                            {
+
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "년대미상" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+
+
+                            }
+                            else if (k == 1)
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            }
+
+                            else
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            }
                         }
-
+                        //소장처 아래
                         else
                         {
-                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
                         }
-                    }
-                    //소장처 아래
-                    else
-                    {
-                        newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
-                    }
 
-                    newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
-                    newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
+                        newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
+                        newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
 
-                    Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
+                        Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
+                    }
+                    Instantiate(sizeBox_prefab, transform);
                 }
-                Instantiate(sizeBox_prefab, transform);
+                else
+                {
+                    for (int k = 0; k < subMainList[i].Count; k++)
+                    {
+                        newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
+                        //연도아래 
+                        if (mainbtnList[i] == "연도별")
+                        {
+
+                            if (k == 0)
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+
+                            }
+
+                            else
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            }
+                        }
+                        //소장처 아래
+                        else
+                        {
+                            newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k];
+                        }
+
+                        newSubBtn.gameObject.GetComponent<btn_sub>().yeartitle = mainbtnList[i];
+                        newSubBtn.gameObject.GetComponent<btn_sub>().group_year = subMainList[i][k];
+
+                        Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
+                    }
+                    Instantiate(sizeBox_prefab, transform);
+                }
+
+
             }
             //구술영상
             else
@@ -304,7 +474,7 @@ public class btnController : MonoBehaviour
 
         selectController.newBody.gameObject.SetActive(false);
 
-         select_type = DataController.select_type;
+        select_type = DataController.select_type;
 
 
         for (int i = 0; i < findSubBtn.Length; i++)
@@ -323,23 +493,29 @@ public class btnController : MonoBehaviour
 
         for (int i = 0; i < mainbtnList.Count; i++)
         {
-            if( select_type == 1){
-                  if(i == 0){
-                  newMainBtn = (GameObject)Instantiate(mainBtn_prefab, transform);
+            if (select_type == 1)
+            {
+                if (i == 0)
+                {
+                    newMainBtn = (GameObject)Instantiate(mainBtn_prefab, transform);
 
-                   newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = mainbtnList[i];
+                    newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = mainbtnList[i];
 
-                  }else{
+                }
+                else
+                {
                     newMainBtn = (GameObject)Instantiate(mainBtn_prefab01, transform);
-                  }
+                }
 
-            }else{
-             newMainBtn = (GameObject)Instantiate(mainBtn_prefab, transform);
-              newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = mainbtnList[i];
+            }
+            else
+            {
+                newMainBtn = (GameObject)Instantiate(mainBtn_prefab, transform);
+                newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = mainbtnList[i];
 
             }
 
-          
+
 
             if (openList[i])
             {

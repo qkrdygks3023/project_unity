@@ -119,14 +119,42 @@ public class TabController : MonoBehaviour
 
         selectController.newBody.gameObject.SetActive(false);
 
+        Debug.Log("selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text === " + selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text);
+
 
         if (index == 0)
         {
-            selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = dataController.select_main + "년";
+            if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "년도미상")
+            {
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년도미상";
+
+            }
+            else if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "0년")
+            {
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년도미상";
+
+            }
+            else
+            {
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = dataController.select_main + "년";
+
+            }
         }
         else
         {
-            selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = dataController.select_main + "년대";
+            if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "년대미상")
+            {
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년대미상";
+            }
+            else if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "0년대")
+            {
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년대미상";
+
+            }
+            else
+            {
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = dataController.select_main + "년대";
+            }
         }
 
         if (index == 3)

@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine.EventSystems;
 
 
-public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+public class gridOnClick : MonoBehaviour, IPointerDownHandler
 {
     // Start is called before the first frame update
     RectTransform width;
@@ -43,36 +43,36 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
     {
         Debug.Log("down");
 
-        DataController.selectGrid(select_index);   
+        DataController.selectGrid(select_index);
         StartCoroutine(sizedUp());
 
         Debug.Log(SelectController.activity);
         //    selectTitle =  this.transform.Find("gridtitle").gameObject.GetComponent<TextMeshProUGUI>().text;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
+    // public void OnPointerEnter(PointerEventData eventData)
+    // {
 
 
-        transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+    //     transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
 
 
-        //  float width = gameObject.GetComponentInChildren<Image>().GetComponent<RectTransform>().rect.width;   
-        //  width.sizeDelta = new Vector2(width.rect.width + 100 , height.rect.height);
-        //  height.sizeDelta = new Vector2(width.rect.width , height.rect.height + 100);
+    //     //  float width = gameObject.GetComponentInChildren<Image>().GetComponent<RectTransform>().rect.width;   
+    //     //  width.sizeDelta = new Vector2(width.rect.width + 100 , height.rect.height);
+    //     //  height.sizeDelta = new Vector2(width.rect.width , height.rect.height + 100);
 
 
 
-    }
+    // }
 
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        ishover = 2;
-        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        //  width.sizeDelta = new Vector2(width.rect.width - 100 , height.rect.height);
-        //  height.sizeDelta = new Vector2(width.rect.width , height.rect.height - 100);
+    // public void OnPointerExit(PointerEventData eventData)
+    // {
+    //     ishover = 2;
+    //     transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+    //     //  width.sizeDelta = new Vector2(width.rect.width - 100 , height.rect.height);
+    //     //  height.sizeDelta = new Vector2(width.rect.width , height.rect.height - 100);
 
-    }
+    // }
 
 
     //서서히 확대
@@ -87,7 +87,7 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
 
         //서서히 커짐        
         for (int i = 0; i < 50; i++)
-        { 
+        {
             //newObj width 2890 까지 증가
             if (width.rect.width <= 2890)
             {
@@ -97,19 +97,19 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler, IPointerEnterHand
             yield return new WaitForSeconds(0.01f);
         }
 
-          SelectController.select();
+        SelectController.select(true);
 
         for (int i = 0; i < 10; i++)
         {
-             newObj.GetComponent<Image>().color = new Color(3, 56, 90, newObj.GetComponent<Image>().color.a - 0.1f);
-            yield return new WaitForSeconds(0.01f);           
+            newObj.GetComponent<Image>().color = new Color(3, 56, 90, newObj.GetComponent<Image>().color.a - 0.1f);
+            yield return new WaitForSeconds(0.01f);
         }
 
-      
+
         Destroy(newObj);
 
 
- 
+
 
     }
 

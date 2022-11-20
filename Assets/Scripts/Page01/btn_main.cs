@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Diagnostics;
 public class btn_main : MonoBehaviour
 {
     dataController DataController;
@@ -14,6 +15,7 @@ public class btn_main : MonoBehaviour
     public List<List<string>> subMainList = new List<List<string>>();
     public List<bool> openList = new List<bool>();
 
+    string SavePath = Application.streamingAssetsPath;
     public int select_index;
 
     public string title;
@@ -39,18 +41,17 @@ public class btn_main : MonoBehaviour
 
     public void btn_main_Click()
     {
-        Debug.Log("btn Main");
-        Debug.Log(GetComponentInChildren<TextMeshProUGUI>().text);
+
 
         title = GetComponentInChildren<TextMeshProUGUI>().text;
 
         mainbtnList = BtnController.mainbtnList;
         int idx = mainbtnList.FindIndex(a => a.Contains(title));
-        Debug.Log(idx);
+
 
         for (int i = 0; i < openList.Count; i++)
         {
-            Debug.Log(idx);
+
 
         }
         openList[idx] = !openList[idx];
@@ -64,16 +65,30 @@ public class btn_main : MonoBehaviour
         if (openList[idx])
         {
             //생성
-            Debug.Log("생성");
+            //   Debug.Log("생성");
             BtnController.select_mainBtn();
 
         }
         else
         {
             //파괴
-            Debug.Log("파괴");
+            // Debug.Log("파괴");
             BtnController.select_mainBtn();
         }
+
+
+    }
+
+    public void btn_libray_Click()
+    {
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        string SavePath = Application.streamingAssetsPath;
+        // string url = DataController.url;
+        string url = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome_proxy.exe  --profile-directory=Default --app-id=gjdeonfmdfofjhjiipeicdbnlainpaon";
+
+
+
+        Process.Start(url);
 
 
     }

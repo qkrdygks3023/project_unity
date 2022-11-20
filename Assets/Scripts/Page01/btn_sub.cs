@@ -60,19 +60,38 @@ public class btn_sub : MonoBehaviour
         }
         dataController.selectData(pageSelect, grouptype, group_year);
         selectController.newBody.gameObject.SetActive(false);
+
         selectController.group_subbtn_title = group_year;
 
         // selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year;
 
         //selectController 오브젝트 
-        //연대별 소장쳐벌
-        selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = yeartitle;
+        //연대별 소장쳐벌        
+        if (pageSelect == 3)
+        {
+            string str_group_year = yeartitle.Split('.')[1].ToString();
+            selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = str_group_year;
+
+        }
+        else
+        {
+            selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = yeartitle;
+
+        }
         // 1950년 1950년대
         if (pageSelect == 0)
         {
             if (grouptype == 0)
             {
-                selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year + "년";
+                if (group_year.ToString() == "0")
+                {
+                    selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = "년도미상";
+                }
+                else
+                {
+                    selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year + "년";
+
+                }
 
             }
             else
@@ -85,6 +104,10 @@ public class btn_sub : MonoBehaviour
         {
             if (grouptype == 0)
             {
+                if (group_year.ToString() == "0")
+                {
+                    selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = "년대미상";
+                }
                 selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = group_year + "년대";
 
             }

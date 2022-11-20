@@ -25,8 +25,8 @@ public class rowitemClick : MonoBehaviour
 
     public void itemClick()
     {
-        
-            dataController.selectGrid(index);
-            selectController.select(); 
+
+        dataController.selectGrid(index);
+        selectController.select(false);
     }
 }
