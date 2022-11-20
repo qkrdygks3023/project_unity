@@ -491,6 +491,8 @@ public class btnController : MonoBehaviour
         }
 
 
+
+
         for (int i = 0; i < mainbtnList.Count; i++)
         {
             if (select_type == 1)

@@ -101,8 +101,7 @@ public class selectController : MonoBehaviour
             }
             else
             {
-                year_groupObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.group_year + "년대";
-
+                year_groupObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.group_year + "년";
             }
         }
         else
@@ -115,7 +114,7 @@ public class selectController : MonoBehaviour
             }
             else
             {
-                year_groupObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.year;
+                year_groupObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.group_year.ToString() + "년대";
 
             }
         }

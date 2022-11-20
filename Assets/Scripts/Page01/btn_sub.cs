@@ -71,12 +71,14 @@ public class btn_sub : MonoBehaviour
         {
             string str_group_year = yeartitle.Split('.')[1].ToString();
             selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = str_group_year;
-
+        }
+        else if (pageSelect == 1 || pageSelect == 2)
+        {
+            selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = "연대별";
         }
         else
         {
             selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = yeartitle;
-
         }
         // 1950년 1950년대
         if (pageSelect == 0)

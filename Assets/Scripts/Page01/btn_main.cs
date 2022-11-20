@@ -42,39 +42,38 @@ public class btn_main : MonoBehaviour
     public void btn_main_Click()
     {
 
+        // title = GetComponentInChildren<TextMeshProUGUI>().text;
 
-        title = GetComponentInChildren<TextMeshProUGUI>().text;
-
-        mainbtnList = BtnController.mainbtnList;
-        int idx = mainbtnList.FindIndex(a => a.Contains(title));
-
-
-        for (int i = 0; i < openList.Count; i++)
-        {
+        // mainbtnList = BtnController.mainbtnList;
+        // int idx = mainbtnList.FindIndex(a => a.Contains(title));
 
 
-        }
-        openList[idx] = !openList[idx];
+        // for (int i = 0; i < openList.Count; i++)
+        // {
+
+
+        // }
+        // openList[idx] = !openList[idx];
     }
 
     public void btn_subBtn_Create()
     {
-        title = GetComponentInChildren<TextMeshProUGUI>().text;
-        mainbtnList = BtnController.mainbtnList;
-        int idx = mainbtnList.FindIndex(a => a.Contains(title));
-        if (openList[idx])
-        {
-            //생성
-            //   Debug.Log("생성");
-            BtnController.select_mainBtn();
+        // title = GetComponentInChildren<TextMeshProUGUI>().text;
+        // mainbtnList = BtnController.mainbtnList;
+        // int idx = mainbtnList.FindIndex(a => a.Contains(title));
+        // if (openList[idx])
+        // {
+        //     //생성
+        //     //   Debug.Log("생성");
+        //     BtnController.select_mainBtn();
 
-        }
-        else
-        {
-            //파괴
-            // Debug.Log("파괴");
-            BtnController.select_mainBtn();
-        }
+        // }
+        // else
+        // {
+        //     //파괴
+        //     // Debug.Log("파괴");
+        //     BtnController.select_mainBtn();
+        // }
 
 
     }
@@ -84,7 +83,7 @@ public class btn_main : MonoBehaviour
         string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         string SavePath = Application.streamingAssetsPath;
         // string url = DataController.url;
-        string url = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome_proxy.exe  --profile-directory=Default --app-id=gjdeonfmdfofjhjiipeicdbnlainpaon";
+        string url = SavePath + "\\webExecute.bat";
 
 
 
