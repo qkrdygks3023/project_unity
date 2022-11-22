@@ -761,6 +761,11 @@ public class dataController : MonoBehaviour
             select_main = year_group[0];
             for (int i = 0; i < SelectData.Count; i++)
             {
+                Debug.Log("==== SelectData.Count =====" + SelectData.Count);
+                Debug.Log("==== select_main == SelectData[i].group_year" + select_main == SelectData[i].group_year.ToString());
+                Debug.Log("==== select_main " + select_main);
+                Debug.Log("==== SelectData[i].group_year =====" + SelectData[i].group_year.ToString());
+
                 if (select_main == SelectData[i].group_year.ToString())
                 {
                     contentData.Add(new contentData(

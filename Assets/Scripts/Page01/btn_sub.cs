@@ -54,6 +54,10 @@ public class btn_sub : MonoBehaviour
         {
             grouptype = 0;
         }
+        else if (yeartitle == "연대별")
+        {
+            grouptype = 0;
+        }
         else
         {
             grouptype = 1;

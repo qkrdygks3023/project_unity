@@ -30,6 +30,12 @@ public class selectController : MonoBehaviour
     public GameObject gridObj;
 
     public GameObject loadingObj;
+    public GameObject image_dvdObj;
+    public GameObject image_videoObj;
+    public GameObject videoScreenObj;
+    public GameObject erorrObj;
+
+
 
 
 
@@ -88,7 +94,7 @@ public class selectController : MonoBehaviour
     //grid select
     public void select(bool isfirst)
     {
-
+        erorrObj.SetActive(false);
         DataController = FindObjectOfType<dataController>();
         newBody.gameObject.SetActive(true);
         if (DataController.select_type == 0)
@@ -135,8 +141,42 @@ public class selectController : MonoBehaviour
         yearObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.year;
         keywordObj.GetComponent<TextMeshProUGUI>().text = keywordString(DataController.selectGridData.keyword);
         timeObj.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(DataController.selectGridData.playtime).ToString();
-        summaryObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.summary;
-        video_Obj.GetComponent<UnityEngine.Video.VideoPlayer>().url = "file://" + Application.streamingAssetsPath + DataController.selectGridData.url;
+
+        summaryObj.GetComponent<TextMeshProUGUI>().text = DataController.select_type == 0 ? DataController.selectGridData.title + "\n" + DataController.selectGridData.summary : DataController.selectGridData.summary;
+
+
+        if (DataController.selectGridData.url == "dvd" || DataController.selectGridData.url == "DVD")
+        {
+            image_dvdObj.SetActive(true);
+            image_videoObj.SetActive(false);
+            videoScreenObj.SetActive(false);
+
+        }
+        else if (DataController.selectGridData.url == "비디오" || DataController.selectGridData.url.ToString().ToLower() == "video")
+        {
+            image_dvdObj.SetActive(false);
+            image_videoObj.SetActive(true);
+            videoScreenObj.SetActive(false);
+        }
+        else
+        {
+            image_dvdObj.SetActive(false);
+            image_videoObj.SetActive(false);
+            videoScreenObj.SetActive(true);
+            try
+            {
+                video_Obj.GetComponent<UnityEngine.Video.VideoPlayer>().url = "file://" + Application.streamingAssetsPath + DataController.selectGridData.url;
+            }
+            catch (System.Exception)
+            {
+
+                throw;
+            }
+
+
+
+        }
+
 
         if (isfirst)
         {
@@ -198,6 +238,12 @@ public class selectController : MonoBehaviour
 
         // Debug.Log( DataController.selectGridData.title);
     }
+
+
+
+
+
+
 
     IEnumerator fadeIn(GameObject obj, float y)
     {

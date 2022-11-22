@@ -96,6 +96,8 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
     public void videoPlay()
     {
         videoPlayer.Play();
+
+
         if (pauseBtn != null && pauseBtn.activeSelf == false)
         {
             pauseBtn.SetActive(true);
@@ -115,8 +117,16 @@ public class videoContorller : MonoBehaviour, IPointerClickHandler
         //     pauseFullBtn.SetActive(true);
         // }
 
+        videoPlayer.errorReceived += VideoPlayer_errorReceived;
+
 
         isPlaying = true;
+    }
+
+    void VideoPlayer_errorReceived(VideoPlayer source, string message)
+    {
+        Debug.Log("VideoPlayer error: " + message);
+        videoPause();
     }
 
     public void videoPause()

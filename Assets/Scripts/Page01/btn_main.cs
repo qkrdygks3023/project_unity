@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using System.Diagnostics;
+
 public class btn_main : MonoBehaviour
 {
     dataController DataController;
@@ -42,25 +42,26 @@ public class btn_main : MonoBehaviour
     public void btn_main_Click()
     {
 
-        // title = GetComponentInChildren<TextMeshProUGUI>().text;
+        title = GetComponentInChildren<TextMeshProUGUI>().text;
 
-        // mainbtnList = BtnController.mainbtnList;
-        // int idx = mainbtnList.FindIndex(a => a.Contains(title));
+        mainbtnList = BtnController.mainbtnList;
+        int idx = mainbtnList.FindIndex(a => a.Contains(title));
+
+        Debug.Log("title = " + title);
+        Debug.Log("openList = " + openList);
 
 
-        // for (int i = 0; i < openList.Count; i++)
-        // {
-
-
-        // }
-        // openList[idx] = !openList[idx];
+        for (int i = 0; i < openList.Count; i++)
+        { }
+        openList[idx] = !openList[idx];
     }
 
     public void btn_subBtn_Create()
     {
-        // title = GetComponentInChildren<TextMeshProUGUI>().text;
-        // mainbtnList = BtnController.mainbtnList;
-        // int idx = mainbtnList.FindIndex(a => a.Contains(title));
+        title = GetComponentInChildren<TextMeshProUGUI>().text;
+        mainbtnList = BtnController.mainbtnList;
+        int idx = mainbtnList.FindIndex(a => a.Contains(title));
+        BtnController.select_mainBtn();
         // if (openList[idx])
         // {
         //     //생성
@@ -78,17 +79,5 @@ public class btn_main : MonoBehaviour
 
     }
 
-    public void btn_libray_Click()
-    {
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-        string SavePath = Application.streamingAssetsPath;
-        // string url = DataController.url;
-        string url = SavePath + "\\webExecute.bat";
 
-
-
-        Process.Start(url);
-
-
-    }
 }

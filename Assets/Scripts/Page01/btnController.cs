@@ -103,7 +103,7 @@ public class btnController : MonoBehaviour
         }
 
 
-
+        openList.Clear();
 
         for (int i = 0; i < mainbtnList.Count; i++)
         {
@@ -121,10 +121,13 @@ public class btnController : MonoBehaviour
                     if (stageNum == 0)
                     {
                         newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = "연도별";
+                        mainbtnList[0] = "연도별";
                     }
                     else
                     {
                         newMainBtn.GetComponentInChildren<TextMeshProUGUI>().text = "연대별";
+                        mainbtnList[0] = "연대별";
+
                     }
 
                 }
@@ -254,7 +257,7 @@ public class btnController : MonoBehaviour
                     {
 
                         //연도아래 
-                        if (mainbtnList[i] == "연도별")
+                        if (mainbtnList[i] == "연대별")
                         {
                             newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
 
@@ -296,7 +299,7 @@ public class btnController : MonoBehaviour
                     {
 
                         //연도아래 
-                        if (mainbtnList[i] == "연도별")
+                        if (mainbtnList[i] == "연대별")
                         {
                             newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
 
@@ -338,7 +341,7 @@ public class btnController : MonoBehaviour
                     {
                         newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
                         //연도아래 
-                        if (mainbtnList[i] == "연도별")
+                        if (mainbtnList[i] == "연대별")
                         {
 
                             if (subMainList[i][k].ToString() == "0")
@@ -379,7 +382,7 @@ public class btnController : MonoBehaviour
                     {
                         newSubBtn = (GameObject)Instantiate(subBtn_prefab, transform);
                         //연도아래 
-                        if (mainbtnList[i] == "연도별")
+                        if (mainbtnList[i] == "연대별")
                         {
 
                             if (k == 0)
@@ -418,6 +421,10 @@ public class btnController : MonoBehaviour
                     if (mainbtnList[i] == "연도별")
                     {
                     }
+                    else if (mainbtnList[i] == "연대별")
+                    {
+
+                    }
                     else
                     {
                         newSubBtn = (GameObject)Instantiate(subBtn_prefab01, transform);
@@ -439,7 +446,7 @@ public class btnController : MonoBehaviour
                         // Debug.Log("* btnContrler " + k + " - " + subMainList[i][k]);
 
 
-                        Debug.Log("* btnContrler " + k + " - " + mainbtnList[1]);
+                        Debug.Log("* btnContrler " + k + " - " + mainbtnList[1] + "++++" + subMainList[1].Count);
 
                         Instantiate(sizeBox_prefab, transform);
                     }
@@ -490,6 +497,18 @@ public class btnController : MonoBehaviour
             Destroy(sizeBoxs[i]);
         }
 
+        unknown_year = false;
+        for (int i = 0; i < mainbtnList.Count; i++)
+        {
+            for (int k = 0; k < subMainList[i].Count; k++)
+            {
+                if (subMainList[i][k].ToString() == "0")
+                {
+                    unknown_year = true;
+                }
+            }
+        }
+
 
 
 
@@ -529,23 +548,71 @@ public class btnController : MonoBehaviour
 
                     if (mainbtnList[i] == "연도별")
                     {
+
+
                         if (select_type == 0)
                         {
-                            if (k == 0)
+                            if (unknown_year)
                             {
-                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "~" + subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                if (subMainList[i][k].ToString() == "0")
+                                {
+                                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "년도미상" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                }
+                                else if (k == 1)
+                                {
 
-                            }
-                            else if (k == subMainList[i].Count - 1)
-                            {
-                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년 ~" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "~" + subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
 
+                                }
+                                else if (k == subMainList[i].Count - 1)
+                                {
+                                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년 ~" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                                }
+                                else
+                                {
+                                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                }
                             }
                             else
                             {
-                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                if (k == 0)
+                                {
+                                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "~" + subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
 
+                                }
+                                else if (k == subMainList[i].Count - 1)
+                                {
+                                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년 ~" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                                }
+                                else
+                                {
+                                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                                }
                             }
+
+
+
+
+                            // if (k == 0)
+                            // {
+                            //     newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "~" + subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            // }
+                            // else if (k == subMainList[i].Count - 1)
+                            // {
+                            //     newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년 ~" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            // }
+                            // else
+                            // {
+                            //     newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            // }
+
+
                         }
                         else if (select_type == 1 || select_type == 2)
                         {
@@ -556,6 +623,22 @@ public class btnController : MonoBehaviour
                         {
                             newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
 
+                        }
+                    }
+                    else if (mainbtnList[i] == "연대별")
+                    {
+                        if (select_type == 1 || select_type == 2)
+                        {
+                            if (subMainList[i][k] == "0")
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "년대미상" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                            }
+                            else
+                            {
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = subMainList[i][k] + "년대" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+
+                            }
+                            Debug.Log("====== btnContrler " + k + " - " + subMainList[i][k] + (subMainList[i][k] == "0").ToString());
                         }
                     }
                     else

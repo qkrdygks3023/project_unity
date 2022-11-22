@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 1331999186492651745}
   - component: {fileID: 1331999186492651746}
   - component: {fileID: 1331999186492651751}
+  - component: {fileID: 6056447290943783887}
   - component: {fileID: 7015900307591905565}
   m_Layer: 5
   m_Name: main_btn 1
@@ -260,8 +261,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331999186492651751}
-        m_TargetAssemblyTypeName: btn_main, Assembly-CSharp
+      - m_Target: {fileID: 6056447290943783887}
+        m_TargetAssemblyTypeName: btn_main01, Assembly-CSharp
         m_MethodName: btn_libray_Click
         m_Mode: 1
         m_Arguments:
@@ -279,7 +280,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331999186492651756}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f86959faeb8a4fecb1e61ca13dfb337, type: 3}
   m_Name: 
@@ -289,6 +290,18 @@ MonoBehaviour:
   select_index: 0
   title: 
   subBtn_prefab: {fileID: 0}
+--- !u!114 &6056447290943783887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331999186492651756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f68ddac17bb854089c1c5ee3accef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7015900307591905565
 MonoBehaviour:
   m_ObjectHideFlags: 0
