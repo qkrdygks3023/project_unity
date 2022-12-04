@@ -385,7 +385,6 @@ D:/dev_unity/project_unity/Assets/StreamingAssets/movies/01/15. 해바라기 가
 D:/dev_unity/project_unity/Assets/StreamingAssets/movies/01/16. 두고온 산하.mp4
 D:/dev_unity/project_unity/Assets/StreamingAssets/movies/01/20. 잊혀진 여전사.mp4
 D:/dev_unity/project_unity/Assets/StreamingAssets/movies/01/27. 단편영화 부치지 못한 편지(보람단).mp4
-D:/dev_unity/project_unity/Assets/StreamingAssets/images/01/29. 포화속에 핀 장미.jpg
 D:/dev_unity/project_unity/Assets/StreamingAssets/movies/02/1.휴전선을 말한다 제1부 155마일의 진실.mp4
 D:/dev_unity/project_unity/Assets/StreamingAssets/movies/02/2.휴전선을 말한다 제2부 휴전선의 두얼굴.mp4
 D:/dev_unity/project_unity/Assets/StreamingAssets/movies/02/3.휴전선을 말한다 제3부 돌아가야할 땅.mp4

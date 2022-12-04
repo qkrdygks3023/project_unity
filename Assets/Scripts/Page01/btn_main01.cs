@@ -55,17 +55,15 @@ public class btn_main01 : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         //     Vector3 mousePos = Input.mousePosition;
         //     selectController.popupObj.GetComponent<RectTransform>().position = new Vector3(mousePos.x, mousePos.y, 0);
         // }
-        selectController.popupObj.SetActive(true);
+        // selectController.popupObj.SetActive(true);
 
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
 
-        selectController.popupObj.SetActive(false);
+        // selectController.popupObj.SetActive(false);
         // StartCoroutine(pauseBtnFadeIn());
-
-
 
     }
 
