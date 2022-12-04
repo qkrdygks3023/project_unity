@@ -100,6 +100,7 @@ public class TabController : MonoBehaviour
 
     public void titleFunction(int index) //0
     {
+        selectController.popupObj.SetActive(false);
         //데이터 구조 
         pageController.stageNum = index;
         dataController.select_type = index;
@@ -124,14 +125,14 @@ public class TabController : MonoBehaviour
 
         if (index == 0)
         {
-            if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "년도미상")
+            if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "연도미상")
             {
-                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년도미상";
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "연도미상";
 
             }
             else if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "0년")
             {
-                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년도미상";
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "연도미상";
 
             }
             else

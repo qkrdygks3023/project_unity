@@ -34,6 +34,8 @@ public class selectController : MonoBehaviour
     public GameObject image_videoObj;
     public GameObject videoScreenObj;
     public GameObject erorrObj;
+    public GameObject popupObj;
+
 
 
 
@@ -102,7 +104,7 @@ public class selectController : MonoBehaviour
 
             if (DataController.selectGridData.group_year == 0)
             {
-                year_groupObj.GetComponent<TextMeshProUGUI>().text = "년도미상";
+                year_groupObj.GetComponent<TextMeshProUGUI>().text = "연도미상";
 
             }
             else
@@ -142,6 +144,7 @@ public class selectController : MonoBehaviour
         keywordObj.GetComponent<TextMeshProUGUI>().text = keywordString(DataController.selectGridData.keyword);
         timeObj.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(DataController.selectGridData.playtime).ToString();
 
+        // summaryObj.GetComponent<TextMeshProUGUI>().text = DataController.selectGridData.title;
         summaryObj.GetComponent<TextMeshProUGUI>().text = DataController.select_type == 0 ? DataController.selectGridData.title + "\n" + DataController.selectGridData.summary : DataController.selectGridData.summary;
 
 

@@ -831,7 +831,7 @@ public class dataController : MonoBehaviour
             {
                 if (select_main.ToString() == "0")
                 {
-                    selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년도미상";
+                    selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "연도미상";
                 }
                 else
                 {
@@ -921,7 +921,7 @@ public class dataController : MonoBehaviour
             { //연도별
                 if (SelectData[i].group_year.ToString() == year_group)
                 {
-                    Debug.Log("i - " + i);
+
                     contentData.Add(new contentData(
                     SelectData[i].title,
                     SelectData[i].group_year,
@@ -939,7 +939,7 @@ public class dataController : MonoBehaviour
             {
                 if (SelectData[i].place == year_group)
                 {
-                    Debug.Log("i - " + i);
+
                     contentData.Add(new contentData(
                     SelectData[i].title,
                     SelectData[i].group_year,

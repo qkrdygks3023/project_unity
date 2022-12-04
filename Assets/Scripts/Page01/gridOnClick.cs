@@ -53,15 +53,12 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler
     // public void OnPointerEnter(PointerEventData eventData)
     // {
 
-
     //     transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
 
 
     //     //  float width = gameObject.GetComponentInChildren<Image>().GetComponent<RectTransform>().rect.width;   
     //     //  width.sizeDelta = new Vector2(width.rect.width + 100 , height.rect.height);
     //     //  height.sizeDelta = new Vector2(width.rect.width , height.rect.height + 100);
-
-
 
     // }
 
@@ -71,7 +68,6 @@ public class gridOnClick : MonoBehaviour, IPointerDownHandler
     //     transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
     //     //  width.sizeDelta = new Vector2(width.rect.width - 100 , height.rect.height);
     //     //  height.sizeDelta = new Vector2(width.rect.width , height.rect.height - 100);
-
     // }
 
 

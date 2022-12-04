@@ -174,7 +174,7 @@ public class btnController : MonoBehaviour
                             if (subMainList[i][k].ToString() == "0")
                             {
 
-                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "년도미상" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "연도미상" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
                                 newSubBtn.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
 
 
@@ -556,7 +556,7 @@ public class btnController : MonoBehaviour
                             {
                                 if (subMainList[i][k].ToString() == "0")
                                 {
-                                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "년도미상" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
+                                    newSubBtn.GetComponentInChildren<TextMeshProUGUI>().text = "연도미상" + " (" + DataController.dictYear[subMainList[i][k]] + ")";
                                 }
                                 else if (k == 1)
                                 {

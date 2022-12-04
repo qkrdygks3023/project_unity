@@ -176,7 +176,10 @@ public class GridController : MonoBehaviour
                         Debug.Log(e);
                     }
 
-                    newObj.GetComponentInChildren<TextMeshProUGUI>().text = contentData[i].title;
+                    //  DataController.selectGridData.title + "\n" + DataController.selectGridData.summary : DataController.selectGridData.summary
+                    newObj.GetComponentInChildren<TextMeshProUGUI>().text = DataController.select_type == 0 ? contentData[i].title + " " + contentData[i].summary : contentData[i].title;
+
+
                     newObj.transform.Find("regdate").gameObject.GetComponent<TextMeshProUGUI>().text = DataController.CountTimeLine(contentData[i].playtime);
                     newObj.gameObject.GetComponent<gridOnClick>().select_index = i;
                     yield return null;
