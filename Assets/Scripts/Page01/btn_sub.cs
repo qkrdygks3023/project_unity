@@ -78,7 +78,9 @@ public class btn_sub : MonoBehaviour
         }
         else if (pageSelect == 1 || pageSelect == 2)
         {
-            selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = "연대별";
+            // selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = "연대별";
+            selectController.yeartitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = yeartitle;
+
         }
         else
         {
