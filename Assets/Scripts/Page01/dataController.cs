@@ -843,7 +843,7 @@ public class dataController : MonoBehaviour
             {
                 if (select_main.ToString() == "0")
                 {
-                    selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년대미상";
+                    selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "연대미상";
                 }
                 else
                 {

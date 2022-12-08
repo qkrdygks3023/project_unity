@@ -143,13 +143,13 @@ public class TabController : MonoBehaviour
         }
         else
         {
-            if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "년대미상")
+            if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "연대미상")
             {
-                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년대미상";
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "연대미상";
             }
             else if (selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text == "0년대")
             {
-                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "년대미상";
+                selectController.year_subtitleObj.GetComponentInChildren<TextMeshProUGUI>().text = "연대미상";
 
             }
             else

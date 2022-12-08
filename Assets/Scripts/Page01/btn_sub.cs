@@ -115,7 +115,7 @@ public class btn_sub : MonoBehaviour
 
                 if (group_year.ToString() == "0")
                 {
-                    selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = "년대미상";
+                    selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = "연대미상";
                 }
                 else
                 {
@@ -126,7 +126,7 @@ public class btn_sub : MonoBehaviour
             }
             else if (selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text == "0년대")
             {
-                selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = "년대미상";
+                selectController.year_subtitleObj.gameObject.GetComponent<TextMeshProUGUI>().text = "연대미상";
             }
             else
             {

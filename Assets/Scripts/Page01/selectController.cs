@@ -117,7 +117,7 @@ public class selectController : MonoBehaviour
 
             if (DataController.selectGridData.group_year == 0)
             {
-                year_groupObj.GetComponent<TextMeshProUGUI>().text = "년대미상";
+                year_groupObj.GetComponent<TextMeshProUGUI>().text = "연대미상";
 
             }
             else
